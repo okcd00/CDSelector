@@ -1,0 +1,79 @@
+@media screen {
+
+    .b-routing {
+        background: #fff url(../images/routing/bg_xian.gif) 18px 0 repeat-y;
+    }
+
+    .b-routing h4 {
+        display: block;
+        padding-left: 76px;
+        font-size: 12px;
+        background: transparent url(../images/routing/icon-routing.png) 0 0 no-repeat;
+    }
+
+    .b-routing h4 span {
+        /*display: none;*/
+        display: block;
+    }
+
+    .b-routing h4 .br-nodename {
+        color:#666;
+    }
+
+    .b-routing h4 .br-nodename strong {
+        display: inline-block;
+        /*border-bottom: 1px dashed #666;*/
+        font-weight: normal;
+    }
+
+    .b-routing ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .b-routing ul li {
+        margin: 0 20px 20px 20px;
+        padding: 5px 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        list-style-type: none;
+        color:#ccc;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .b-routing ul li h5 {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        color:#666;
+    }
+
+    .b-routing ul li h5 strong {
+        font-weight: normal;
+    }
+    
+    .b-routing ul li span {
+        display: inline-block;
+        width: 20%;
+        color:#666;
+        font-size: 12px;
+    }
+
+    .b-routing ul li span strong {
+        color:#aaa;
+    }
+
+    .b-routing ul li:hover {
+        background-color: #f6f6f6;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .b-routing ul li span {
+        width: auto;
+        font-size: 12px;
+    }
+}
+

@@ -1,0 +1,10 @@
+[info]
+username = okcd00@qq.com
+password = C&G0622@
+runtime  = 1
+
+[action]
+debug = true
+enroll = true
+evaluate = true
+select_bat = false

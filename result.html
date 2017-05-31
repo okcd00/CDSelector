@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择课程-选课系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<link href="/static/stylelib/base.css" rel="stylesheet" type="text/css" />
+<link href="/static/stylelib/responsive.css" rel="stylesheet" type="text/css" />
+<!-- // plugins css -->
+<link href="/static/stylelib/plugins/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="/static/stylelib/plugins/iealert/style.css" rel="stylesheet" type="text/css" />
+<!-- // theme css -->
+<link href="/static/stylelib/theme_wblue/screen.css" rel="stylesheet" type="text/css" />
+<link href="/static/stylelib/theme_default/routing.css" rel="stylesheet" type="text/css" />
+<link href="/static/stylelib/theme_wblue/my_responsive.css" rel="stylesheet" type="text/css" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="/static/stylelib/plugins/html5shiv.js"></script>
+<![endif]-->
+<!--// Loading JS -->
+<script src="/static/stylelib/jquery-1.8.3.min.js"></script>
+<script src="/static/i18n/messages.js"></script>
+	<script src="/static/stylelib/base.js"></script>
+<script src="/static/stylelib/plugins/iealert/iealert.js"></script>
+<script src="/static/stylelib/plugins/jquery.nicescroll.min.js"></script>
+<!--common script for all pages-->
+<script src="/static/stylelib/theme_default/global.js"></script>
+<script src="/static/stylelib/plugins/sco.modal.js"></script>
+<script src="/static/stylelib/plugins/jquery.placeholder.min.js"></script>
+<script language="javascript" type="text/javascript" src="/static/My97DatePicker/WdatePicker.js"></script>
+<link href="/static/jquery-select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+<script src="/static/jquery-select2/4.0.2/js/select2.min.js" type="text/javascript"></script>
+<link href="/static/jquery-validation/1.15.0/dist/jquery.validate.min.css" rel="stylesheet" />
+<script src="/static/jquery-validation/1.15.0/dist/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/static/jquery-validation/1.15.0/dist/localization/messages_zh.min.js"></script>
+	<script src="/static/jquery-form/jquery.form.js" type="text/javascript"></script>
+<link href="/static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet" />
+<script src="/static/jquery-jbox/2.3/jquery.jBox-2.3.min.js" type="text/javascript"></script>
+<script src="/static/common/sumreg.js" type="text/javascript"></script>
+<link href="/static/common/sumreg.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+	<div id="header" class="navbar navbar-inverse navbar-fixed-top">      <div class="navbar-inner">          <div class="container-fluid">              <a id="edu_logo" target="_top" class="brand" href="http://sep.ucas.ac.cn/portal/site/105" >                <img src="http://sep.ucas.ac.cn//resources/images/edu_cloud.png"/>              </a><!--//logo:end-->              <a id="logo" class="brand" href="#" >                <span>选课系统</span>              </a><!--//site_name:end-->               <!-- //系统菜单 -->                      <div class="b-select-system">                          <a href="#" class="bss-btn">                              <i class="icon-angle-down"></i>                              <span>选择其他系统</span>                          </a>                          <div class="bss-menu">                              <ul>  	    						<li>  									<a target="_top" class="http://sep.ucas.ac.cn/portal/site/105" href="http://sep.ucas.ac.cn/portal/site/105">  		    							<img alt=""src="http://sep.ucas.ac.cn/access/img/site/105.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">  		    							<h5>SEP</h5>  									</a>  	    						</li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/16">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/16.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>课程网站</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/281">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/6e6e454e-a6a9-4427-9713-3fb83ea31e5a.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>中科大睿客网</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/1">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/1.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>学籍管理</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/217">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/eb2834ba-e971-4e5c-bc61-673fbbcaf1e4.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>所级教务</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/221">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/221.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>培养指导</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/241">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/5ce01641-f9d8-418d-a13a-710147bd7472.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>回所办理</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/261">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/af6fa143-a2f8-4d79-b626-db868d3e5c56.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>报修管理</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/269">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/4da77bf0-4d0b-4d03-b6e9-5e8844fae5e0.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>心理健康</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/282">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/91e650cb-fa5f-4d75-b0ca-635d9b382240.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>奖助系统</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/298">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/322241b6-9f51-44fd-819b-c550b434886f.gif" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>自主学习空间</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/10">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/10.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>学位管理</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/218">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/218.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>实景课堂</h5>                                      </a>                                  </li>                                  <li>                                      <a href="javascript:;">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/226.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>选课系统</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/235">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/235.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>公寓管理</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/291">                                          <img alt="" src="http://sep.ucas.ac.cn/access/img/site/397edbf7-7a83-4d05-84eb-7e4a9c9d1184.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">                                          <h5>四六级报名系统</h5>                                      </a>                                  </li>                                  <li>                                      <a href="http://sep.ucas.ac.cn//portal/site/303">                                          <img alt="" src="http://sep.ucas.ac.cn/resources/images/app-default-icon2.png" >                                          <h5>调查问卷</h5>                                      </a>                                  </li>                              </ul>                          </div>                      </div><!--//b-select-system:end-->                          <!-- //顶部菜单按钮(除pc端外显示).btn-navbar  -->                      <a class="b-top-toggle-menu btn-navbar" data-toggle="collapse" data-target=".nav-collapse">                          <i class="icon-align-justify"></i>                      </a>                        <!-- //顶部提醒 -->                      <div id="taskInfo" class="b-top-remind hidden-phone">                      </div><!--//b-top-remind:end-->                      <!-- //顶部左侧链接与菜单 -->                      <div class="b-top-nav">                          <ul class="nav pull-right top-menu">                              <li class="btnav-info" title="当前用户所在单位">                              </li>                            <li class="btnav-menu dropdown" title="切换角色">                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">                               	<i class="icon-user"></i> 学生角色                               	<b class="caret"></b>                               </a>                               	<ul class="dropdown-menu">                                         <li>空</li>                                  </ul>                           </li>                             <li class="btnav-info">                                 <a>陈点                             </a>                              </li>                              <li><a href="http://sep.ucas.ac.cn/logout"  title="退出系统"><i class="icon-off"></i></a></li>                          </ul>                      </div><!--//b-top-nav:end-->          </div><!--//container:end-->      </div><!--//container-fluid:end-->  </div><!--//header:end--><div id="main-menu" class="row-fluid">
+   <div class="b-sidebar-scroll">
+       <div id="sidebar" class="nav-collapse collapse">
+           <ul class="b-sidebar-menu">
+           		<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>通知公告</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/notice/view/1" target="">通知公告</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>学期课表</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/course/termSchedule" target="">学期课表</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item active">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>选修课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class="active"><a href="/courseManage/main" target="">选择课程</a></li>
+							<li class=""><a href="/courseManage/selectedCourse" target="">已选课程</a></li>
+							<li class=""><a href="/course/coursetip" target="">选课学分提示</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>评估课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/evaluate/49344" target="">2016年秋季学期</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>查询成绩</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/score/yjs/all" target="">所有成绩</a></li>
+							<li class=""><a href="/score/yjs/p10" target="">Program10成绩</a></li>
+							<li class=""><a href="/score/yjs/49344" target="">2016年秋季学期</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>科学前沿与人文讲座</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/subject/lecture" target="">讲座预告</a></li>
+							<li class=""><a href="/subject/notice" target="">讲座通知</a></li>
+							<li class=""><a href="/subject/student" target="">听讲情况</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>Program-10</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/program10/intro" target="">介绍项目</a></li>
+							<li class=""><a href="/program10/register" target="">注册项目</a></li>
+							<li class=""><a href="/program10/selectedCourse" target="">选择课程</a></li>
+							<li class=""><a href="/program10/cancel" target="">注销项目</a></li>
+							<li class=""><a href="/program10/pringCourse" target="_blank">打印选课单</a></li>
+							<li class=""><a href="/program10/evaluateMain" target="">评估项目</a></li>
+							<li class=""><a href="/program10/downloadMain" target="">下载申请表</a></li>
+							</ul>
+	             	</li>
+				</ul><!--//sidebar-menu-->
+       </div><!--//sidebar:end-->
+    </div>
+</div><!--//main-menu:end--><div id="main-content">
+		<div class="container-fluid">
+			
+<div class="row-fluid">
+    <div class="span12">
+        <h2 id="page-title"><span>选择课程</span></h2>
+        </div><!--span*:end-->
+</div><!--//row-fluid:end-->
+<div class="m-cbox m-lgray">
+	<div class="mc-head">
+	    <h4>
+	        <span class="mch-smenu-btn"><i class="icon-reorder"></i></span>
+			选择课程</h4>
+	    <div class="mch-tool">
+	        <a href="#" class="mcht-zoom-btn"><i class="icon-chevron-down"></i></a>
+	    </div>
+	</div><!--//mc-head:end-->
+	
+    <div class="mc-body">
+		<div class="head">
+			<div id="messageBoxError" class="alert alert-error "><button data-dismiss="alert" class="close">×</button>
+				<label id="loginError" class="error">你选择的课程名称为【英文科技论文写作】和【入侵容忍技术讨论】的上课时间冲突，请重新调整你选的课程，谢谢！</label>
+			</div>
+			<div id="messageBoxSuccess" class="alert alert-success hide"><button data-dismiss="alert" class="close">×</button>
+				<label id="loginSuccess" class="success"></label>
+			</div>
+		</div>
+		<form id="regfrm" name="regfrm" action="/courseManage/saveCourse?s=05d5cfef-1c54-4863-8716-f1dc0863e41e" class="form-horizontal" method="post">
+		<input type="hidden" name="deptIds" value="915"/>
+		<table class="table table-striped table-bordered table-advance table-hover">
+		   <thead>
+		       <tr>
+		       	   <th>选课</th>
+		       	   <th>学位</th>
+		           <th>课程编码</th>
+		           <th>课程名称</th>
+		           <th>课时</th>
+		           <th>学分</th>
+		           <th>限选</th>
+		           <th>已选</th>
+		           <th>课程属性</th>
+		           <th>授课方式</th>
+		           <th>考试方式</th>
+		           <th>主讲教师</th>
+		    	</tr>
+		   	</thead>
+		   	<tbody>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131205" /></td>
+					<td><input type="checkbox" id="did_131205" name="did_131205" value="131205"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131205" target="_blank"><span id="courseCode_131205">15DGB002H-L16</span></a></td>
+					<td><a href="/course/coursetime/131205" target="_blank">英语B-16班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131205">1.0</span></td>
+					<td>35</td>
+					<td >11</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131205" target="_blank">陈玮</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131206" /></td>
+					<td><input type="checkbox" id="did_131206" name="did_131206" value="131206"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131206" target="_blank"><span id="courseCode_131206">15DGB002H-L205</span></a></td>
+					<td><a href="/course/coursetime/131206" target="_blank">英语B-205班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131206">1.0</span></td>
+					<td>35</td>
+					<td >18</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131206" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131207"  disabled/></td>
+					<td><input type="checkbox" id="did_131207" name="did_131207" value="131207"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131207" target="_blank"><span id="courseCode_131207">15DGB002H-L206</span></a></td>
+					<td><a href="/course/coursetime/131207" target="_blank">英语B-206班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131207">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131207" target="_blank">邬颖祺</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131208" /></td>
+					<td><input type="checkbox" id="did_131208" name="did_131208" value="131208"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131208" target="_blank"><span id="courseCode_131208">15DGB002H-L207</span></a></td>
+					<td><a href="/course/coursetime/131208" target="_blank">英语B-207班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131208">1.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131208" target="_blank">彭宇</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131209" /></td>
+					<td><input type="checkbox" id="did_131209" name="did_131209" value="131209"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131209" target="_blank"><span id="courseCode_131209">15DGB002H-L208</span></a></td>
+					<td><a href="/course/coursetime/131209" target="_blank">英语B-208班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131209">1.0</span></td>
+					<td>35</td>
+					<td >3</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131209" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131211"  disabled/></td>
+					<td><input type="checkbox" id="did_131211" name="did_131211" value="131211"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131211" target="_blank"><span id="courseCode_131211">15DGB002H-L213</span></a></td>
+					<td><a href="/course/coursetime/131211" target="_blank">英语B-213班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131211">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131211" target="_blank">邬颖祺</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131212" /></td>
+					<td><input type="checkbox" id="did_131212" name="did_131212" value="131212"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131212" target="_blank"><span id="courseCode_131212">15DGB002H-L215</span></a></td>
+					<td><a href="/course/coursetime/131212" target="_blank">英语B-215班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131212">1.0</span></td>
+					<td>35</td>
+					<td >26</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131212" target="_blank">彭宇</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131213" /></td>
+					<td><input type="checkbox" id="did_131213" name="did_131213" value="131213"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131213" target="_blank"><span id="courseCode_131213">15DGB002H-L218</span></a></td>
+					<td><a href="/course/coursetime/131213" target="_blank">英语B-218班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131213">1.0</span></td>
+					<td>35</td>
+					<td >13</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131213" target="_blank">陈玮</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131214" /></td>
+					<td><input type="checkbox" id="did_131214" name="did_131214" value="131214"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131214" target="_blank"><span id="courseCode_131214">15DGB002H-L224</span></a></td>
+					<td><a href="/course/coursetime/131214" target="_blank">英语B-224班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131214">1.0</span></td>
+					<td>35</td>
+					<td >1</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131214" target="_blank">邵春</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131215" /></td>
+					<td><input type="checkbox" id="did_131215" name="did_131215" value="131215"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131215" target="_blank"><span id="courseCode_131215">15DGB002H-L232</span></a></td>
+					<td><a href="/course/coursetime/131215" target="_blank">英语B-232班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131215">1.0</span></td>
+					<td>35</td>
+					<td >5</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131215" target="_blank">邵春</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131216"  disabled/></td>
+					<td><input type="checkbox" id="did_131216" name="did_131216" value="131216"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131216" target="_blank"><span id="courseCode_131216">15DGB002H-L237</span></a></td>
+					<td><a href="/course/coursetime/131216" target="_blank">英语B-237班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131216">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131216" target="_blank">田禾</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131217"  disabled/></td>
+					<td><input type="checkbox" id="did_131217" name="did_131217" value="131217"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131217" target="_blank"><span id="courseCode_131217">15DGB002H-L238</span></a></td>
+					<td><a href="/course/coursetime/131217" target="_blank">英语B-238班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131217">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131217" target="_blank">田禾</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131218"  disabled/></td>
+					<td><input type="checkbox" id="did_131218" name="did_131218" value="131218"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131218" target="_blank"><span id="courseCode_131218">15DGB002H-L241</span></a></td>
+					<td><a href="/course/coursetime/131218" target="_blank">英语B-241班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131218">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131218" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131219"  disabled/></td>
+					<td><input type="checkbox" id="did_131219" name="did_131219" value="131219"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131219" target="_blank"><span id="courseCode_131219">15DGB002H-L242</span></a></td>
+					<td><a href="/course/coursetime/131219" target="_blank">英语B-242班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131219">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131219" target="_blank">邬颖祺</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131220"  disabled/></td>
+					<td><input type="checkbox" id="did_131220" name="did_131220" value="131220"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131220" target="_blank"><span id="courseCode_131220">15DGB002H-L243</span></a></td>
+					<td><a href="/course/coursetime/131220" target="_blank">英语B-243班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131220">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131220" target="_blank">邬颖祺</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131225" /></td>
+					<td><input type="checkbox" id="did_131225" name="did_131225" value="131225"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131225" target="_blank"><span id="courseCode_131225">15DGB002H-L37</span></a></td>
+					<td><a href="/course/coursetime/131225" target="_blank">英语B-37班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131225">1.0</span></td>
+					<td>35</td>
+					<td >10</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131225" target="_blank">孙丽冰</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131227" /></td>
+					<td><input type="checkbox" id="did_131227" name="did_131227" value="131227"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131227" target="_blank"><span id="courseCode_131227">15DGB002H-L85</span></a></td>
+					<td><a href="/course/coursetime/131227" target="_blank">英语B-85班（怀）-高级听说</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131227">1.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131227" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131229"  disabled/></td>
+					<td><input type="checkbox" id="did_131229" name="did_131229" value="131229"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131229" target="_blank"><span id="courseCode_131229">15DGB002H-R04</span></a></td>
+					<td><a href="/course/coursetime/131229" target="_blank">英语B-04班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131229">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131229" target="_blank">陈玮</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131230"  disabled/></td>
+					<td><input type="checkbox" id="did_131230" name="did_131230" value="131230"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131230" target="_blank"><span id="courseCode_131230">15DGB002H-R214</span></a></td>
+					<td><a href="/course/coursetime/131230" target="_blank">英语B-214班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131230">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131230" target="_blank">田禾</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131231" /></td>
+					<td><input type="checkbox" id="did_131231" name="did_131231" value="131231"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131231" target="_blank"><span id="courseCode_131231">15DGB002H-R216</span></a></td>
+					<td><a href="/course/coursetime/131231" target="_blank">英语B-216班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131231">1.0</span></td>
+					<td>35</td>
+					<td >29</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131231" target="_blank">孙海洋</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131232"  disabled/></td>
+					<td><input type="checkbox" id="did_131232" name="did_131232" value="131232"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131232" target="_blank"><span id="courseCode_131232">15DGB002H-R217</span></a></td>
+					<td><a href="/course/coursetime/131232" target="_blank">英语B-217班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131232">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131232" target="_blank">陈玮</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131233" /></td>
+					<td><input type="checkbox" id="did_131233" name="did_131233" value="131233"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131233" target="_blank"><span id="courseCode_131233">15DGB002H-R227</span></a></td>
+					<td><a href="/course/coursetime/131233" target="_blank">英语B-227班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131233">1.0</span></td>
+					<td>35</td>
+					<td >28</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131233" target="_blank">孙海洋</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131234"  disabled/></td>
+					<td><input type="checkbox" id="did_131234" name="did_131234" value="131234"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131234" target="_blank"><span id="courseCode_131234">15DGB002H-R228</span></a></td>
+					<td><a href="/course/coursetime/131234" target="_blank">英语B-228班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131234">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131234" target="_blank">孙海洋</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131237"  disabled/></td>
+					<td><input type="checkbox" id="did_131237" name="did_131237" value="131237"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131237" target="_blank"><span id="courseCode_131237">15DGB002H-R239</span></a></td>
+					<td><a href="/course/coursetime/131237" target="_blank">英语B-239班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131237">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131237" target="_blank">田禾</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131240"  disabled/></td>
+					<td><input type="checkbox" id="did_131240" name="did_131240" value="131240"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131240" target="_blank"><span id="courseCode_131240">15DGB002H-R267</span></a></td>
+					<td><a href="/course/coursetime/131240" target="_blank">英语B-267班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131240">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131240" target="_blank">邵春</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131241" /></td>
+					<td><input type="checkbox" id="did_131241" name="did_131241" value="131241"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131241" target="_blank"><span id="courseCode_131241">15DGB002H-R268</span></a></td>
+					<td><a href="/course/coursetime/131241" target="_blank">英语B-268班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131241">1.0</span></td>
+					<td>35</td>
+					<td >26</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131241" target="_blank">邵春</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131242" /></td>
+					<td><input type="checkbox" id="did_131242" name="did_131242" value="131242"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131242" target="_blank"><span id="courseCode_131242">15DGB002H-R65</span></a></td>
+					<td><a href="/course/coursetime/131242" target="_blank">英语B-65班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131242">1.0</span></td>
+					<td>35</td>
+					<td >22</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131242" target="_blank">胡江波</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131243" /></td>
+					<td><input type="checkbox" id="did_131243" name="did_131243" value="131243"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131243" target="_blank"><span id="courseCode_131243">15DGB002H-R74</span></a></td>
+					<td><a href="/course/coursetime/131243" target="_blank">英语B-74班（怀）-高级读写</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131243">1.0</span></td>
+					<td>35</td>
+					<td >12</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131243" target="_blank">胡江波</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131244" /></td>
+					<td><input type="checkbox" id="did_131244" name="did_131244" value="131244"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131244" target="_blank"><span id="courseCode_131244">15DGB002H-S02</span></a></td>
+					<td><a href="/course/coursetime/131244" target="_blank">英语B-02班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131244">1.0</span></td>
+					<td>35</td>
+					<td >17</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131244" target="_blank">Ann Marie Ross</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131245"  disabled/></td>
+					<td><input type="checkbox" id="did_131245" name="did_131245" value="131245"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131245" target="_blank"><span id="courseCode_131245">15DGB002H-S07</span></a></td>
+					<td><a href="/course/coursetime/131245" target="_blank">英语B-07班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131245">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131245" target="_blank">Lewis Sandler</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131246" /></td>
+					<td><input type="checkbox" id="did_131246" name="did_131246" value="131246"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131246" target="_blank"><span id="courseCode_131246">15DGB002H-S08</span></a></td>
+					<td><a href="/course/coursetime/131246" target="_blank">英语B-08班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131246">1.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131246" target="_blank">Lewis Sandler</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131248" /></td>
+					<td><input type="checkbox" id="did_131248" name="did_131248" value="131248"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131248" target="_blank"><span id="courseCode_131248">15DGB002H-S12</span></a></td>
+					<td><a href="/course/coursetime/131248" target="_blank">英语B-12班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131248">1.0</span></td>
+					<td>35</td>
+					<td >11</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131248" target="_blank">Lewis Sandler</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131249"  disabled/></td>
+					<td><input type="checkbox" id="did_131249" name="did_131249" value="131249"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131249" target="_blank"><span id="courseCode_131249">15DGB002H-S15</span></a></td>
+					<td><a href="/course/coursetime/131249" target="_blank">英语B-15班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131249">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131249" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131250"  disabled/></td>
+					<td><input type="checkbox" id="did_131250" name="did_131250" value="131250"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131250" target="_blank"><span id="courseCode_131250">15DGB002H-S19</span></a></td>
+					<td><a href="/course/coursetime/131250" target="_blank">英语B-19班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131250">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131250" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131251"  disabled/></td>
+					<td><input type="checkbox" id="did_131251" name="did_131251" value="131251"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131251" target="_blank"><span id="courseCode_131251">15DGB002H-S201</span></a></td>
+					<td><a href="/course/coursetime/131251" target="_blank">英语B-201班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131251">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131251" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131252"  disabled/></td>
+					<td><input type="checkbox" id="did_131252" name="did_131252" value="131252"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131252" target="_blank"><span id="courseCode_131252">15DGB002H-S202</span></a></td>
+					<td><a href="/course/coursetime/131252" target="_blank">英语B-202班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131252">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131252" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131253"  disabled/></td>
+					<td><input type="checkbox" id="did_131253" name="did_131253" value="131253"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131253" target="_blank"><span id="courseCode_131253">15DGB002H-S21</span></a></td>
+					<td><a href="/course/coursetime/131253" target="_blank">英语B-21班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131253">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131253" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131254" /></td>
+					<td><input type="checkbox" id="did_131254" name="did_131254" value="131254"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131254" target="_blank"><span id="courseCode_131254">15DGB002H-S22</span></a></td>
+					<td><a href="/course/coursetime/131254" target="_blank">英语B-22班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131254">1.0</span></td>
+					<td>35</td>
+					<td >20</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131254" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131255"  disabled/></td>
+					<td><input type="checkbox" id="did_131255" name="did_131255" value="131255"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131255" target="_blank"><span id="courseCode_131255">15DGB002H-S220</span></a></td>
+					<td><a href="/course/coursetime/131255" target="_blank">英语B-220班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131255">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131255" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131256"  disabled/></td>
+					<td><input type="checkbox" id="did_131256" name="did_131256" value="131256"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131256" target="_blank"><span id="courseCode_131256">15DGB002H-S221</span></a></td>
+					<td><a href="/course/coursetime/131256" target="_blank">英语B-221班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131256">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131256" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131257" /></td>
+					<td><input type="checkbox" id="did_131257" name="did_131257" value="131257"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131257" target="_blank"><span id="courseCode_131257">15DGB002H-S222</span></a></td>
+					<td><a href="/course/coursetime/131257" target="_blank">英语B-222班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131257">1.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131257" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131258"  disabled/></td>
+					<td><input type="checkbox" id="did_131258" name="did_131258" value="131258"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131258" target="_blank"><span id="courseCode_131258">15DGB002H-S223</span></a></td>
+					<td><a href="/course/coursetime/131258" target="_blank">英语B-223班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131258">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131258" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131259"  disabled/></td>
+					<td><input type="checkbox" id="did_131259" name="did_131259" value="131259"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131259" target="_blank"><span id="courseCode_131259">15DGB002H-S225</span></a></td>
+					<td><a href="/course/coursetime/131259" target="_blank">英语B-225班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131259">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131259" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131260"  disabled/></td>
+					<td><input type="checkbox" id="did_131260" name="did_131260" value="131260"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131260" target="_blank"><span id="courseCode_131260">15DGB002H-S229</span></a></td>
+					<td><a href="/course/coursetime/131260" target="_blank">英语B-229班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131260">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131260" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131261"  disabled/></td>
+					<td><input type="checkbox" id="did_131261" name="did_131261" value="131261"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131261" target="_blank"><span id="courseCode_131261">15DGB002H-S230</span></a></td>
+					<td><a href="/course/coursetime/131261" target="_blank">英语B-230班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131261">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131261" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131262" /></td>
+					<td><input type="checkbox" id="did_131262" name="did_131262" value="131262"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131262" target="_blank"><span id="courseCode_131262">15DGB002H-S231</span></a></td>
+					<td><a href="/course/coursetime/131262" target="_blank">英语B-231班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131262">1.0</span></td>
+					<td>35</td>
+					<td >18</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131262" target="_blank">Ann Marie Ross</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131263" /></td>
+					<td><input type="checkbox" id="did_131263" name="did_131263" value="131263"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131263" target="_blank"><span id="courseCode_131263">15DGB002H-S236</span></a></td>
+					<td><a href="/course/coursetime/131263" target="_blank">英语B-236班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131263">1.0</span></td>
+					<td>35</td>
+					<td >18</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131263" target="_blank">ROBERT THOMAS TUOHEY</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131264" /></td>
+					<td><input type="checkbox" id="did_131264" name="did_131264" value="131264"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131264" target="_blank"><span id="courseCode_131264">15DGB002H-S240</span></a></td>
+					<td><a href="/course/coursetime/131264" target="_blank">英语B-240班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131264">1.0</span></td>
+					<td>35</td>
+					<td >31</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131264" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131265"  disabled/></td>
+					<td><input type="checkbox" id="did_131265" name="did_131265" value="131265"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131265" target="_blank"><span id="courseCode_131265">15DGB002H-S254</span></a></td>
+					<td><a href="/course/coursetime/131265" target="_blank">英语B-254班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131265">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131265" target="_blank">Ann Marie Ross</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131266"  disabled/></td>
+					<td><input type="checkbox" id="did_131266" name="did_131266" value="131266"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131266" target="_blank"><span id="courseCode_131266">15DGB002H-S255</span></a></td>
+					<td><a href="/course/coursetime/131266" target="_blank">英语B-255班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131266">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131266" target="_blank">Ann Marie Ross</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131267" /></td>
+					<td><input type="checkbox" id="did_131267" name="did_131267" value="131267"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131267" target="_blank"><span id="courseCode_131267">15DGB002H-S256</span></a></td>
+					<td><a href="/course/coursetime/131267" target="_blank">英语B-256班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131267">1.0</span></td>
+					<td>35</td>
+					<td >19</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131267" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131269" /></td>
+					<td><input type="checkbox" id="did_131269" name="did_131269" value="131269"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131269" target="_blank"><span id="courseCode_131269">15DGB002H-S269</span></a></td>
+					<td><a href="/course/coursetime/131269" target="_blank">英语B-269班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131269">1.0</span></td>
+					<td>35</td>
+					<td >19</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131269" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131270" /></td>
+					<td><input type="checkbox" id="did_131270" name="did_131270" value="131270"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131270" target="_blank"><span id="courseCode_131270">15DGB002H-S27</span></a></td>
+					<td><a href="/course/coursetime/131270" target="_blank">英语B-27班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131270">1.0</span></td>
+					<td>35</td>
+					<td >12</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131270" target="_blank">ROBERT THOMAS TUOHEY</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131271" /></td>
+					<td><input type="checkbox" id="did_131271" name="did_131271" value="131271"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131271" target="_blank"><span id="courseCode_131271">15DGB002H-S271</span></a></td>
+					<td><a href="/course/coursetime/131271" target="_blank">英语B-271班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131271">1.0</span></td>
+					<td>35</td>
+					<td >9</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131271" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131272" /></td>
+					<td><input type="checkbox" id="did_131272" name="did_131272" value="131272"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131272" target="_blank"><span id="courseCode_131272">15DGB002H-S272</span></a></td>
+					<td><a href="/course/coursetime/131272" target="_blank">英语B-272班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131272">1.0</span></td>
+					<td>35</td>
+					<td >11</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131272" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131273" /></td>
+					<td><input type="checkbox" id="did_131273" name="did_131273" value="131273"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131273" target="_blank"><span id="courseCode_131273">15DGB002H-S275</span></a></td>
+					<td><a href="/course/coursetime/131273" target="_blank">英语B-275班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131273">1.0</span></td>
+					<td>35</td>
+					<td >32</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131273" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131274"  disabled/></td>
+					<td><input type="checkbox" id="did_131274" name="did_131274" value="131274"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131274" target="_blank"><span id="courseCode_131274">15DGB002H-S278</span></a></td>
+					<td><a href="/course/coursetime/131274" target="_blank">英语B-278班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131274">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131274" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131275"  disabled/></td>
+					<td><input type="checkbox" id="did_131275" name="did_131275" value="131275"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131275" target="_blank"><span id="courseCode_131275">15DGB002H-S279</span></a></td>
+					<td><a href="/course/coursetime/131275" target="_blank">英语B-279班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131275">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131275" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131276" /></td>
+					<td><input type="checkbox" id="did_131276" name="did_131276" value="131276"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131276" target="_blank"><span id="courseCode_131276">15DGB002H-S29</span></a></td>
+					<td><a href="/course/coursetime/131276" target="_blank">英语B-29班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131276">1.0</span></td>
+					<td>35</td>
+					<td >16</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131276" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131277"  disabled/></td>
+					<td><input type="checkbox" id="did_131277" name="did_131277" value="131277"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131277" target="_blank"><span id="courseCode_131277">15DGB002H-S35</span></a></td>
+					<td><a href="/course/coursetime/131277" target="_blank">英语B-35班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131277">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131277" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131278"  disabled/></td>
+					<td><input type="checkbox" id="did_131278" name="did_131278" value="131278"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131278" target="_blank"><span id="courseCode_131278">15DGB002H-S56</span></a></td>
+					<td><a href="/course/coursetime/131278" target="_blank">英语B-56班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131278">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131278" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131279" /></td>
+					<td><input type="checkbox" id="did_131279" name="did_131279" value="131279"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131279" target="_blank"><span id="courseCode_131279">15DGB002H-S58</span></a></td>
+					<td><a href="/course/coursetime/131279" target="_blank">英语B-58班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131279">1.0</span></td>
+					<td>35</td>
+					<td >7</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131279" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131280"  disabled/></td>
+					<td><input type="checkbox" id="did_131280" name="did_131280" value="131280"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131280" target="_blank"><span id="courseCode_131280">15DGB002H-S70</span></a></td>
+					<td><a href="/course/coursetime/131280" target="_blank">英语B-70班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131280">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131280" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131281" /></td>
+					<td><input type="checkbox" id="did_131281" name="did_131281" value="131281"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131281" target="_blank"><span id="courseCode_131281">15DGB002H-S78</span></a></td>
+					<td><a href="/course/coursetime/131281" target="_blank">英语B-78班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131281">1.0</span></td>
+					<td>35</td>
+					<td >25</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131281" target="_blank">ROBERT THOMAS TUOHEY</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131282" /></td>
+					<td><input type="checkbox" id="did_131282" name="did_131282" value="131282"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131282" target="_blank"><span id="courseCode_131282">15DGB002H-S80</span></a></td>
+					<td><a href="/course/coursetime/131282" target="_blank">英语B-80班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131282">1.0</span></td>
+					<td>35</td>
+					<td >17</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131282" target="_blank">Gene George Earle</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131283"  disabled/></td>
+					<td><input type="checkbox" id="did_131283" name="did_131283" value="131283"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131283" target="_blank"><span id="courseCode_131283">15DGB002H-S82</span></a></td>
+					<td><a href="/course/coursetime/131283" target="_blank">英语B-82班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131283">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131283" target="_blank">ROBERT THOMAS TUOHEY</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131284"  disabled/></td>
+					<td><input type="checkbox" id="did_131284" name="did_131284" value="131284"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131284" target="_blank"><span id="courseCode_131284">15DGB002H-S89</span></a></td>
+					<td><a href="/course/coursetime/131284" target="_blank">英语B-89班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131284">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131284" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131285"  disabled/></td>
+					<td><input type="checkbox" id="did_131285" name="did_131285" value="131285"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131285" target="_blank"><span id="courseCode_131285">15DGB002H-S91</span></a></td>
+					<td><a href="/course/coursetime/131285" target="_blank">英语B-91班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131285">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131285" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131286"  disabled/></td>
+					<td><input type="checkbox" id="did_131286" name="did_131286" value="131286"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131286" target="_blank"><span id="courseCode_131286">15DGB002H-S92</span></a></td>
+					<td><a href="/course/coursetime/131286" target="_blank">英语B-92班（怀）-高级口语</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131286">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131286" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131287" /></td>
+					<td><input type="checkbox" id="did_131287" name="did_131287" value="131287"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131287" target="_blank"><span id="courseCode_131287">15DGB002H-W05</span></a></td>
+					<td><a href="/course/coursetime/131287" target="_blank">英语B-05班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131287">1.0</span></td>
+					<td>35</td>
+					<td >16</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131287" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131288" /></td>
+					<td><input type="checkbox" id="did_131288" name="did_131288" value="131288"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131288" target="_blank"><span id="courseCode_131288">15DGB002H-W06</span></a></td>
+					<td><a href="/course/coursetime/131288" target="_blank">英语B-06班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131288">1.0</span></td>
+					<td>35</td>
+					<td >19</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131288" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131289" /></td>
+					<td><input type="checkbox" id="did_131289" name="did_131289" value="131289"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131289" target="_blank"><span id="courseCode_131289">15DGB002H-W09</span></a></td>
+					<td><a href="/course/coursetime/131289" target="_blank">英语B-09班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131289">1.0</span></td>
+					<td>35</td>
+					<td >23</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131289" target="_blank">孙迎晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131290"  disabled/></td>
+					<td><input type="checkbox" id="did_131290" name="did_131290" value="131290"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131290" target="_blank"><span id="courseCode_131290">15DGB002H-W13</span></a></td>
+					<td><a href="/course/coursetime/131290" target="_blank">英语B-13班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131290">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131290" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131291"  disabled/></td>
+					<td><input type="checkbox" id="did_131291" name="did_131291" value="131291"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131291" target="_blank"><span id="courseCode_131291">15DGB002H-W14</span></a></td>
+					<td><a href="/course/coursetime/131291" target="_blank">英语B-14班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131291">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131291" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131292"  disabled/></td>
+					<td><input type="checkbox" id="did_131292" name="did_131292" value="131292"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131292" target="_blank"><span id="courseCode_131292">15DGB002H-W17</span></a></td>
+					<td><a href="/course/coursetime/131292" target="_blank">英语B-17班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131292">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131292" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131293"  disabled/></td>
+					<td><input type="checkbox" id="did_131293" name="did_131293" value="131293"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131293" target="_blank"><span id="courseCode_131293">15DGB002H-W18</span></a></td>
+					<td><a href="/course/coursetime/131293" target="_blank">英语B-18班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131293">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131293" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131294"  disabled/></td>
+					<td><input type="checkbox" id="did_131294" name="did_131294" value="131294"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131294" target="_blank"><span id="courseCode_131294">15DGB002H-W203</span></a></td>
+					<td><a href="/course/coursetime/131294" target="_blank">英语B-203班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131294">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131294" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131295"  disabled/></td>
+					<td><input type="checkbox" id="did_131295" name="did_131295" value="131295"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131295" target="_blank"><span id="courseCode_131295">15DGB002H-W204</span></a></td>
+					<td><a href="/course/coursetime/131295" target="_blank">英语B-204班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131295">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131295" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131296"  disabled/></td>
+					<td><input type="checkbox" id="did_131296" name="did_131296" value="131296"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131296" target="_blank"><span id="courseCode_131296">15DGB002H-W209</span></a></td>
+					<td><a href="/course/coursetime/131296" target="_blank">英语B-209班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131296">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131296" target="_blank">Trisha Angelica Malanyaon</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131297"  disabled/></td>
+					<td><input type="checkbox" id="did_131297" name="did_131297" value="131297"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131297" target="_blank"><span id="courseCode_131297">15DGB002H-W211</span></a></td>
+					<td><a href="/course/coursetime/131297" target="_blank">英语B-211班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131297">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131297" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131298"  disabled/></td>
+					<td><input type="checkbox" id="did_131298" name="did_131298" value="131298"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131298" target="_blank"><span id="courseCode_131298">15DGB002H-W212</span></a></td>
+					<td><a href="/course/coursetime/131298" target="_blank">英语B-212班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131298">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131298" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131299"  disabled/></td>
+					<td><input type="checkbox" id="did_131299" name="did_131299" value="131299"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131299" target="_blank"><span id="courseCode_131299">15DGB002H-W226</span></a></td>
+					<td><a href="/course/coursetime/131299" target="_blank">英语B-226班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131299">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131299" target="_blank">ROBERT THOMAS TUOHEY</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131235" /></td>
+					<td><input type="checkbox" id="did_131235" name="did_131235" value="131235"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131235" target="_blank"><span id="courseCode_131235">15DGB002H-W233</span></a></td>
+					<td><a href="/course/coursetime/131235" target="_blank">英语B-233班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131235">1.0</span></td>
+					<td>35</td>
+					<td >2</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131235" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131236" /></td>
+					<td><input type="checkbox" id="did_131236" name="did_131236" value="131236"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131236" target="_blank"><span id="courseCode_131236">15DGB002H-W234</span></a></td>
+					<td><a href="/course/coursetime/131236" target="_blank">英语B-234班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131236">1.0</span></td>
+					<td>35</td>
+					<td >3</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131236" target="_blank">张红晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131300"  disabled/></td>
+					<td><input type="checkbox" id="did_131300" name="did_131300" value="131300"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131300" target="_blank"><span id="courseCode_131300">15DGB002H-W235</span></a></td>
+					<td><a href="/course/coursetime/131300" target="_blank">英语B-235班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131300">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131300" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131301" /></td>
+					<td><input type="checkbox" id="did_131301" name="did_131301" value="131301"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131301" target="_blank"><span id="courseCode_131301">15DGB002H-W241</span></a></td>
+					<td><a href="/course/coursetime/131301" target="_blank">英语B-241班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131301">1.0</span></td>
+					<td>35</td>
+					<td >29</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131301" target="_blank">冉继军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131302" /></td>
+					<td><input type="checkbox" id="did_131302" name="did_131302" value="131302"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131302" target="_blank"><span id="courseCode_131302">15DGB002H-W242</span></a></td>
+					<td><a href="/course/coursetime/131302" target="_blank">英语B-242班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131302">1.0</span></td>
+					<td>35</td>
+					<td >20</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131302" target="_blank">冉继军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131303" /></td>
+					<td><input type="checkbox" id="did_131303" name="did_131303" value="131303"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131303" target="_blank"><span id="courseCode_131303">15DGB002H-W245</span></a></td>
+					<td><a href="/course/coursetime/131303" target="_blank">英语B-245班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131303">1.0</span></td>
+					<td>35</td>
+					<td >18</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131303" target="_blank">孙丽冰</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131304"  disabled/></td>
+					<td><input type="checkbox" id="did_131304" name="did_131304" value="131304"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131304" target="_blank"><span id="courseCode_131304">15DGB002H-W246</span></a></td>
+					<td><a href="/course/coursetime/131304" target="_blank">英语B-246班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131304">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131304" target="_blank">孙丽冰</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131305"  disabled/></td>
+					<td><input type="checkbox" id="did_131305" name="did_131305" value="131305"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131305" target="_blank"><span id="courseCode_131305">15DGB002H-W247</span></a></td>
+					<td><a href="/course/coursetime/131305" target="_blank">英语B-247班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131305">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131305" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131306" /></td>
+					<td><input type="checkbox" id="did_131306" name="did_131306" value="131306"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131306" target="_blank"><span id="courseCode_131306">15DGB002H-W249</span></a></td>
+					<td><a href="/course/coursetime/131306" target="_blank">英语B-249班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131306">1.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131306" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131307" /></td>
+					<td><input type="checkbox" id="did_131307" name="did_131307" value="131307"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131307" target="_blank"><span id="courseCode_131307">15DGB002H-W251</span></a></td>
+					<td><a href="/course/coursetime/131307" target="_blank">英语B-251班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131307">1.0</span></td>
+					<td>35</td>
+					<td >6</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131307" target="_blank">LORNA MARGARET SNUGGS</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131309" /></td>
+					<td><input type="checkbox" id="did_131309" name="did_131309" value="131309"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131309" target="_blank"><span id="courseCode_131309">15DGB002H-W261</span></a></td>
+					<td><a href="/course/coursetime/131309" target="_blank">英语B-261班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131309">1.0</span></td>
+					<td>35</td>
+					<td >11</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131309" target="_blank">许宏晨</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131310" /></td>
+					<td><input type="checkbox" id="did_131310" name="did_131310" value="131310"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131310" target="_blank"><span id="courseCode_131310">15DGB002H-W262</span></a></td>
+					<td><a href="/course/coursetime/131310" target="_blank">英语B-262班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131310">1.0</span></td>
+					<td>35</td>
+					<td >17</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131310" target="_blank">许宏晨</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131311" /></td>
+					<td><input type="checkbox" id="did_131311" name="did_131311" value="131311"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131311" target="_blank"><span id="courseCode_131311">15DGB002H-W263</span></a></td>
+					<td><a href="/course/coursetime/131311" target="_blank">英语B-263班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131311">1.0</span></td>
+					<td>35</td>
+					<td >12</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131311" target="_blank">冉继军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131314"  disabled/></td>
+					<td><input type="checkbox" id="did_131314" name="did_131314" value="131314"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131314" target="_blank"><span id="courseCode_131314">15DGB002H-W270</span></a></td>
+					<td><a href="/course/coursetime/131314" target="_blank">英语B-270班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131314">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131314" target="_blank">吴江梅</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131315" /></td>
+					<td><input type="checkbox" id="did_131315" name="did_131315" value="131315"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131315" target="_blank"><span id="courseCode_131315">15DGB002H-W273</span></a></td>
+					<td><a href="/course/coursetime/131315" target="_blank">英语B-273班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131315">1.0</span></td>
+					<td>35</td>
+					<td >12</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131315" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131316" /></td>
+					<td><input type="checkbox" id="did_131316" name="did_131316" value="131316"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131316" target="_blank"><span id="courseCode_131316">15DGB002H-W274</span></a></td>
+					<td><a href="/course/coursetime/131316" target="_blank">英语B-274班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131316">1.0</span></td>
+					<td>35</td>
+					<td >26</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131316" target="_blank">Lauren David</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131317"  disabled/></td>
+					<td><input type="checkbox" id="did_131317" name="did_131317" value="131317"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131317" target="_blank"><span id="courseCode_131317">15DGB002H-W28</span></a></td>
+					<td><a href="/course/coursetime/131317" target="_blank">英语B-28班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131317">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131317" target="_blank">吴江梅</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131318" /></td>
+					<td><input type="checkbox" id="did_131318" name="did_131318" value="131318"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131318" target="_blank"><span id="courseCode_131318">15DGB002H-W30</span></a></td>
+					<td><a href="/course/coursetime/131318" target="_blank">英语B-30班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131318">1.0</span></td>
+					<td>35</td>
+					<td >5</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131318" target="_blank">Gene George Earle</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131320"  disabled/></td>
+					<td><input type="checkbox" id="did_131320" name="did_131320" value="131320"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131320" target="_blank"><span id="courseCode_131320">15DGB002H-W32</span></a></td>
+					<td><a href="/course/coursetime/131320" target="_blank">英语B-32班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131320">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131320" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131321"  disabled/></td>
+					<td><input type="checkbox" id="did_131321" name="did_131321" value="131321"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131321" target="_blank"><span id="courseCode_131321">15DGB002H-W33</span></a></td>
+					<td><a href="/course/coursetime/131321" target="_blank">英语B-33班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131321">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131321" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131322"  disabled/></td>
+					<td><input type="checkbox" id="did_131322" name="did_131322" value="131322"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131322" target="_blank"><span id="courseCode_131322">15DGB002H-W34</span></a></td>
+					<td><a href="/course/coursetime/131322" target="_blank">英语B-34班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131322">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131322" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131323" /></td>
+					<td><input type="checkbox" id="did_131323" name="did_131323" value="131323"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131323" target="_blank"><span id="courseCode_131323">15DGB002H-W39</span></a></td>
+					<td><a href="/course/coursetime/131323" target="_blank">英语B-39班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131323">1.0</span></td>
+					<td>35</td>
+					<td >33</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131323" target="_blank">Gene George Earle</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131324"  disabled/></td>
+					<td><input type="checkbox" id="did_131324" name="did_131324" value="131324"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131324" target="_blank"><span id="courseCode_131324">15DGB002H-W41 	</span></a></td>
+					<td><a href="/course/coursetime/131324" target="_blank">英语B-41班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131324">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131324" target="_blank">孙迎晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131325"  disabled/></td>
+					<td><input type="checkbox" id="did_131325" name="did_131325" value="131325"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131325" target="_blank"><span id="courseCode_131325">15DGB002H-W42</span></a></td>
+					<td><a href="/course/coursetime/131325" target="_blank">英语B-42班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131325">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131325" target="_blank">孙迎晖</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131326"  disabled/></td>
+					<td><input type="checkbox" id="did_131326" name="did_131326" value="131326"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131326" target="_blank"><span id="courseCode_131326">15DGB002H-W44</span></a></td>
+					<td><a href="/course/coursetime/131326" target="_blank">英语B-44班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131326">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131326" target="_blank">Carl James Hutchinson</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131329"  disabled/></td>
+					<td><input type="checkbox" id="did_131329" name="did_131329" value="131329"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131329" target="_blank"><span id="courseCode_131329">15DGB002H-W47</span></a></td>
+					<td><a href="/course/coursetime/131329" target="_blank">英语B-47班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131329">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131329" target="_blank">吴江梅</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131330"  disabled/></td>
+					<td><input type="checkbox" id="did_131330" name="did_131330" value="131330"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131330" target="_blank"><span id="courseCode_131330">15DGB002H-W48</span></a></td>
+					<td><a href="/course/coursetime/131330" target="_blank">英语B-48班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131330">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131330" target="_blank">吴江梅</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131331" /></td>
+					<td><input type="checkbox" id="did_131331" name="did_131331" value="131331"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131331" target="_blank"><span id="courseCode_131331">15DGB002H-W49</span></a></td>
+					<td><a href="/course/coursetime/131331" target="_blank">英语B-49班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131331">1.0</span></td>
+					<td>35</td>
+					<td >17</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131331" target="_blank">Gene George Earle</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131333" /></td>
+					<td><input type="checkbox" id="did_131333" name="did_131333" value="131333"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131333" target="_blank"><span id="courseCode_131333">15DGB002H-W57</span></a></td>
+					<td><a href="/course/coursetime/131333" target="_blank">英语B-57班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131333">1.0</span></td>
+					<td>35</td>
+					<td >1</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131333" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131334" /></td>
+					<td><input type="checkbox" id="did_131334" name="did_131334" value="131334"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131334" target="_blank"><span id="courseCode_131334">15DGB002H-W62</span></a></td>
+					<td><a href="/course/coursetime/131334" target="_blank">英语B-62班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131334">1.0</span></td>
+					<td>35</td>
+					<td >11</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131334" target="_blank">Philip John Docherty</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131335" /></td>
+					<td><input type="checkbox" id="did_131335" name="did_131335" value="131335"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131335" target="_blank"><span id="courseCode_131335">15DGB002H-W81</span></a></td>
+					<td><a href="/course/coursetime/131335" target="_blank">英语B-81班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131335">1.0</span></td>
+					<td>35</td>
+					<td >25</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131335" target="_blank">Gene George Earle</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131336"  disabled/></td>
+					<td><input type="checkbox" id="did_131336" name="did_131336" value="131336"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131336" target="_blank"><span id="courseCode_131336">15DGB002H-W86</span></a></td>
+					<td><a href="/course/coursetime/131336" target="_blank">英语B-86班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131336">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131336" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131337"  disabled/></td>
+					<td><input type="checkbox" id="did_131337" name="did_131337" value="131337"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131337" target="_blank"><span id="courseCode_131337">15DGB002H-W88</span></a></td>
+					<td><a href="/course/coursetime/131337" target="_blank">英语B-88班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131337">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131337" target="_blank">Hawkeye</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131338"  disabled/></td>
+					<td><input type="checkbox" id="did_131338" name="did_131338" value="131338"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/131338" target="_blank"><span id="courseCode_131338">15DGB002H-W90</span></a></td>
+					<td><a href="/course/coursetime/131338" target="_blank">英语B-90班（怀）-高级写作</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_131338">1.0</span></td>
+					<td>35</td>
+					<td class="m-font-red">35</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131338" target="_blank">Daniel Elias Concepcion</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131423"  disabled/></td>
+					<td><input type="checkbox" id="did_131423" name="did_131423" value="131423"  disabled/></td>
+					<td><a href="/course/courseplan/131423" target="_blank"><span id="courseCode_131423">15MGX001H-01</span></a></td>
+					<td><a href="/course/coursetime/131423" target="_blank">口译技能训练-01班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131423">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131423" target="_blank">彭宇</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131424"  disabled/></td>
+					<td><input type="checkbox" id="did_131424" name="did_131424" value="131424"  disabled/></td>
+					<td><a href="/course/courseplan/131424" target="_blank"><span id="courseCode_131424">15MGX001H-02</span></a></td>
+					<td><a href="/course/coursetime/131424" target="_blank">口译技能训练-02班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131424">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131424" target="_blank">彭宇</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131425"  disabled/></td>
+					<td><input type="checkbox" id="did_131425" name="did_131425" value="131425"  disabled/></td>
+					<td><a href="/course/courseplan/131425" target="_blank"><span id="courseCode_131425">15MGX003H-01</span></a></td>
+					<td><a href="/course/coursetime/131425" target="_blank">学术交流英语口语-01班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131425">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131425" target="_blank">刘彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131426"  disabled/></td>
+					<td><input type="checkbox" id="did_131426" name="did_131426" value="131426"  disabled/></td>
+					<td><a href="/course/courseplan/131426" target="_blank"><span id="courseCode_131426">15MGX003H-02</span></a></td>
+					<td><a href="/course/coursetime/131426" target="_blank">学术交流英语口语-02班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131426">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131426" target="_blank">刘彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132619" /></td>
+					<td><input type="checkbox" id="did_132619" name="did_132619" value="132619"  disabled/></td>
+					<td><a href="/course/courseplan/132619" target="_blank"><span id="courseCode_132619">15MGX004H-01</span></a></td>
+					<td><a href="/course/coursetime/132619" target="_blank">基础学术论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132619">1.0</span></td>
+					<td>200</td>
+					<td >99</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/132619" target="_blank">Torsten Jülich</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132620" /></td>
+					<td><input type="checkbox" id="did_132620" name="did_132620" value="132620"  disabled/></td>
+					<td><a href="/course/courseplan/132620" target="_blank"><span id="courseCode_132620">15MGX004H-02</span></a></td>
+					<td><a href="/course/coursetime/132620" target="_blank">基础学术论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132620">1.0</span></td>
+					<td>200</td>
+					<td >111</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/132620" target="_blank">Torsten Jülich</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131429"  disabled/></td>
+					<td><input type="checkbox" id="did_131429" name="did_131429" value="131429"  disabled/></td>
+					<td><a href="/course/courseplan/131429" target="_blank"><span id="courseCode_131429">15MGX005H-01</span></a></td>
+					<td><a href="/course/coursetime/131429" target="_blank">国际交流英语听力-01班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131429">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131429" target="_blank">彭工</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131430"  disabled/></td>
+					<td><input type="checkbox" id="did_131430" name="did_131430" value="131430"  disabled/></td>
+					<td><a href="/course/courseplan/131430" target="_blank"><span id="courseCode_131430">15MGX005H-02</span></a></td>
+					<td><a href="/course/coursetime/131430" target="_blank">国际交流英语听力-02班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131430">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131430" target="_blank">彭工</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131433"  disabled/></td>
+					<td><input type="checkbox" id="did_131433" name="did_131433" value="131433"  disabled/></td>
+					<td><a href="/course/courseplan/131433" target="_blank"><span id="courseCode_131433">15MGX007H-01</span></a></td>
+					<td><a href="/course/coursetime/131433" target="_blank">高级语音训练-01班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131433">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131433" target="_blank">刘彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131434"  disabled/></td>
+					<td><input type="checkbox" id="did_131434" name="did_131434" value="131434"  disabled/></td>
+					<td><a href="/course/courseplan/131434" target="_blank"><span id="courseCode_131434">15MGX007H-02</span></a></td>
+					<td><a href="/course/coursetime/131434" target="_blank">高级语音训练-02班</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131434">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/131434" target="_blank">刘彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131435"  disabled/></td>
+					<td><input type="checkbox" id="did_131435" name="did_131435" value="131435"  disabled/></td>
+					<td><a href="/course/courseplan/131435" target="_blank"><span id="courseCode_131435">15MGX008H-01</span></a></td>
+					<td><a href="/course/coursetime/131435" target="_blank">英美报刊选读-01班（东区）</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131435">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131435" target="_blank">李晓棣</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131436"  disabled/></td>
+					<td><input type="checkbox" id="did_131436" name="did_131436" value="131436"  disabled/></td>
+					<td><a href="/course/courseplan/131436" target="_blank"><span id="courseCode_131436">15MGX008H-02</span></a></td>
+					<td><a href="/course/coursetime/131436" target="_blank">英美报刊选读-02班（西区）</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_131436">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131436" target="_blank">李晓棣</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131439"  disabled/></td>
+					<td><input type="checkbox" id="did_131439" name="did_131439" value="131439"  disabled/></td>
+					<td><a href="/course/courseplan/131439" target="_blank"><span id="courseCode_131439">15MGX012H</span></a></td>
+					<td><a href="/course/coursetime/131439" target="_blank">德语（二外）</a></td>
+					<td>90</td>
+					<td><span id="courseCredit_131439">2.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131439" target="_blank">沈永前</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131440"  disabled/></td>
+					<td><input type="checkbox" id="did_131440" name="did_131440" value="131440"  disabled/></td>
+					<td><a href="/course/courseplan/131440" target="_blank"><span id="courseCode_131440">15MGX013H-01</span></a></td>
+					<td><a href="/course/coursetime/131440" target="_blank">日语（二外）（初级）</a></td>
+					<td>60</td>
+					<td><span id="courseCredit_131440">2.0</span></td>
+					<td>29</td>
+					<td class="m-font-red">29</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131440" target="_blank">-</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="131441"  disabled/></td>
+					<td><input type="checkbox" id="did_131441" name="did_131441" value="131441"  disabled/></td>
+					<td><a href="/course/courseplan/131441" target="_blank"><span id="courseCode_131441">15MGX013H-02</span></a></td>
+					<td><a href="/course/coursetime/131441" target="_blank">日语（二外）（初级）</a></td>
+					<td>60</td>
+					<td><span id="courseCredit_131441">2.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/131441" target="_blank">-</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132039"  disabled/></td>
+					<td><input type="checkbox" id="did_132039" name="did_132039" value="132039"  disabled/></td>
+					<td><a href="/course/courseplan/132039" target="_blank"><span id="courseCode_132039">15MGX018H-01</span></a></td>
+					<td><a href="/course/coursetime/132039" target="_blank">英文科技论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132039">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/132039" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132040"  disabled/></td>
+					<td><input type="checkbox" id="did_132040" name="did_132040" value="132040"  disabled/></td>
+					<td><a href="/course/courseplan/132040" target="_blank"><span id="courseCode_132040">15MGX018H-02</span></a></td>
+					<td><a href="/course/coursetime/132040" target="_blank">英文科技论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132040">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/132040" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132041"  disabled/></td>
+					<td><input type="checkbox" id="did_132041" name="did_132041" value="132041"  disabled/></td>
+					<td><a href="/course/courseplan/132041" target="_blank"><span id="courseCode_132041">15MGX018H-03</span></a></td>
+					<td><a href="/course/coursetime/132041" target="_blank">英文科技论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132041">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/132041" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="132042"  disabled/></td>
+					<td><input type="checkbox" id="did_132042" name="did_132042" value="132042"  disabled/></td>
+					<td><a href="/course/courseplan/132042" target="_blank"><span id="courseCode_132042">15MGX018H-04</span></a></td>
+					<td><a href="/course/coursetime/132042" target="_blank">英文科技论文写作</a></td>
+					<td>32</td>
+					<td><span id="courseCredit_132042">1.0</span></td>
+					<td>34</td>
+					<td class="m-font-red">34</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/132042" target="_blank">RAYMOND SERAPHIM PORTER</a></td>
+                </tr>
+			</tbody>
+ 		</table><!--//table:end-->
+ 		<div class="form-actions">
+		    <button type="submit" name="sb" value="y" class="btn btn-primary">确定提交选课</button>
+		    <button type="button" id="cancelBtn" name="sb" value="y" class="btn btn-primary">取消选课</button>
+		</div>
+ 		</form>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#regfrm select").change(function() {
+		var v = $(this).val();
+		var arr = v.split("__");
+		var id = arr[0];
+		var code = arr[1];
+		var xf = arr[2];
+		var courseType = arr[3];
+		var f = arr[4];
+		$("#courseCode_"+id).html(code);
+		$("#courseCredit_"+id).html(xf);
+		if (f == '1') {
+			$("#did_"+id).attr("disabled",false);
+		} else {
+			$("#did_"+id).attr("checked",false);
+			$("#did_"+id).attr("disabled",true);
+		}
+	});
+	$("#cancelBtn").click(function(){
+		window.location = "/courseManage/main?s=05d5cfef-1c54-4863-8716-f1dc0863e41e";
+	});
+	$("#regfrm").validate({
+		rules: {
+			sids: {
+				required: true,
+				minlength: 1
+			}
+		},
+		messages: {
+			sids: "请至少选择一门课"
+		},
+		submitHandler: function(form){
+			top.$.jBox.confirm("确认提交吗？","系统提示",function(v,h,f){
+				if(v=="ok"){
+					loading('正在提交，请稍等...');
+					form.submit();
+				}
+			},{buttonsFocus:1});
+			top.$('.jbox-body .jbox-icon').css('top','55px');
+		},
+		errorPlacement: function(error, element) {
+			top.$.jBox.tip($(error).text());
+		}
+	});
+});
+</script>
+
+		</div><!--//container-fluid:end-->
+	</div><!--//main-content:end-->
+	<div id="footer">
+            <div class="container-fluid">
+              2013 &copy; 中国科学院大学，网络信息中心.</div>
+        </div><!--//footer:end--></body>
+</html>
