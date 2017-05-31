@@ -321,7 +321,7 @@
 		<p>选课有效时间段：
 		2017-06-01 12:30:00  至  2017-06-09 12:30:00</p>
 	</div>
-		<form id="regfrm" name="regfrm" action="/courseManage/savePhone?s=f202b061-1cca-44bd-b69b-d3ad87922c6c" class="form-horizontal" method="post">
+		<form id="regfrm" name="regfrm" action="/courseManage/savePhone?s=f5a08e16-ff10-44ba-8889-2e3db91d8bab" class="form-horizontal" method="post">
 			<p><strong class="m-font-red">为了给您提供更好的服务，需要您提供固定电话、手机（至少一项不为空）填入以下栏目，该信息为必填项！</strong></p>
 			<div class="">
 			    	固定电话：
@@ -332,7 +332,7 @@
 			</div>
 		</form>
 	<div>为了提高您的选课效率，建议您首先选择院系以便过滤出需要选择的课程列表！ 以下院系分类前代码即开课编号第一位。</div>
- 		<form id="regfrm2" name="regfrm2" action="/courseManage/selectCourse?s=f202b061-1cca-44bd-b69b-d3ad87922c6c" class="form-horizontal" method="post">
+ 		<form id="regfrm2" name="regfrm2" action="/courseManage/selectCourse?s=f5a08e16-ff10-44ba-8889-2e3db91d8bab" class="form-horizontal" method="post">
  		<div class="row-fluid">
 						<div class="span2"><input type="checkbox" name="deptIds" id="id_910" value="910"/> <label for="id_910">01-数学学院</label></div>
 						<div class="span2"><input type="checkbox" name="deptIds" id="id_911" value="911"/> <label for="id_911">02-物理学院</label></div>
@@ -423,7 +423,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#addBachelorCourse").click(function() {
-		window.location="/courseManage/selectBCourse?s=f202b061-1cca-44bd-b69b-d3ad87922c6c";
+		window.location="/courseManage/selectBCourse?s=f5a08e16-ff10-44ba-8889-2e3db91d8bab";
 	});
 	$("#regfrm").validate({
 		groups: {
@@ -478,7 +478,7 @@ $(document).ready(function() {
 function del(courseId) {
 	top.$.jBox.confirm('确认要删除吗？','系统提示',function(v,h,f){
 		if(v=="ok"){
-			window.location = "/courseManage/del/" + courseId + "?s=f202b061-1cca-44bd-b69b-d3ad87922c6c";
+			window.location = "/courseManage/del/" + courseId + "?s=f5a08e16-ff10-44ba-8889-2e3db91d8bab";
 		}
 	},{buttonsFocus:1});
 	top.$('.jbox-body .jbox-icon').css('top','55px');

@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60e9f6dd-1467-478b-bfbe-d25980b7bf21" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/AUTHORS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/CMakeLists.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/Dockerfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/INSTALL.GIT.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/NEWS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/android/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/android/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/android/jni/Android.mk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/android/jni/Application.mk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/apitypes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/baseapi.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/baseapi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/capi.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/capi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/pdfrenderer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/renderer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/renderer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/api/tesseractmain.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/dotproductavx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/dotproductavx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/dotproductsse.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/dotproductsse.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/simddetect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/arch/simddetect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/autogen.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/adaptions.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/applybox.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/control.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/control.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/docqual.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/docqual.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/equationdetect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/equationdetect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/fixspace.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/fixspace.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/fixxht.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/linerec.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/ltrresultiterator.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/ltrresultiterator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/mutableiterator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/osdetect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/osdetect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/output.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/output.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pageiterator.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pageiterator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pagesegmain.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pagewalk.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/par_control.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/paragraphs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/paragraphs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/paragraphs_internal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/paramsd.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/paramsd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pgedit.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/pgedit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/recogtraining.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/reject.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/reject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/resultiterator.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/resultiterator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/superscript.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessbox.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessbox.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessedit.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessedit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tesseractclass.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tesseractclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessvars.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tessvars.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/tfacepp.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/thresholder.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/thresholder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/werdit.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccmain/werdit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blamer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blamer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blckerr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blobbox.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blobbox.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blobs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blobs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blread.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/blread.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/boxread.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/boxread.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/boxword.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/boxword.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ccstruct.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ccstruct.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/coutln.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/coutln.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/crakedge.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/debugpixa.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/detlinefit.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/detlinefit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/dppoint.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/dppoint.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/fontinfo.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/fontinfo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/genblob.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/genblob.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/hpdsizes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/imagedata.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/imagedata.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ipoints.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/linlsq.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/linlsq.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/matrix.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/matrix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/mod128.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/mod128.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/normalis.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/normalis.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrblock.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrblock.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrpara.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrpara.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrrow.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ocrrow.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/otsuthr.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/otsuthr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/pageres.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/pageres.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/params_training_featdef.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/params_training_featdef.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/pdblock.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/pdblock.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/points.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/points.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/polyaprx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/polyaprx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/polyblk.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/polyblk.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/publictypes.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/publictypes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/quadlsq.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/quadlsq.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/quadratc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/quspline.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/quspline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ratngs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/ratngs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/rect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/rect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/rejctmap.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/rejctmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/seam.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/seam.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/split.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/split.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/statistc.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/statistc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/stepblob.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/stepblob.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/vecfuncs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/vecfuncs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/werd.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccstruct/werd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ambigs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ambigs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/basedir.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/basedir.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/bits16.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/bits16.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/bitvector.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/bitvector.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ccutil.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ccutil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/clst.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/clst.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/doubleptr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/elst.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/elst.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/elst2.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/elst2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/errcode.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/errcode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/fileerr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/genericheap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/genericvector.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/globaloc.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/globaloc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/helpers.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/host.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/indexmapbidi.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/indexmapbidi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/kdpair.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/lsterr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/mainblk.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/memry.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/memry.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ndminx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/nwmain.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/object_cache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/ocrclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/params.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/params.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/platform.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/qrsequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/scanutils.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/scanutils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/serialis.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/serialis.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/sorthelper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/stderr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/strngs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/strngs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/tesscallback.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/tessdatamanager.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/tessdatamanager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/tprintf.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/tprintf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unichar.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unichar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharcompress.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharcompress.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharmap.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharset.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicharset.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicity_table.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicodes.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/unicodes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/universalambigs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/ccutil/universalambigs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/adaptive.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/adaptive.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/adaptmatch.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/blobclass.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/blobclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/classify.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/classify.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/cluster.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/cluster.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/clusttool.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/clusttool.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/cutoffs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/cutoffs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/errorcounter.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/errorcounter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/featdefs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/featdefs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/float2int.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/float2int.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/fpoint.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/fpoint.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturedist.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturedist.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturemap.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturemap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturespace.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfeaturespace.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intfx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intmatcher.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intmatcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intproto.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/intproto.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/kdtree.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/kdtree.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mastertrainer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mastertrainer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mf.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfdefs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfdefs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfoutline.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfoutline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/mfx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/normfeat.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/normfeat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/normmatch.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/normmatch.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/ocrfeatures.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/ocrfeatures.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/outfeat.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/outfeat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/picofeat.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/picofeat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/protos.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/protos.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/sampleiterator.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/sampleiterator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/shapeclassifier.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/shapeclassifier.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/shapetable.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/shapetable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/tessclassifier.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/tessclassifier.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/trainingsample.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/trainingsample.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/trainingsampleset.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/classify/trainingsampleset.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/BuildFunctions.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/Configure.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/FindICU.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/SourceGroups.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/templates/TesseractConfig-version.cmake.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cmake/templates/TesseractConfig.cmake.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/configure.ac" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/contrib/genlangdata.pl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/contrib/tesseract-c_api-demo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/contrib/tesseract.completion" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/contrib/traineddata.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cppan.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/bitvec.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/bitvec.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/callcpp.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/callcpp.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/const.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/cutil.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/cutil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/cutil_class.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/cutil_class.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/danerror.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/danerror.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/efio.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/efio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/emalloc.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/emalloc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/freelist.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/freelist.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/globals.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/oldlist.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/oldlist.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/structures.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/cutil/structures.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/context.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dawg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dawg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dawg_cache.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dawg_cache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dict.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/dict.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/hyphen.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/matchdefs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/permdawg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/stopper.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/stopper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/trie.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/dict/trie.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/Doxyfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/ambiguous_words.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/ambiguous_words.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/ambiguous_words.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/ambiguous_words.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/cntraining.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/cntraining.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/cntraining.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/cntraining.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/combine_tessdata.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/combine_tessdata.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/combine_tessdata.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/combine_tessdata.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/dawg2wordlist.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/dawg2wordlist.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/dawg2wordlist.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/dawg2wordlist.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/generate_manpages.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/mftraining.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/mftraining.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/mftraining.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/mftraining.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/shapeclustering.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/shapeclustering.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/shapeclustering.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/shapeclustering.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/tesseract.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/tesseract.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/tesseract.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/tesseract.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/tesseract.bib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharambigs.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharambigs.5.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharambigs.5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharambigs.5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset.5.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset.5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset.5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset_extractor.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset_extractor.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset_extractor.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/unicharset_extractor.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/wordlist2dawg.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/wordlist2dawg.1.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/wordlist2dawg.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/doc/wordlist2dawg.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/docker-compose.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/Manifest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ScrollView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/events/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/events/SVEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/events/SVEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/events/SVEventType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVAbstractMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVCheckboxMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVEmptyMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVImageHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVMenuBar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVPopupMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVSubMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/java/com/google/scrollview/ui/SVWindow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/convolve.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/convolve.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/ctc.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/ctc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/fullyconnected.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/fullyconnected.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/functions.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/functions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/input.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/input.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstm.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstmrecognizer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstmrecognizer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstmtrainer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/lstmtrainer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/maxpool.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/maxpool.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/network.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/network.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/networkbuilder.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/networkbuilder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/networkio.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/networkio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/networkscratch.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/parallel.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/parallel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/plumbing.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/plumbing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/recodebeam.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/recodebeam.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/reconfig.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/reconfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/reversed.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/reversed.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/series.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/series.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/static_shape.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/stridemap.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/stridemap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/tfnetwork.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/tfnetwork.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/tfnetwork.proto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/weightmatrix.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/lstm/weightmatrix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/opencl/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/opencl/oclkernels.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/opencl/opencl_device_selection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/opencl/openclwrapper.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/opencl/openclwrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/ambigs.train" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/api_config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/bazaar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/bigram" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/box.train" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/box.train.stderr" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/digits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/get.image" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/hocr" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/inter" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/kannada" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/linebox" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/logfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/lstm.train" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/makebox" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/quiet" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/rebox" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/strokewidth" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/configs/unlv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/eng.user-patterns" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/eng.user-words" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/pdf.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/batch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/batch.nochop" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/matdemo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/msdemo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/nobatch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tessdata/tessconfigs/segdemo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/tesseract.pc.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/DuTillet1004Pg2LG.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/FILES" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/counttestset.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/eurotext.tif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/hebrew-nikud-genesis-1-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/hebrew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/hebtypo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/phototest.tif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reorgdata.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/1995.bus.3B.sum" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/1995.doe3.3B.sum" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/1995.mag.3B.sum" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/1995.news.3B.sum" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/2.03.summary" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/reports/2.04.summary" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/runalltests.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/testing/runtestset.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/alignedblob.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/alignedblob.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/baselinedetect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/baselinedetect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/bbgrid.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/bbgrid.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/blkocc.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/blkocc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/blobgrid.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/blobgrid.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/ccnontextdetect.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/ccnontextdetect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/cjkpitch.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/cjkpitch.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colfind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colfind.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartition.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartition.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartitiongrid.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartitiongrid.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartitionset.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/colpartitionset.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/devanagari_processing.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/devanagari_processing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/drawedg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/drawedg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/drawtord.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/drawtord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/edgblob.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/edgblob.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/edgloop.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/edgloop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/equationdetectbase.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/equationdetectbase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/fpchop.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/fpchop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/gap_map.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/gap_map.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/imagefind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/imagefind.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/linefind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/linefind.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/makerow.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/makerow.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/oldbasel.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/oldbasel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/pithsync.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/pithsync.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/pitsync1.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/pitsync1.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/scanedg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/scanedg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/sortflts.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/sortflts.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/strokewidth.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/strokewidth.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tabfind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tabfind.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tablefind.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tablefind.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tablerecog.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tablerecog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tabvector.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tabvector.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/textlineprojection.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/textlineprojection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/textord.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/textord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/topitch.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/topitch.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tordmain.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tordmain.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tospace.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tovars.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/tovars.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/underlin.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/underlin.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/wordseg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/wordseg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/workingpartset.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/textord/workingpartset.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/CMakeLists.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/ambiguous_words.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/boxchar.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/boxchar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/classifier_tester.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/cntraining.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/combine_tessdata.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/commandlineflags.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/commandlineflags.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/commontraining.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/commontraining.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/dawg2wordlist.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/degradeimage.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/degradeimage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/fileio.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/fileio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/icuerrorcode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/language-specific.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/ligature_table.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/ligature_table.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/lstmeval.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/lstmtester.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/lstmtester.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/lstmtraining.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/merge_unicharsets.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/mergenf.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/mergenf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/mftraining.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/normstrngs.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/normstrngs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/pango_font_info.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/pango_font_info.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/set_unicharset_properties.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/shapeclustering.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/stringrenderer.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/stringrenderer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tessopt.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tessopt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tesstrain.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tesstrain_utils.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/text2image.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tlog.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/tlog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/unicharset_extractor.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/unicharset_training_utils.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/unicharset_training_utils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/util.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/training/wordlist2dawg.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/scrollview.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/scrollview.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/svmnode.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/svmnode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/svpaint.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/svutil.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/viewer/svutil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/gettimeofday.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/gettimeofday.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/mathfix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/strcasestr.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/strcasestr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/strtok_r.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/strtok_r.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/port/vcsversion.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/tesseract/resource.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/vs2010/tesseract/tesseract.rc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/Makefile.am" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/associate.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/associate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/chop.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/chop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/chopper.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/chopper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/drawfx.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/drawfx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/findseam.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/findseam.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/gradechop.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/gradechop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/language_model.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/language_model.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_consistency.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_consistency.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_pain_points.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_pain_points.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_state.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/lm_state.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/measure.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/outlines.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/outlines.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/params_model.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/params_model.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/pieces.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/plotedges.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/plotedges.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/render.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/render.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/segsearch.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/tface.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/wordclass.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/wordrec.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify/tesseract-master/wordrec/wordrec.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check.html" afterPath="$PROJECT_DIR$/check.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check2.html" afterPath="$PROJECT_DIR$/check2.html" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CDSelector$CDSelector.coverage" NAME="CDSelector Coverage Results" MODIFIED="1496245832179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CDSelector.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CDSelector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="161" />
+    <option name="y" value="294" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDSelector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDSelector" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.CDSelector">
+    <configuration default="false" name="CDSelector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CDSelector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="CDSelector" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CDSelector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.CDSelector" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.CDSelector" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60e9f6dd-1467-478b-bfbe-d25980b7bf21" name="Default" comment="" />
+      <created>1496245818087</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1496245818087</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="161" y="294" width="1936" height="1056" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CDSelector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
