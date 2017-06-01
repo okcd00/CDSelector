@@ -233,13 +233,20 @@ class UCASEvaluate:
 
             
 if __name__ == "__main__":
-    ucasEvaluate = UCASEvaluate()
+    while True:
+        try:
+            ucasEvaluate = UCASEvaluate()
+            break
+        except Exception, e:
+            if e[0]=="Connection aborted.":
+                ucasEvaluate = UCASEvaluate()
+
     print "Debug Mode:", ucasEvaluate.debug
     
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
         exit()
-    print('Login success')
+    print('Login success: ' + ucasEvaluate.username)
     
     if ucasEvaluate.enroll:
         print('Enrolling start')
