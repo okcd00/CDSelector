@@ -13,3 +13,6 @@ UCAS Course Selector
     + Done
 + If not done
     + `$ pip install -r requirement.txt` 
+
+# Blog Article
+http://blog.csdn.net/okcd00/article/details/72827861
