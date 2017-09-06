@@ -44,7 +44,140 @@
 
 </head>
 <body>
-	<div id="header" class="navbar navbar-inverse navbar-fixed-top">      <div class="navbar-inner">          <div class="container-fluid">              <a id="edu_logo" target="_top" class="brand" href="http://sep.ucas.ac.cn/portal/site/105" >                <img src="http://sep.ucas.ac.cn//resources/images/edu_cloud.png"/>              </a><!--//logo:end-->              <a id="logo" class="brand" href="#" >                <span>选课系统</span>              </a><!--//site_name:end-->               <!-- //系统菜单 -->                          <!-- //顶部菜单按钮(除pc端外显示).btn-navbar  -->                      <a class="b-top-toggle-menu btn-navbar" data-toggle="collapse" data-target=".nav-collapse">                          <i class="icon-align-justify"></i>                      </a>                        <!-- //顶部提醒 -->                      <div id="taskInfo" class="b-top-remind hidden-phone">                      </div><!--//b-top-remind:end-->                      <!-- //顶部左侧链接与菜单 -->                      <div class="b-top-nav">                          <ul class="nav pull-right top-menu">                              <li class="btnav-info" title="当前用户所在单位"> 中国科学院计算技术研究所                             </li>                             <li class="btnav-info">                                 <a>柳阳                                                                 </a>                              </li>                              <li><a href="/logout"  title="退出系统"><i class="icon-off"></i></a></li>                          </ul>                      </div><!--//b-top-nav:end-->          </div><!--//container:end-->      </div><!--//container-fluid:end-->  </div><!--//header:end--><div id="main-menu" class="row-fluid">
+	 <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container-fluid">
+              <a id="edu_logo" target="_top" class="brand" href="http://sep.ucas.ac.cn/portal/site/105" >
+                <img src="http://sep.ucas.ac.cn//resources/images/edu_cloud.png"/>
+              </a><!--//logo:end-->
+              <a id="logo" class="brand" href="#" >
+                <span>选课系统</span>
+              </a><!--//site_name:end-->
+               <!-- //系统菜单 -->
+                      <div class="b-select-system">
+                          <a href="#" class="bss-btn">
+                              <i class="icon-angle-down"></i>
+                              <span>选择其他系统</span>
+                          </a>
+                          <div class="bss-menu">
+                              <ul>
+  	    						<li>
+  									<a target="_top" class="http://sep.ucas.ac.cn/portal/site/105" href="http://sep.ucas.ac.cn/portal/site/105">
+  		    							<img alt=""src="http://sep.ucas.ac.cn/access/img/site/105.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">
+  		    							<h5>SEP</h5>
+  									</a>
+  	    						</li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/16"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/16.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>课程网站</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/269"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/4da77bf0-4d0b-4d03-b6e9-5e8844fae5e0.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>心理健康</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/261"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/af6fa143-a2f8-4d79-b626-db868d3e5c56.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>报修管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/1"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/1.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学籍管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/221"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/221.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>培养指导</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/217"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/eb2834ba-e971-4e5c-bc61-673fbbcaf1e4.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>所级教务</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/218"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/218.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>实景课堂</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/10"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/10.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学位管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/282"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/91e650cb-fa5f-4d75-b0ca-635d9b382240.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>奖助系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="javascript:;"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/226.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>选课系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/291"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/397edbf7-7a83-4d05-84eb-7e4a9c9d1184.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>四六级报名系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/311"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/resources/images/app-default-icon2.png" > 
+                                         <h5>一卡通支付</h5> 
+                                     </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div><!--//b-select-system:end-->
+  
+  
+                      <!-- //顶部菜单按钮(除pc端外显示).btn-navbar  -->
+                      <a class="b-top-toggle-menu btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                          <i class="icon-align-justify"></i>
+                      </a>
+  
+                      <!-- //顶部提醒 -->
+                      <div id="taskInfo" class="b-top-remind hidden-phone">
+                      </div><!--//b-top-remind:end-->
+                      <!-- //顶部左侧链接与菜单 -->
+                      <div class="b-top-nav">
+                          <ul class="nav pull-right top-menu">
+                              <li class="btnav-info" title="当前用户所在单位">
+ 中国科学院计算技术研究所                             </li>
+                            <li class="btnav-menu dropdown" title="切换角色">
+                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               	<i class="icon-user"></i> 学生角色
+                               	<b class="caret"></b>
+                               </a>
+                               	<ul class="dropdown-menu">
+                                         <li><a  href="http://sep.ucas.ac.cn//portal/site/226/821"><i class="icon-user-md"></i> 学生角色</a></li>
+                                  </ul>
+                           </li>
+                             <li class="btnav-info"> 
+                                <a>
+柳阳                                                                 
+</a>
+                              </li>
+                              <li><a href="http://sep.ucas.ac.cn//logout"  title="退出系统"><i class="icon-off"></i></a></li>
+                          </ul>
+                      </div><!--//b-top-nav:end-->
+          </div><!--//container:end-->
+      </div><!--//container-fluid:end-->
+  </div><!--//header:end-->
+ <div id="main-menu" class="row-fluid">
    <div class="b-sidebar-scroll">
        <div id="sidebar" class="nav-collapse collapse">
            <ul class="b-sidebar-menu">
@@ -129,6 +262,17 @@
 							<li class=""><a href="/program10/downloadMain" target="">下载申请表</a></li>
 							</ul>
 	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>讲义调查问卷</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/poll/main" target="">讲义调查问卷</a></li>
+							<li class=""><a href="/static/doc/pollHelp.doc" target="">使用说明</a></li>
+							</ul>
+	             	</li>
 				</ul><!--//sidebar-menu-->
        </div><!--//sidebar:end-->
     </div>
@@ -164,7 +308,7 @@
 		<p>选课有效时间段：
 		2017-09-07 12:30:00  至  2017-09-24 17:00:00</p>
 	</div>
-		<form id="regfrm" name="regfrm" action="/courseManage/savePhone?s=6b20658a-2985-41d4-b03a-0a97214d7df8" class="form-horizontal" method="post">
+		<form id="regfrm" name="regfrm" action="/courseManage/savePhone?s=566e4309-4384-49ec-b9a4-65b8b5c80572" class="form-horizontal" method="post">
 			<p><strong class="m-font-red">为了给您提供更好的服务，需要您提供固定电话、手机（至少一项不为空）填入以下栏目，该信息为必填项！</strong></p>
 			<div class="">
 			    	固定电话：
@@ -175,7 +319,7 @@
 			</div>
 		</form>
 	<div>为了提高您的选课效率，建议您首先选择院系以便过滤出需要选择的课程列表！ 以下院系分类前代码即开课编号第一位。</div>
- 		<form id="regfrm2" name="regfrm2" action="/courseManage/selectCourse?s=6b20658a-2985-41d4-b03a-0a97214d7df8" class="form-horizontal" method="post">
+ 		<form id="regfrm2" name="regfrm2" action="/courseManage/selectCourse?s=566e4309-4384-49ec-b9a4-65b8b5c80572" class="form-horizontal" method="post">
  		<div class="row-fluid">
 						<div class="span2"><input type="checkbox" name="deptIds" id="id_910" value="910"/> <label for="id_910">数学学院</label></div>
 						<div class="span2"><input type="checkbox" name="deptIds" id="id_911" value="911"/> <label for="id_911">物理学院</label></div>
@@ -257,7 +401,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#addBachelorCourse").click(function() {
-		window.location="/courseManage/selectBCourse?s=6b20658a-2985-41d4-b03a-0a97214d7df8";
+		window.location="/courseManage/selectBCourse?s=566e4309-4384-49ec-b9a4-65b8b5c80572";
 	});
 	$("#regfrm").validate({
 		groups: {
@@ -312,7 +456,7 @@ $(document).ready(function() {
 function del(courseId) {
 	top.$.jBox.confirm('确认要删除吗？','系统提示',function(v,h,f){
 		if(v=="ok"){
-			window.location = "/courseManage/del/" + courseId + "?s=6b20658a-2985-41d4-b03a-0a97214d7df8";
+			window.location = "/courseManage/del/" + courseId + "?s=566e4309-4384-49ec-b9a4-65b8b5c80572";
 		}
 	},{buttonsFocus:1});
 	top.$('.jbox-body .jbox-icon').css('top','55px');

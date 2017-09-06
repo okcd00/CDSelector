@@ -131,7 +131,7 @@ class UCASEvaluate:
                 sys.stdout.write(showText)
                 sys.stdout.flush()
         except KeyboardInterrupt:
-            print("KeyboardInterrupt Detected, bye!")
+            print("\nKeyboardInterrupt Detected, bye!")
             return "STOP"
         except Exception as exception:
             return "Course_Selection_Port is not open, waiting..."
@@ -250,7 +250,7 @@ if __name__ == "__main__":
     
     time.sleep(1)
     os.system("color 0A")
-    os.system('MODE con: COLS=72 LINES=10 & TITLE CD_Course_Selecting is working')
+    os.system('MODE con: COLS=80 LINES=10 & TITLE CD_Course_Selecting is working')
     
     while True:
         try:
@@ -261,9 +261,9 @@ if __name__ == "__main__":
                 ucasEvaluate = UCASEvaluate()
 
     if ucasEvaluate.debug:
-        print "Debug Mode:", ucasEvaluate.debug
-        print "In debug mode, you can check snapshot with html files."
-        print "By the way, Ctrl+C to stop."
+        print ("Debug Mode: %s" % str(ucasEvaluate.debug) )
+        print ("In debug mode, you can check snapshot with html files.")
+        print ("By the way, Ctrl+C to stop.")
     
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
