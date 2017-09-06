@@ -1,6 +1,6 @@
 [info]
-username = YOU@SOMEWHERE
-password = YOUR_PASSWORD
+username = you@somewhere.com
+password = your_password_here
 runtime  = 2
 
 [action]
