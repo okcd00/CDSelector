@@ -8,11 +8,12 @@ UCAS Course Selector
 + Modify File `courseid`
     + such as `091M7014H` as 罗平老师的推荐系统课程
     + such as `09xxxxxxx on` as 某个需要被选为学位课的课程
-+ Run Script
++ Run Script 
     + `$ python CDSelector.py`
     + Done
-+ If not done
-    + `$ pip install -r requirement.txt` 
++ If not done 
+    + `$ pip install -r requirement.txt`  
+    + try this 个
 
 # Blog Article
 http://blog.csdn.net/okcd00/article/details/72827861
