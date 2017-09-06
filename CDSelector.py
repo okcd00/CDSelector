@@ -8,6 +8,8 @@
 #   date     : 2017-01-06
 #   desc     : UCAS Course_Selection Program
 # =====================================================
+
+import os
 import sys
 import time
 import requests
@@ -98,9 +100,9 @@ class UCASEvaluate:
             while True:
                 msg = ""
                 if self.select_bat: 
-                    # print self.coursesId
                     result, msg = self.__enrollCourses(self.coursesId)
-                    if result: self.coursesId.clear()
+                    if result: 
+                        self.coursesId.clear()
                 else:   
                     for eachCourse in self.coursesId:
                         if eachCourse in response.text:
@@ -118,7 +120,7 @@ class UCASEvaluate:
                     if self.enrollCount[enroll] == 0:
                         self.coursesId.pop(enroll)
                 self.enrollCount.clear()
-                if not self.coursesId: return
+                if not self.coursesId: return 'INVALID COURSES_ID'
                 idx += 1
                 time.sleep(self.runtime)
                 showText = "\r> " + "%s <%d> %s" % (
@@ -130,10 +132,10 @@ class UCASEvaluate:
                 sys.stdout.flush()
         except KeyboardInterrupt:
             print("KeyboardInterrupt Detected, bye!")
+            return "STOP"
         except Exception as exception:
-            print("System error")
-            print(exception)
-            # exit()
+            return "Course_Selection_Port is not open, waiting..."
+             
 
     def __enrollCourse(self, courseId, isDegree):
         response = self.s.get(self.courseSelectionBase)
@@ -154,6 +156,7 @@ class UCASEvaluate:
         categoryUrl = self.courseCategory + identity
         response = self.s.post(categoryUrl, data=postdata)
         if self.debug:
+            print ("Now Posting, save snapshot in check2.html.")
             with open('./check2.html', 'wb+') as f:
                 f.write(response.text.encode('utf-8'))
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -175,6 +178,8 @@ class UCASEvaluate:
 
             courseSaveUrl = self.courseSave + identity
             response = self.s.post(courseSaveUrl, data=postdata)
+            
+            print ("Now Checking, save snapshot in result.html.")
             with open('result.html','wb+') as f:
                 f.write(response.text.encode('utf-8'))
             if 'class="error' not in response.text:
@@ -207,6 +212,7 @@ class UCASEvaluate:
         response = self.s.post(categoryUrl, data=postdata)
         
         if self.debug: 
+            print ("Now Posting, save snapshot in check2.html.")
             with open('./check2.html', 'wb+') as f:
                 f.write(response.text.encode('utf-8'))
         
@@ -225,6 +231,8 @@ class UCASEvaluate:
 
         courseSaveUrl = self.courseSave + identity
         response = self.s.post(courseSaveUrl, data=postdata)
+        
+        print ("Now Checking, save snapshot in result.html.")
         with open('result.html','wb+') as f:
             f.write(response.text.encode('utf-8'))
         if 'class="error' not in response.text:
@@ -233,23 +241,41 @@ class UCASEvaluate:
 
             
 if __name__ == "__main__":
+    print("starting...")
+    os.system('MODE con: COLS=128 LINES=32 & TITLE Welcome to CDSelector')
+    
+    from logo import show_logo
+    show_logo() # delete this for faster start 23333
+    os.system('cls')
+    
+    time.sleep(1)
+    os.system("color 0A")
+    os.system('MODE con: COLS=72 LINES=10 & TITLE CD_Course_Selecting is working')
+    
     while True:
         try:
             ucasEvaluate = UCASEvaluate()
             break
-        except Exception, e:
+        except Exception as e:
             if e[0]=="Connection aborted.":
                 ucasEvaluate = UCASEvaluate()
 
-    print "Debug Mode:", ucasEvaluate.debug
+    if ucasEvaluate.debug:
+        print "Debug Mode:", ucasEvaluate.debug
+        print "In debug mode, you can check snapshot with html files."
+        print "By the way, Ctrl+C to stop."
     
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
         exit()
     print('Login success: ' + ucasEvaluate.username)
     
-    if ucasEvaluate.enroll:
-        print('Enrolling start')
-        ucasEvaluate.enrollCourses()
-        print('Enrolling finish')
-    # TODO: Single Try
+    print('Enrolling starts')
+    while ucasEvaluate.enroll:
+        status = ucasEvaluate.enrollCourses()
+        if status == 'STOP':
+            break
+        else: 
+            status += time.asctime( time.localtime(time.time()) )
+            sys.stdout.write("%s\r" % status)
+    print('Enrolling finished')
