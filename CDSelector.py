@@ -40,7 +40,7 @@ class UCASEvaluate:
         self.enroll = cf.getboolean('action', 'enroll')
         self.evaluate = cf.getboolean('action', 'evaluate')
         self.select_bat = cf.getboolean('action', 'select_bat')
-		self.watch_logo = cf.getboolean('action', 'watch_logo')
+        self.watch_logo = cf.getboolean('action', 'watch_logo')
 
         self.loginPage = 'http://sep.ucas.ac.cn'
         self.loginUrl = self.loginPage + '/slogin'
@@ -147,7 +147,7 @@ class UCASEvaluate:
                 sys.stdout.write(showText)
                 sys.stdout.flush()
         except KeyboardInterrupt:
-            print("KeyboardInterrupt Detected, bye!")
+            print("\nKeyboardInterrupt Detected, bye!")
             
             return "STOP"
         except Exception as exception:
@@ -283,9 +283,9 @@ if __name__ == "__main__":
                 ucasEvaluate = UCASEvaluate()
 
     if ucasEvaluate.debug:
-        print "Debug Mode:", ucasEvaluate.debug
-        print "In debug mode, you can check snapshot with html files."
-        print "By the way, Ctrl+C to stop."
+        print ("Debug Mode: %s" % str(ucasEvaluate.debug) )
+        print ("In debug mode, you can check snapshot with html files.")
+        print ("By the way, Ctrl+C to stop.")
     
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
