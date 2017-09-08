@@ -8,3 +8,4 @@ debug = true
 enroll = true
 evaluate = true
 select_bat = false
+watch_logo = false

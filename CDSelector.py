@@ -16,6 +16,16 @@ import requests
 from bs4 import BeautifulSoup
 from configparser import RawConfigParser
 
+# Fix issue #1 by @bobo334334
+index_course = {
+    '01':u'数学','02':u'物理','03':u'天文','04':u'化学','05':u'材料',
+    '06':u'生命','07':u'地球','08':u'资环','09':u'计算','10':u'电子',
+    '11':u'工程','12':u'经管','13':u'公共','14':u'人文','23':u'马克',
+    '15':u'外语','16':u'中丹','17':u'国际','18':u'存济','TY':u'体育',
+    '19':u'微电','21':u'未来','20':u'网络','24':u'心理','25':u'人工',
+    '26':u'纳米','27':u'艺术','22':u'创新',
+}
+                
 class UCASEvaluate:
     def __init__(self):
         self.__readCoursesId('./courseid')
@@ -30,6 +40,7 @@ class UCASEvaluate:
         self.enroll = cf.getboolean('action', 'enroll')
         self.evaluate = cf.getboolean('action', 'evaluate')
         self.select_bat = cf.getboolean('action', 'select_bat')
+		self.watch_logo = cf.getboolean('action', 'watch_logo')
 
         self.loginPage = 'http://sep.ucas.ac.cn'
         self.loginUrl = self.loginPage + '/slogin'
@@ -101,18 +112,23 @@ class UCASEvaluate:
                 msg = ""
                 if self.select_bat: 
                     result, msg = self.__enrollCourses(self.coursesId)
+                    
                     if result: 
                         self.coursesId.clear()
                 else:   
                     for eachCourse in self.coursesId:
+                        
                         if eachCourse in response.text:
                             print("Course " + eachCourse + " has been selected.")
+                            
                             continue
                         if (eachCourse in self.enrollCount and
                                 self.enrollCount[eachCourse] == 0):
                             continue
+                        
                         self.enrollCount[eachCourse] = 1
                         result, msg = self.__enrollCourse(eachCourse, self.coursesId[eachCourse])
+                        
                         if result:
                             self.enrollCount[eachCourse] = 0
 
@@ -131,9 +147,11 @@ class UCASEvaluate:
                 sys.stdout.write(showText)
                 sys.stdout.flush()
         except KeyboardInterrupt:
-            print("\nKeyboardInterrupt Detected, bye!")
+            print("KeyboardInterrupt Detected, bye!")
+            
             return "STOP"
         except Exception as exception:
+            
             return "Course_Selection_Port is not open, waiting..."
              
 
@@ -142,13 +160,16 @@ class UCASEvaluate:
         if self.debug:
             with open('./check.html', 'wb+') as f:
                 f.write(response.text.encode('utf-8'))
+        
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        categories = dict([(label.contents[0][:2], label['for'][3:])
-                          for label in soup.find_all('label')[2:]])
-        categoryId = categories[courseId[:2]]
+        categories = dict([(label.contents[0][:2],label['for'][3:]) 
+                           for label in soup.find_all('label')[2:]])
+        
+        categoryId = categories[index_course[courseId[:2]]]
+            
         identity = soup.form['action'].split('=')[1]
-
+        
         postdata = {
             'deptIds': categoryId,
             'sb': 0
@@ -244,13 +265,14 @@ if __name__ == "__main__":
     print("starting...")
     os.system('MODE con: COLS=128 LINES=32 & TITLE Welcome to CDSelector')
     
-    from logo import show_logo
-    show_logo() # delete this for faster start 23333
-    os.system('cls')
-    
+    if watch_logo:
+        from logo import show_logo
+        show_logo() # delete this for faster start 23333
+        os.system('cls')
+
     time.sleep(1)
     os.system("color 0A")
-    os.system('MODE con: COLS=80 LINES=10 & TITLE CD_Course_Selecting is working')
+    os.system('MODE con: COLS=72 LINES=10 & TITLE CD_Course_Selecting is working')
     
     while True:
         try:
@@ -261,9 +283,9 @@ if __name__ == "__main__":
                 ucasEvaluate = UCASEvaluate()
 
     if ucasEvaluate.debug:
-        print ("Debug Mode: %s" % str(ucasEvaluate.debug) )
-        print ("In debug mode, you can check snapshot with html files.")
-        print ("By the way, Ctrl+C to stop.")
+        print "Debug Mode:", ucasEvaluate.debug
+        print "In debug mode, you can check snapshot with html files."
+        print "By the way, Ctrl+C to stop."
     
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
