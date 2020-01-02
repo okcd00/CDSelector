@@ -18,7 +18,7 @@ from configparser import RawConfigParser
 
 # Fix issue #1 by @bobo334334
 index_course = {
-    '01':u'数学','02':u'物理','03':u'天文','04':u'化学','05':u'材料',
+    '01':u'数学','02':u'物理','03':u'天文','04':u'心理','05':u'材料',
     '06':u'生命','07':u'地球','08':u'资环','09':u'计算','10':u'电子',
     '11':u'工程','12':u'经管','13':u'公共','14':u'人文','23':u'马克',
     '15':u'外语','16':u'中丹','17':u'国际','18':u'存济','TY':u'体育',
@@ -265,10 +265,10 @@ if __name__ == "__main__":
     print("starting...")
     os.system('MODE con: COLS=128 LINES=32 & TITLE Welcome to CDSelector')
     
-    if watch_logo:
-        from logo import show_logo
-        show_logo() # delete this for faster start 23333
-        os.system('cls')
+    # if watch_logo:
+    #     from logo import show_logo
+    #     show_logo() # delete this for faster start 23333
+    #     os.system('cls')
 
     time.sleep(1)
     os.system("color 0A")
