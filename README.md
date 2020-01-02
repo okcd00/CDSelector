@@ -16,3 +16,6 @@ UCAS Course Selector
 
 # Blog Article
 http://blog.csdn.net/okcd00/article/details/72827861
+
+# Note
+推荐使用无线，登SEP时不需要输验证码
