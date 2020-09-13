@@ -11,11 +11,12 @@ UCAS Course Selector
 + Run Script 
     + `$ python CDSelector.py`
     + Done
-+ If not done 
++ If not done      
     + try `$ pip install -r requirement.txt`  
 
 # Blog Article
 http://blog.csdn.net/okcd00/article/details/72827861
 
 # Note
-推荐使用无线，登SEP时不需要输验证码
+请使用无线网连入UCAS，或者网线直连网络接口（不经过路由器中转），     
+这样属于内网直连，登SEP时不需要输验证码。
