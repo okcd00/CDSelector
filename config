@@ -1,11 +1,11 @@
 [info]
-username = you@somewhere.com
-password = your_password_here
-runtime  = 2
+username = yourname@anywhere.com
+password = yourpass
+runtime  = 3
 
 [action]
 debug = true
 enroll = true
 evaluate = true
-select_bat = false
+select_bat = true
 watch_logo = false
