@@ -118,7 +118,11 @@ class UCASEvaluate:
         return request_str
 
     def show_response(self, response, url="", data=None, description=""):
-        print('[{}]'.format(description), response)
+        if 200 <= int(response.status_code) < 300:
+            status_str = "Link Success"
+        else:
+            status_str = "Link failed with code {}".format(int(response.status_code))
+        print('[{}] {}'.format(description, status_str))
         if self.debug:
             print("\tReq as {}".format(self.show_http_request(url, data)))
             print("\tView as {}".format(response.url))
@@ -126,6 +130,22 @@ class UCASEvaluate:
 
     def update_headers_with_cookie(self):
         self.headers.update({'Cookie': ';'.join(['{}={}'.format(k, v) for k, v in self.s.cookies.items()])})
+
+    def session_get(self, url, data=None, desc=""):
+        response = self.s.get(
+            url=url, data=data, headers=self.headers)
+        self.show_response(
+            response, url, data, description=desc)
+        self.update_headers_with_cookie()
+        return response
+
+    def session_post(self, url, data=None, desc=""):
+        response = self.s.post(
+            url=url, data=data, headers=self.headers)
+        self.show_response(
+            response, url, data, description=desc)
+        self.update_headers_with_cookie()
+        return response
 
     def login(self):
         post_data = {
@@ -139,12 +159,13 @@ class UCASEvaluate:
         if 'sepuser' in self.s.cookies.get_dict():
             return True
         return False
-    
-    def get_message(self, restext):
+
+    @staticmethod
+    def get_message(restext):
         css_soup = BeautifulSoup(restext, 'html.parser')
         text = css_soup.select('#main-content > div > div.m-cbox.m-lgray > div.mc-body > div')[0].text
         return "".join(line.strip() for line in text.split('\n'))
-    
+
     def __read_from_course_id(self, filename):
         courses_file = open(filename, 'rb')
         self.coursesId = {}
@@ -162,30 +183,25 @@ class UCASEvaluate:
                 is_degree = True
             self.coursesId[course_id] = is_degree
             self.coursesDept[course_id] = course_dept
+        print("")
 
     def enrollCourses(self):
-        response = self.s.get(
-            self.courseSystem, headers=self.headers)
-        self.show_response(response, self.courseSystem, None, 'SEP AppStore')
+        response = self.session_get(
+            url=self.courseSystem, desc='SEP AppStore')
         soup = BeautifulSoup(response.text, 'html.parser')
-        identity = re.findall(r'"http://jwxk.ucas.ac.cn/login\?Identity=(.*)&amp;roleId=[0-9]{2,4}"', str(soup))[0]
+        identity = re.findall(r'"http://jwxk.ucas.ac.cn/login\?Identity=(.*)&amp;roleId=[0-9]{2,4}"',
+                              str(soup))[0]
         print("[Obtain Identity]", identity)
         try:
             post_data = {
                 'roleId': 821,
             }
-            self.update_headers_with_cookie()
-            response = self.s.get(  # Notification homepage
-                self.courseIdentify + identity, data=post_data,
-                headers=self.headers, cookies=self.s.cookies)  # current agent login
-            self.show_response(response, self.courseIdentify + identity, post_data, 'Notification List')
+            response = self.session_get(  # Notification homepage
+                url=self.courseIdentify + identity, data=post_data, desc='Notification List')
 
-            self.update_headers_with_cookie()
-            response = self.s.get(  # Selected Courses
-                self.courseSelected,
-                headers=self.headers, cookies=self.s.cookies)  # get course_dept list
-            self.show_response(response, self.courseSelected, None, 'SelectedCourse List')
-            self.dump_here(response)  # <= NOW HERE
+            response = self.session_get(  # SelectedCourse List
+                url=self.courseSelected, desc='SelectedCourse List')
+            self.dump_check(response, '已选课程')
 
             idx, last_msg = 0, ""
             while True:
@@ -198,6 +214,7 @@ class UCASEvaluate:
                 else:
                     # select one by one
                     for each_course in self.coursesId:
+                        # Ignore the courses already selected
                         if each_course in response.text:
                             print("Course " + each_course + " has been selected.")
                             continue
@@ -220,10 +237,9 @@ class UCASEvaluate:
                     return 'INVALID COURSES_ID'
                 idx += 1
                 time.sleep(self.runtime)
-                show_text = "\r> " + "%s <%d> %s" % (
-                        msg, idx,
-                        time.asctime( time.localtime(time.time()) )
-                    )
+                show_text = "\r> 第 {} 次尝试： <{}> {}\n".format(
+                        idx, msg,
+                        time.asctime(time.localtime(time.time())))
                 last_msg = msg
                 sys.stdout.write(show_text)
                 sys.stdout.flush()
@@ -235,14 +251,13 @@ class UCASEvaluate:
             return "Course_Selection_Port is not open, waiting..."
 
     def __enrollCourse(self, course_id, isDegree):
-        response = self.s.get(self.courseSelectionBase)
-        print("[Step into Enroll]", response)
-        print("\tView as {}".format(response.url))
-        self.dump_check(response, 'check')
+        response = self.session_get(  # SelectedCourse List
+            url=self.courseSelectionBase, desc='Course Selection Board')
+        self.dump_check(response, '预选课程')
 
         soup = BeautifulSoup(response.text, 'html.parser')
         dept_ids = self.coursesDept.get(course_id)
-        identity = soup.form['action'].split('=')[1]  # <= HERE, for 403
+        identity = soup.form['action'].split('=')[1]
 
         # 查看 对应学院
         # /courseManage/selectCourse?s=fd287a9f-a12b-4219-820a-bbd65800901a&deptIds=911&deptIds=914&sb=0
@@ -250,37 +265,34 @@ class UCASEvaluate:
             'deptIds': dept_ids,
             'sb': 0
         }
-        categoryUrl = self.courseCategory + identity
-        response = self.s.post(
-            categoryUrl, data=post_data, headers=self.headers)
-        print("[Step into CourseCategory]", response)
-        print("\tView as {}".format(response.url))
-        self.dump_check(response, 'check2')
+        response = self.session_post(
+            self.courseCategory + identity, data=post_data,
+            desc='Step into {}'.format(index_course[dept_ids]))
+        self.dump_check(response, index_course[dept_ids] + '学院')
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        courseTable = soup.body.form.table
-        if courseTable:
-            courseTable = courseTable.find_all('tr')[1:]
+        course_table = soup.body.form.table
+        if course_table:
+            course_table = course_table.find_all('tr')[1:]
         else:
             return False, "Course Selection is unreachable or not started."
-        courseDict = dict([(c.span.contents[0], c.span['id'].split('_')[1])
-                           for c in courseTable])
+        course_dict = dict([(c.span.contents[0], c.span['id'].split('_')[1])
+                            for c in course_table])
+        # print(course_dict)
 
-        if course_id in courseDict:
+        if course_id in course_dict:
             post_data = {
                 'deptIds': dept_ids,
-                'sids': courseDict[course_id]
+                'sids': course_dict[course_id]
             }
 
             if isDegree:
-                post_data['did_' + courseDict[course_id]] = courseDict[course_id]
+                post_data['did_' + course_dict[course_id]] = course_dict[course_id]
 
-            courseSaveUrl = self.courseSave + identity
-            response = self.s.post(courseSaveUrl, data=post_data)
+            response = self.session_post(
+                self.courseSave + identity, data=post_data)
 
-            print("Now Checking, save snapshot in result.html.")
-            with open('result.html', 'wb+') as f:
-                f.write(response.text.encode('utf-8'))
+            self.dump_check(response, '抢课结果_{}'.format(course_id))
             if 'class="error' not in response.text:
                 return True, '[Success] ' + course_id
             else:
@@ -288,56 +300,55 @@ class UCASEvaluate:
         else:
             return False, "No such course"
 
-    def __enrollCourses(self, courseIds):  # For English
-        response = self.s.get(self.courseSelectionBase)
-        if self.debug: 
-            with open('./check.html', 'wb+') as f:
-                f.write(response.text.encode('utf-8'))
+    def __enrollCourses(self, course_ids):
+        """
+        一般来说不推荐一下选好几个，一个一个选比较好，选得多了其中任意一个人满了都会失败
+        但是英语需要同时选择听说/读写，才可以成功选课，所以也提供一下这个方法
+        :param course_ids:
+        :return:
+        """
+        response = self.session_get(  # SelectedCourse List
+            url=self.courseSelectionBase, desc='Course Selection Board')
+        self.dump_check(response, '预选课程')
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        categories = dict([(label.contents[0][:2], label['for'][3:])
-                          for label in soup.find_all('label')[2:]])
         identity = soup.form['action'].split('=')[1]
-        
-        category_ids = []
-        for courseId in courseIds:
-            category_ids.append(categories[courseId[:2]])
+
+        dept_ids = []
+        for course_id in course_ids:
+            dept_ids.append(self.coursesDept.get(course_id))
         
         post_data = {
-            'deptIds': category_ids,
+            'deptIds': dept_ids,
             'sb': 0
         }
-        
-        category_url = self.courseCategory + identity
-        response = self.s.post(category_url, data=post_data)
-        
-        if self.debug: 
-            print ("Now Posting, save snapshot in check2.html.")
-            with open('./check2.html', 'wb+') as f:
-                f.write(response.text.encode('utf-8'))
+
+        response = self.session_post(
+            self.courseCategory + identity, data=post_data,
+            desc='Step into {}'.format(index_course[dept_ids]))
+        self.dump_check(response, index_course[dept_ids] + '学院')
         
         soup = BeautifulSoup(response.text, 'html.parser')
-        courseTable = soup.body.form.table
-        if courseTable:
-            courseTable = courseTable.find_all('tr')[1:]
+        course_table = soup.body.form.table
+        if course_table:
+            course_table = course_table.find_all('tr')[1:]
         else:
             return False, "Course Selection is unreachable or not started."
-        courseDict = dict([(c.span.contents[0], c.span['id'].split('_')[1])
-                           for c in courseTable])
+        course_dict = dict([(c.span.contents[0], c.span['id'].split('_')[1])
+                            for c in course_table])
+        # print(course_dict)
 
         post_data = {
-            'deptIds': category_ids,
-            'sids': [courseDict[courseId] for courseId in courseIds]
+            'deptIds': dept_ids,
+            'sids': [course_dict[courseId] for courseId in course_ids]
         }
 
-        courseSaveUrl = self.courseSave + identity
-        response = self.s.post(courseSaveUrl, data=post_data)
-        
-        print ("Now Checking, save snapshot in result.html.")
-        with open('result.html', 'wb+') as f:
-            f.write(response.text.encode('utf-8'))
+        response = self.session_post(
+            self.courseSave + identity, data=post_data)
+        self.dump_check(response, '抢课结果')
+
         if 'class="error' not in response.text:
-            return True, '[Success] ' + courseId
+            return True, '[Success] ' + course_ids
         else:
             return False, self.get_message(response.text).strip()
 
@@ -370,17 +381,21 @@ if __name__ == "__main__":
     if not ucasEvaluate.login():
         print('Login error. Please check your username and password.')
         exit()
+
     print('Login success: ' + ucasEvaluate.username)
-    print("[Obtain SepUser]", ucasEvaluate.s.cookies.get_dict()['sepuser'])
-    
+    if ucasEvaluate.debug:
+        print("[Obtain SepUser]", ucasEvaluate.s.cookies.get_dict()['sepuser'])
+    print("-----" * 5)
     print('Enrolling starts')
-    # at least run once
-    status = ucasEvaluate.enrollCourses()   
-    status += time.asctime(time.localtime(time.time()))
-    sys.stdout.write("%s\r" % status)
+    if not ucasEvaluate.enroll:
+        # at least run once
+        status = ucasEvaluate.enrollCourses()
+        status += time.asctime(time.localtime(time.time()))
+        sys.stdout.write("%s\r" % status)
+
     while ucasEvaluate.enroll:
         status = ucasEvaluate.enrollCourses()
-        if status == 'STOP':
+        if status.startswith('STOP'):
             break
         else: 
             status += time.asctime(time.localtime(time.time()))
