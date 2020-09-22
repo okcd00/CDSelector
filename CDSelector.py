@@ -73,7 +73,6 @@ class UCASEvaluate:
         self.courseIdentify = self.courseBase + '/login?Identity='
         self.courseSelected = self.courseBase + '/courseManage/selectedCourse'
         self.courseSelectionBase = self.courseBase + '/courseManage/main'
-        # deptIds=957
         self.courseCategory = self.courseBase + '/courseManage/selectCourse?s='
 
         self.courseSave = self.courseBase + '/courseManage/saveCourse?s='
@@ -85,24 +84,43 @@ class UCASEvaluate:
 
         self.enrollCount = {}
         self.headers = {
-            'Host': 'sep.ucas.ac.cn',
+            'Host': 'jwxk.ucas.ac.cn',
             'Connection': 'keep-alive',
             # 'Pragma': 'no-cache',
             # 'Cache-Control': 'no-cache',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Upgrade-Insecure-Requests': '1',
-            'User-Agent': header_store[-4],
+            'User-Agent': header_store[-5],
             'Accept-Encoding': 'gzip, deflate',
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
         }
-        self.headers = None
+        # self.headers = None
 
         self.s = requests.Session()
-        # login_page = self.s.get(self.loginPage, headers=self.headers)
+        self.s.get(self.loginPage, headers=self.headers)
 
-    def dump_here(self, response):
+    @staticmethod
+    def dump_here(response):
         with open('./here.html', 'wb+') as f:
             f.write(response.text.encode('utf-8'))
+
+    @staticmethod
+    def show_http_request(url, data):
+        request_str = '{}'.format(url)
+        if data is not None:
+            request_str += '?'
+            request_str += '&'.join(['{}={}'.format(k, v) for k, v in data.items()])
+        return request_str
+
+    def show_response(self, response, url="", data=None, description=""):
+        print('[{}]'.format(description), response)
+        if self.debug:
+            print("\tReq as {}".format(self.show_http_request(url, data)))
+            print("\tView as {}".format(response.url))
+            print("\tCookie: {}".format(self.s.cookies.get_dict()))
+
+    def update_headers_with_cookie(self):
+        self.headers.update({'Cookie': ';'.join(['{}={}'.format(k, v) for k, v in self.s.cookies.items()])})
 
     def login(self):
         post_data = {
@@ -112,10 +130,7 @@ class UCASEvaluate:
         }
         response = self.s.post(
             self.loginUrl, data=post_data, headers=self.headers)
-        print('[Login]', response)
-        print("\tView as {}?userName={}&pwd={}&sb=sb".format(
-            self.loginUrl, self.username, self.password))
-        # print(response.text)
+        self.show_response(response, self.loginUrl, post_data, 'Login')
         if 'sepuser' in self.s.cookies.get_dict():
             return True
         return False
@@ -129,12 +144,13 @@ class UCASEvaluate:
         courses_file = open(filename, 'rb')
         self.coursesId = {}
         self.coursesDept = {}
+        print('[Loading CourseID]')
         for line in courses_file.readlines():
             if isinstance(line, bytes):
                 line = line.decode('utf-8')
             line = line.strip().replace(' ', '').split(':')
             course_dept = dept_ids_dict.get(line[0][:2])
-            print(line[0][:2], course_dept)
+            print(line[1], line[0][:2], 'ID:', course_dept)
             course_id = line[1]
             is_degree = False
             if len(line) == 3 and line[2] == 'on':
@@ -145,24 +161,26 @@ class UCASEvaluate:
     def enrollCourses(self):
         response = self.s.get(
             self.courseSystem, headers=self.headers)
-        print("[Step into SEP]", response)
-        print("\tView as {}".format(self.courseSystem))
+        self.show_response(response, self.courseSystem, None, 'SEP AppStore')
         soup = BeautifulSoup(response.text, 'html.parser')
         identity = re.findall(r'"http://jwxk.ucas.ac.cn/login\?Identity=(.*)&amp;roleId=[0-9]{2,4}"', str(soup))[0]
         print("[Obtain Identity]", identity)
         try:
             post_data = {
-                # 'Identity': identity,
                 'roleId': 821,
             }
-            response = self.s.get(
+            self.update_headers_with_cookie()
+            response = self.s.get(  # Notification homepage
                 self.courseIdentify + identity, data=post_data,
                 headers=self.headers, cookies=self.s.cookies)  # current agent login
-            print("[Step into CourseList]", response)
-            print("\tView as {}?Identity={}&roleId={}".format(self.courseLogin, identity, 821))
-            response = self.s.get(
-                self.courseSelected, headers=self.headers)  # get course_dept list
-            print("[Step into DeptList]", response)
+            self.show_response(response, self.courseIdentify + identity, post_data, 'Notification List')
+
+            self.update_headers_with_cookie()
+            response = self.s.get(  # Selected Courses
+                self.courseSelected,
+                headers=self.headers, cookies=self.s.cookies)  # get course_dept list
+            self.show_response(response, self.courseSelected, None, 'SelectedCourse List')
+            self.dump_here(response)  # <= NOW HERE
 
             idx, last_msg = 0, ""
             while True:
@@ -213,7 +231,8 @@ class UCASEvaluate:
 
     def __enrollCourse(self, course_id, isDegree):
         response = self.s.get(self.courseSelectionBase)
-        print("[Step into Enroll]", self.courseSelectionBase)
+        print("[Step into Enroll]", response)
+        print("\tView as {}".format(response.url))
         if self.debug:
             with open('./check.html', 'wb+') as f:
                 f.write(response.text.encode('utf-8'))
@@ -231,7 +250,8 @@ class UCASEvaluate:
         categoryUrl = self.courseCategory + identity
         response = self.s.post(
             categoryUrl, data=post_data, headers=self.headers)
-        print(response)
+        print("[Step into CourseCategory]", response)
+        print("\tView as {}".format(response.url))
         if self.debug:
             print("Now Posting, save snapshot in check2.html.")
             with open('./check2.html', 'wb+') as f:
