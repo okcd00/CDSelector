@@ -1,0 +1,61 @@
+html,body {
+  background-color: #ffffff;
+}
+label {display:inline-block;margin-bottom:0;}
+.form-search label{margin-left:10px;}
+.form-search span label{margin-left:0;}
+.form-search .ul-form {margin:0;overflow:hidden;}
+.form-search .ul-form li{float:left;list-style:none;height:35px;line-height:35px;}
+.form-search .ul-form li label{width:80px;text-align:right;}
+.form-search .ul-form li span label{width:auto;}
+.form-search .ul-form li.clearfix{float:none;}
+.form-search .ul-form li.btns{padding-left:10px;}
+.form-search .ul-form li.btns .btn{margin-right:5px;}
+
+.form-horizontal .control-label2 {
+  float: left;
+  width: 100px;
+  padding-top: 5px;
+  text-align: right;
+}
+.form-horizontal .controls2 {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 120px;
+  *margin-left: 0;
+}
+.form-horizontal .controls2:first-child {
+  *padding-left: 120px;
+}
+.form-horizontal .control-group3 {
+    margin-bottom: 0px;
+}
+.form-horizontal .control-label3 {
+    float: left;
+    width: 300px;
+    padding-top: 5px;
+    text-align: right;
+}
+.form-horizontal .control-label4 {
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    text-align: left;
+}
+.form-horizontal .controls3 {
+    margin-left: 330px;
+}
+.hr{
+	margin:5px 0;
+}
+table .btn-group > .btn,
+table .btn-group > .dropdown-menu,
+table .btn-group > .popover {
+  font-size: 12px;
+}
+.bg {
+    background-image: url(index-bg.gif);
+    background-repeat: repeat-x;
+    padding-top: 10px;
+    margin: 0px;
+}

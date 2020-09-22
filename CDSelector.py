@@ -99,10 +99,15 @@ class UCASEvaluate:
         self.s = requests.Session()
         self.s.get(self.loginPage, headers=self.headers)
 
-    @staticmethod
-    def dump_here(response):
-        with open('./here.html', 'wb+') as f:
-            f.write(response.text.encode('utf-8'))
+    def dump_check(self, response, page_name='check'):
+        if self.debug:
+            with open('./{}.html'.format(page_name), 'wb+') as f:
+                text = response.text.replace('href="/static', 'href="static')
+                text = text.replace('src="/static', 'src="static')
+                f.write(text.encode('utf-8'))
+
+    def dump_here(self, response):
+        self.dump_check(response, 'here')
 
     @staticmethod
     def show_http_request(url, data):
@@ -233,9 +238,7 @@ class UCASEvaluate:
         response = self.s.get(self.courseSelectionBase)
         print("[Step into Enroll]", response)
         print("\tView as {}".format(response.url))
-        if self.debug:
-            with open('./check.html', 'wb+') as f:
-                f.write(response.text.encode('utf-8'))
+        self.dump_check(response, 'check')
 
         soup = BeautifulSoup(response.text, 'html.parser')
         dept_ids = self.coursesDept.get(course_id)
@@ -252,10 +255,8 @@ class UCASEvaluate:
             categoryUrl, data=post_data, headers=self.headers)
         print("[Step into CourseCategory]", response)
         print("\tView as {}".format(response.url))
-        if self.debug:
-            print("Now Posting, save snapshot in check2.html.")
-            with open('./check2.html', 'wb+') as f:
-                f.write(response.text.encode('utf-8'))
+        self.dump_check(response, 'check2')
+
         soup = BeautifulSoup(response.text, 'html.parser')
         courseTable = soup.body.form.table
         if courseTable:
