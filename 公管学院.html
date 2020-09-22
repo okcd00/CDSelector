@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择课程-选课系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="renderer" content="webkit" />
+<link href="static/stylelib/base.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/responsive.css" rel="stylesheet" type="text/css" />
+<!-- // plugins css -->
+<link href="static/stylelib/plugins/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/plugins/iealert/style.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/plugins/chosen/chosen.css" rel="stylesheet" type="text/css" />
+<!-- // theme css -->
+<link href="static/stylelib/theme_wblue/screen.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/theme_default/routing.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/theme_wblue/my_responsive.css" rel="stylesheet" type="text/css" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="static/stylelib/plugins/html5shiv.js"></script>
+<![endif]-->
+<!--// Loading JS -->
+<script src="static/stylelib/jquery-1.8.3.min.js"></script>
+<script src="static/i18n/messages.js"></script>
+	<script src="static/stylelib/base.js"></script>
+<script src="static/stylelib/plugins/iealert/iealert.js"></script>
+<script src="static/stylelib/plugins/jquery.nicescroll.min.js"></script>
+<!--common script for all pages-->
+<script src="static/stylelib/theme_default/global.js"></script>
+<script src="static/stylelib/plugins/sco.modal.js"></script>
+<script src="static/stylelib/plugins/jquery.placeholder.min.js"></script>
+<script language="javascript" type="text/javascript" src="static/My97DatePicker/WdatePicker.js"></script>
+<link href="static/jquery-select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+<script src="static/jquery-select2/4.0.2/js/select2.min.js" type="text/javascript"></script>
+<script src="static/stylelib/plugins/chosen/chosen.jquery.js"></script>
+<link href="static/jquery-validation/1.15.0/dist/jquery.validate.min.css" rel="stylesheet" />
+<script src="static/jquery-validation/1.15.0/dist/jquery.validate.min.js" type="text/javascript"></script>
+<script src="static/jquery-validation/1.15.0/dist/localization/messages_zh.min.js"></script>
+	<script src="static/jquery-form/jquery.form.js" type="text/javascript"></script>
+<link href="static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet" />
+<script src="static/jquery-jbox/2.3/jquery.jBox-2.3.min.js" type="text/javascript"></script>
+<script src="static/common/sumreg.js" type="text/javascript"></script>
+<link href="static/common/sumreg.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+	 <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container-fluid">
+              <a id="edu_logo" target="_top" class="brand" href="http://sep.ucas.ac.cn/portal/site/105" >
+                <img src="http://sep.ucas.ac.cn//resources/images/edu_cloud.png"/>
+              </a><!--//logo:end-->
+              <a id="logo" class="brand" href="#" >
+                <span>选课系统</span>
+              </a><!--//site_name:end-->
+               <!-- //系统菜单 -->
+                      <div class="b-select-system">
+                          <a href="#" class="bss-btn">
+                              <i class="icon-angle-down"></i>
+                              <span>选择其他系统</span>
+                          </a>
+                          <div class="bss-menu">
+                              <ul>
+  	    						<li>
+  									<a target="_top" class="http://sep.ucas.ac.cn/portal/site/105" href="http://sep.ucas.ac.cn/portal/site/105">
+  		    							<img alt=""src="http://sep.ucas.ac.cn/access/img/site/105.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">
+  		    							<h5>SEP</h5>
+  									</a>
+  	    						</li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/416"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/c11e1a91-5f47-4fff-a6cf-aea6b78f816a.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>网上办事大厅</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/16"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/16.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>课程网站</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/400"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/86ba481a-eb57-4cd3-bd21-408cc981782d.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>正版GIS软件下载</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/405"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/resources/images/app-default-icon2.png" > 
+                                         <h5>就业管理系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/1"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/1.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学籍管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/221"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/221.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>培养指导</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/217"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/eb2834ba-e971-4e5c-bc61-673fbbcaf1e4.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>所级教务</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/10"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/10.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学位管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/218"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/218.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>实景课堂</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/282"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/91e650cb-fa5f-4d75-b0ca-635d9b382240.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>奖助系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/306"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/9d73e90b-1162-4716-b176-81d1011813fd.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学籍变动审核</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="javascript:;"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/226.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>选课系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/311"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/134de36f-4a3f-4c17-bb38-7f759466072b.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>一卡通支付</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/299"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/87f717aa-492c-4fd8-aa7e-96815973d631.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>校园支付</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/291"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/397edbf7-7a83-4d05-84eb-7e4a9c9d1184.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>四六级报名系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/255"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/bea5429e-3e12-4807-8456-25712a542bda.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>正版软件</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/259"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/0c5b43cf-00e1-4378-8522-4ab5b39aae6f.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>校友网</h5> 
+                                     </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div><!--//b-select-system:end-->
+  
+  
+                      <!-- //顶部菜单按钮(除pc端外显示).btn-navbar  -->
+                      <a class="b-top-toggle-menu btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="javascript:void(0);">
+                          <i class="icon-align-justify"></i>
+                      </a>
+  
+                      <!-- //顶部提醒 -->
+                      <div id="taskInfo" class="b-top-remind hidden-phone">
+                      </div><!--//b-top-remind:end-->
+                      <!-- //顶部左侧链接与菜单 -->
+                      <div class="b-top-nav">
+                          <ul class="nav pull-right top-menu">
+                              <li class="btnav-info" title="当前用户所在单位">
+ 中国科学院昆明植物研究所                             </li>
+                            <li class="btnav-menu dropdown" title="切换角色">
+                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               	<i class="icon-user"></i> 学生角色
+                               	<b class="caret"></b>
+                               </a>
+                               	<ul class="dropdown-menu">
+                                         <li><a  href="http://sep.ucas.ac.cn//portal/site/226/821"><i class="icon-user-md"></i> 学生角色</a></li>
+                                  </ul>
+                           </li>
+                             <li class="btnav-info"> 
+                                <a>
+代伟                             
+</a>
+                              </li>
+                              <li><a href="http://sep.ucas.ac.cn//logout"  title="退出系统"><i class="icon-off"></i></a></li>
+                          </ul>
+                      </div><!--//b-top-nav:end-->
+          </div><!--//container:end-->
+      </div><!--//container-fluid:end-->
+  </div><!--//header:end-->
+ <style type="text/css">
+.pull-right > li > .dropdown-menu, .nav > li > .dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+.nav > li {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dropdown-menu {
+    min-width:30px
+}
+</style>
+<ul class="nav pull-right top-menu" style="margin-right:10px">
+	<li class="btnav-menu">
+		<a href="http://inc.ucas.ac.cn/home/info/467ed160-1fe8-436a-994d-235206b33628/3d223558-53a2-4c56-9456-25d79d6317e9" target="_blank" title="帮助指南">
+		<i class=""></i> <span>帮助指南</span>
+		</a>
+	</li>
+	<li class="btnav-menu dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="语言">
+		<i class=""></i> <span>语言</span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="?locale=zh_CN"><i class=""></i> 中文</a></li>
+			<li><a href="?locale=en_US"><i class=""></i> English</a></li>
+		</ul>
+	</li>
+</ul>
+<div id="main-menu" class="row-fluid">
+   <div class="b-sidebar-scroll">
+       <div id="sidebar" class="nav-collapse collapse">
+           <ul class="b-sidebar-menu">
+           		<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>通知公告</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/notice/view/1" target="">通知公告</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>学期课表</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/course/termSchedule" target="">学期课表</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item active">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>选修课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class="active"><a href="/courseManage/main" target="">选择课程</a></li>
+							<li class=""><a href="/courseManage/selectedCourse" target="">已选课程</a></li>
+							<li class=""><a href="/course/coursetip" target="">选课学分提示</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>评估课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/evaluate/course/59587" target="">2020年夏季学期</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>查询成绩</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/score/yjs/all" target="">所有成绩</a></li>
+							<li class=""><a href="/score/yjs/p10" target="">Program10成绩</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>科学前沿讲座</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/subject/notice" target="">讲座通知</a></li>
+							<li class=""><a href="/subject/lecture" target="">讲座预告</a></li>
+							<li class=""><a href="/subject/student" target="">听讲情况</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>人文讲座</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/subject/humanityNotice" target="">讲座通知</a></li>
+							<li class=""><a href="/subject/humanityLecture" target="">讲座预告</a></li>
+							<li class=""><a href="/subject/humanityStudent" target="">报名及听课记录</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>Program-10</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/program10/intro" target="">介绍项目</a></li>
+							<li class=""><a href="/program10/register" target="">注册项目</a></li>
+							<li class=""><a href="/program10/selectedCourse" target="">选择课程</a></li>
+							<li class=""><a href="/program10/cancel" target="">注销项目</a></li>
+							<li class=""><a href="/program10/pringCourse" target="_blank">打印选课单</a></li>
+							<li class=""><a href="/program10/evaluateMain" target="">评估项目</a></li>
+							<li class=""><a href="/program10/downloadMain" target="">下载申请表</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>讲义调查问卷</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/poll/main" target="">讲义调查问卷</a></li>
+							<li class=""><a href="static/doc/pollHelp.doc" target="">使用说明</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>成绩单申请</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/selfServicePrint/applyMain" target="">自助打印成绩单申请</a></li>
+							<li class=""><a href="/selfServicePrint/dzcjd/applyMaindz" target="">电子成绩单申请</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>英语免修免考</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/engExempt/notice" target="">通知</a></li>
+							<li class=""><a href="/engExempt/apply" target="">报名</a></li>
+							<li class=""><a href="/engExempt/result" target="">认定结果查询</a></li>
+							</ul>
+	             	</li>
+				</ul><!--//sidebar-menu-->
+       </div><!--//sidebar:end-->
+    </div>
+</div><!--//main-menu:end--><div id="main-content">
+		<div class="container-fluid">
+			
+<div class="row-fluid">
+    <div class="span12">
+        <h2 id="page-title"><span>选择课程</span></h2>
+        </div><!--span*:end-->
+</div><!--//row-fluid:end-->
+<div class="m-cbox m-lgray">
+	<div class="mc-head">
+	    <h4>
+	        <span class="mch-smenu-btn"><i class="icon-reorder"></i></span>
+			选择课程</h4>
+	    <div class="mch-tool">
+	        <a href="#" class="mcht-zoom-btn"><i class="icon-chevron-down"></i></a>
+	    </div>
+	</div><!--//mc-head:end-->
+	
+    <div class="mc-body">
+		<div class="head">
+			<div id="messageBoxError" class="alert alert-error hide"><button data-dismiss="alert" class="close">×</button>
+				<label id="loginError" class="error"></label>
+			</div>
+			<div id="messageBoxSuccess" class="alert alert-success hide"><button data-dismiss="alert" class="close">×</button>
+				<label id="loginSuccess" class="success"></label>
+			</div>
+		</div>
+		<form id="regfrm" name="regfrm" action="/courseManage/saveCourse?s=bec4fe4b-b466-4469-9916-4494f95f59e9" class="form-horizontal" method="post">
+		<input type="hidden" name="deptIds" value="945"/>
+		<table class="table table-striped table-bordered table-advance table-hover">
+		   <thead>
+		       <tr>
+		       	   <th>选课</th>
+		       	   <th>学位</th>
+		           <th>课程编码</th>
+		           <th>课程名称</th>
+		           <th>课时</th>
+		           <th>学分</th>
+		           <th>限选</th>
+		           <th>已选</th>
+		           <th>课程属性</th>
+		           <th>授课方式</th>
+		           <th>考试方式</th>
+		           <th>主讲教师</th>
+		    	</tr>
+		   	</thead>
+		   	<tbody>
+			<tr>
+					<td><input type="checkbox" name="sids" value="4335C2F87E82C217" /></td>
+					<td><input type="checkbox" id="did_4335C2F87E82C217" name="did_4335C2F87E82C217" value="4335C2F87E82C217"  disabled/></td>
+					<td><a href="/course/courseplan/177756" target="_blank"><span id="courseCode_4335C2F87E82C217">020200MGX001H</span></a></td>
+					<td><a href="/course/coursetime/177756" target="_blank">区域经济学导论</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_4335C2F87E82C217">1.0</span></td>
+					<td>100</td>
+					<td >95</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177756" target="_blank">吕晨</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="AF1CCE616C8D05B3" /></td>
+					<td><input type="checkbox" id="did_AF1CCE616C8D05B3" name="did_AF1CCE616C8D05B3" value="AF1CCE616C8D05B3" /></td>
+					<td><a href="/course/courseplan/177293" target="_blank"><span id="courseCode_AF1CCE616C8D05B3">030100M01001H</span></a></td>
+					<td><a href="/course/coursetime/177293" target="_blank">民法学</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_AF1CCE616C8D05B3">3.0</span></td>
+					<td>35</td>
+					<td >12</td>
+					<td>
+						<select id="courseType_177293" name="courseType_AF1CCE616C8D05B3">
+									<option value="AF1CCE616C8D05B3__030100M01001H__3.0__131__1">一级学科核心课</option>
+									<option value="AF1CCE616C8D05B3__030100M01001H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>授课、讨论</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/177293" target="_blank">罗先觉</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="2EBC37F5B8E33EA2" /></td>
+					<td><input type="checkbox" id="did_2EBC37F5B8E33EA2" name="did_2EBC37F5B8E33EA2" value="2EBC37F5B8E33EA2" /></td>
+					<td><a href="/course/courseplan/177295" target="_blank"><span id="courseCode_2EBC37F5B8E33EA2">030100M01002H</span></a></td>
+					<td><a href="/course/coursetime/177295" target="_blank">法理学</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_2EBC37F5B8E33EA2">3.0</span></td>
+					<td>46</td>
+					<td >7</td>
+					<td>
+						<select id="courseType_177295" name="courseType_2EBC37F5B8E33EA2">
+									<option value="2EBC37F5B8E33EA2__030100M01002H__3.0__131__1">一级学科核心课</option>
+									<option value="2EBC37F5B8E33EA2__030100M01002H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/177295" target="_blank">肖尤丹等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="296FD4D91815FE0C" /></td>
+					<td><input type="checkbox" id="did_296FD4D91815FE0C" name="did_296FD4D91815FE0C" value="296FD4D91815FE0C" /></td>
+					<td><a href="/course/courseplan/177292" target="_blank"><span id="courseCode_296FD4D91815FE0C">030100M01003H</span></a></td>
+					<td><a href="/course/coursetime/177292" target="_blank">知识产权法</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_296FD4D91815FE0C">3.0</span></td>
+					<td>35</td>
+					<td >30</td>
+					<td>
+						<select id="courseType_177292" name="courseType_296FD4D91815FE0C">
+									<option value="296FD4D91815FE0C__030100M01003H__3.0__131__1">一级学科核心课</option>
+									<option value="296FD4D91815FE0C__030100M01003H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177292" target="_blank">李顺德等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="FDEE418218EACACF"  disabled/></td>
+					<td><input type="checkbox" id="did_FDEE418218EACACF" name="did_FDEE418218EACACF" value="FDEE418218EACACF"  disabled/></td>
+					<td><a href="/course/courseplan/178124" target="_blank"><span id="courseCode_FDEE418218EACACF">030100MGB001H-01</span></a></td>
+					<td><a href="/course/coursetime/178124" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_FDEE418218EACACF">1.0</span></td>
+					<td>242</td>
+					<td class="m-font-red">243</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178124" target="_blank">阎文军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="25D750AC43863202"  disabled/></td>
+					<td><input type="checkbox" id="did_25D750AC43863202" name="did_25D750AC43863202" value="25D750AC43863202"  disabled/></td>
+					<td><a href="/course/courseplan/178125" target="_blank"><span id="courseCode_25D750AC43863202">030100MGB001H-02</span></a></td>
+					<td><a href="/course/coursetime/178125" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_25D750AC43863202">1.0</span></td>
+					<td>216</td>
+					<td class="m-font-red">216</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178125" target="_blank">罗先觉</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="24F9966693D05BD4"  disabled/></td>
+					<td><input type="checkbox" id="did_24F9966693D05BD4" name="did_24F9966693D05BD4" value="24F9966693D05BD4"  disabled/></td>
+					<td><a href="/course/courseplan/178126" target="_blank"><span id="courseCode_24F9966693D05BD4">030100MGB001H-03</span></a></td>
+					<td><a href="/course/coursetime/178126" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_24F9966693D05BD4">1.0</span></td>
+					<td>214</td>
+					<td class="m-font-red">216</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178126" target="_blank">唐素琴</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="9F5A49E59589703B"  disabled/></td>
+					<td><input type="checkbox" id="did_9F5A49E59589703B" name="did_9F5A49E59589703B" value="9F5A49E59589703B"  disabled/></td>
+					<td><a href="/course/courseplan/178129" target="_blank"><span id="courseCode_9F5A49E59589703B">030100MGB001H-04</span></a></td>
+					<td><a href="/course/coursetime/178129" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_9F5A49E59589703B">1.0</span></td>
+					<td>300</td>
+					<td class="m-font-red">300</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178129" target="_blank">张艳等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="4E04EADD91AD26A1"  disabled/></td>
+					<td><input type="checkbox" id="did_4E04EADD91AD26A1" name="did_4E04EADD91AD26A1" value="4E04EADD91AD26A1"  disabled/></td>
+					<td><a href="/course/courseplan/178127" target="_blank"><span id="courseCode_4E04EADD91AD26A1">030100MGB001H-05</span></a></td>
+					<td><a href="/course/coursetime/178127" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_4E04EADD91AD26A1">1.0</span></td>
+					<td>300</td>
+					<td class="m-font-red">300</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178127" target="_blank">刘朝</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="7EFDC7B2F56618FD"  disabled/></td>
+					<td><input type="checkbox" id="did_7EFDC7B2F56618FD" name="did_7EFDC7B2F56618FD" value="7EFDC7B2F56618FD"  disabled/></td>
+					<td><a href="/course/courseplan/178128" target="_blank"><span id="courseCode_7EFDC7B2F56618FD">030100MGB001H-06</span></a></td>
+					<td><a href="/course/coursetime/178128" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_7EFDC7B2F56618FD">1.0</span></td>
+					<td>300</td>
+					<td class="m-font-red">301</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178128" target="_blank">尹锋林等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="46ABBE023626E926"  disabled/></td>
+					<td><input type="checkbox" id="did_46ABBE023626E926" name="did_46ABBE023626E926" value="46ABBE023626E926"  disabled/></td>
+					<td><a href="/course/courseplan/178120" target="_blank"><span id="courseCode_46ABBE023626E926">030100MGB001H-07</span></a></td>
+					<td><a href="/course/coursetime/178120" target="_blank">知识产权（限工程硕士修读）</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_46ABBE023626E926">1.0</span></td>
+					<td>300</td>
+					<td class="m-font-red">301</td>
+					<td>
+						公共必修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178120" target="_blank">李玲娟等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="60E3FAFC6A94FA84" /></td>
+					<td><input type="checkbox" id="did_60E3FAFC6A94FA84" name="did_60E3FAFC6A94FA84" value="60E3FAFC6A94FA84"  disabled/></td>
+					<td><a href="/course/courseplan/177384" target="_blank"><span id="courseCode_60E3FAFC6A94FA84">030100MGX001H</span></a></td>
+					<td><a href="/course/coursetime/177384" target="_blank">合同法</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_60E3FAFC6A94FA84">1.0</span></td>
+					<td>120</td>
+					<td >119</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177384" target="_blank">阎文军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="B7F5EE4D0BABF4E3" /></td>
+					<td><input type="checkbox" id="did_B7F5EE4D0BABF4E3" name="did_B7F5EE4D0BABF4E3" value="B7F5EE4D0BABF4E3"  disabled/></td>
+					<td><a href="/course/courseplan/177389" target="_blank"><span id="courseCode_B7F5EE4D0BABF4E3">030100MGX002H</span></a></td>
+					<td><a href="/course/coursetime/177389" target="_blank">行政法</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_B7F5EE4D0BABF4E3">1.0</span></td>
+					<td>48</td>
+					<td >46</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177389" target="_blank">张艳</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="1F882236544C896F" /></td>
+					<td><input type="checkbox" id="did_1F882236544C896F" name="did_1F882236544C896F" value="1F882236544C896F"  disabled/></td>
+					<td><a href="/course/courseplan/177390" target="_blank"><span id="courseCode_1F882236544C896F">030100MGX003H</span></a></td>
+					<td><a href="/course/coursetime/177390" target="_blank">刑法</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_1F882236544C896F">1.0</span></td>
+					<td>100</td>
+					<td >98</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177390" target="_blank">尹锋林</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="7590AF8594DA6DE0" /></td>
+					<td><input type="checkbox" id="did_7590AF8594DA6DE0" name="did_7590AF8594DA6DE0" value="7590AF8594DA6DE0"  disabled/></td>
+					<td><a href="/course/courseplan/177383" target="_blank"><span id="courseCode_7590AF8594DA6DE0">030100MGX006H</span></a></td>
+					<td><a href="/course/coursetime/177383" target="_blank">技术合同与案例分析</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_7590AF8594DA6DE0">1.0</span></td>
+					<td>120</td>
+					<td >117</td>
+					<td>
+						公共选修课</td>
+					<td>授课、讨论</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177383" target="_blank">李玲娟</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="F5D03184516E46A4" /></td>
+					<td><input type="checkbox" id="did_F5D03184516E46A4" name="did_F5D03184516E46A4" value="F5D03184516E46A4" /></td>
+					<td><a href="/course/courseplan/177283" target="_blank"><span id="courseCode_F5D03184516E46A4">120100M02001H</span></a></td>
+					<td><a href="/course/coursetime/177283" target="_blank">高级战略管理学</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_F5D03184516E46A4">2.0</span></td>
+					<td>35</td>
+					<td >29</td>
+					<td>
+						<select id="courseType_177283" name="courseType_F5D03184516E46A4">
+									<option value="F5D03184516E46A4__120100M02001H__2.0__132__1">一级学科普及课</option>
+									<option value="F5D03184516E46A4__120100M02001H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177283" target="_blank">霍国庆</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="363A08F16924B6BB" /></td>
+					<td><input type="checkbox" id="did_363A08F16924B6BB" name="did_363A08F16924B6BB" value="363A08F16924B6BB" /></td>
+					<td><a href="/course/courseplan/177757" target="_blank"><span id="courseCode_363A08F16924B6BB">120100M02002H</span></a></td>
+					<td><a href="/course/coursetime/177757" target="_blank">能源战略管理</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_363A08F16924B6BB">2.0</span></td>
+					<td>35</td>
+					<td >31</td>
+					<td>
+						<select id="courseType_177757" name="courseType_363A08F16924B6BB">
+									<option value="363A08F16924B6BB__120100M02002H__2.0__132__1">一级学科普及课</option>
+									<option value="363A08F16924B6BB__120100M02002H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/177757" target="_blank">范英等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="179D3AB1EA7DB5B9" /></td>
+					<td><input type="checkbox" id="did_179D3AB1EA7DB5B9" name="did_179D3AB1EA7DB5B9" value="179D3AB1EA7DB5B9" /></td>
+					<td><a href="/course/courseplan/177288" target="_blank"><span id="courseCode_179D3AB1EA7DB5B9">120100M02003H</span></a></td>
+					<td><a href="/course/coursetime/177288" target="_blank">现代化科学导论</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_179D3AB1EA7DB5B9">2.0</span></td>
+					<td>35</td>
+					<td >34</td>
+					<td>
+						<select id="courseType_177288" name="courseType_179D3AB1EA7DB5B9">
+									<option value="179D3AB1EA7DB5B9__120100M02003H__2.0__132__1">一级学科普及课</option>
+									<option value="179D3AB1EA7DB5B9__120100M02003H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177288" target="_blank">何传启等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="A9E989D854687197" /></td>
+					<td><input type="checkbox" id="did_A9E989D854687197" name="did_A9E989D854687197" value="A9E989D854687197" /></td>
+					<td><a href="/course/courseplan/177285" target="_blank"><span id="courseCode_A9E989D854687197">120100M02004H</span></a></td>
+					<td><a href="/course/coursetime/177285" target="_blank">科技战略管理</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_A9E989D854687197">2.0</span></td>
+					<td>0</td>
+					<td >21</td>
+					<td>
+						<select id="courseType_177285" name="courseType_A9E989D854687197">
+									<option value="A9E989D854687197__120100M02004H__2.0__132__1">一级学科普及课</option>
+									<option value="A9E989D854687197__120100M02004H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177285" target="_blank">霍国庆</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="73486F9764BB57C0" /></td>
+					<td><input type="checkbox" id="did_73486F9764BB57C0" name="did_73486F9764BB57C0" value="73486F9764BB57C0" /></td>
+					<td><a href="/course/courseplan/177286" target="_blank"><span id="courseCode_73486F9764BB57C0">120100M02006H</span></a></td>
+					<td><a href="/course/coursetime/177286" target="_blank">创新经济学</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_73486F9764BB57C0">2.0</span></td>
+					<td>35</td>
+					<td >25</td>
+					<td>
+						<select id="courseType_177286" name="courseType_73486F9764BB57C0">
+									<option value="73486F9764BB57C0__120100M02006H__2.0__132__1">一级学科普及课</option>
+									<option value="73486F9764BB57C0__120100M02006H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177286" target="_blank">温珂等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="AD3C0AFD788AC414" /></td>
+					<td><input type="checkbox" id="did_AD3C0AFD788AC414" name="did_AD3C0AFD788AC414" value="AD3C0AFD788AC414"  disabled/></td>
+					<td><a href="/course/courseplan/177381" target="_blank"><span id="courseCode_AD3C0AFD788AC414">120100MGX001H</span></a></td>
+					<td><a href="/course/coursetime/177381" target="_blank">科研项目质量管理</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_AD3C0AFD788AC414">1.0</span></td>
+					<td>48</td>
+					<td >47</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177381" target="_blank">王富良</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="035D1F0F6E642EDF" /></td>
+					<td><input type="checkbox" id="did_035D1F0F6E642EDF" name="did_035D1F0F6E642EDF" value="035D1F0F6E642EDF"  disabled/></td>
+					<td><a href="/course/courseplan/177382" target="_blank"><span id="courseCode_035D1F0F6E642EDF">120100MGX002H</span></a></td>
+					<td><a href="/course/coursetime/177382" target="_blank">领导力</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_035D1F0F6E642EDF">1.0</span></td>
+					<td>120</td>
+					<td >110</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177382" target="_blank">曾明彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="A1ABC31624785C83" /></td>
+					<td><input type="checkbox" id="did_A1ABC31624785C83" name="did_A1ABC31624785C83" value="A1ABC31624785C83"  disabled/></td>
+					<td><a href="/course/courseplan/177379" target="_blank"><span id="courseCode_A1ABC31624785C83">120100MGX003H</span></a></td>
+					<td><a href="/course/coursetime/177379" target="_blank">高科技企业管理</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_A1ABC31624785C83">1.0</span></td>
+					<td>120</td>
+					<td >116</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177379" target="_blank">孙玉麟</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="D9E6D46E1A40A4DB" /></td>
+					<td><input type="checkbox" id="did_D9E6D46E1A40A4DB" name="did_D9E6D46E1A40A4DB" value="D9E6D46E1A40A4DB"  disabled/></td>
+					<td><a href="/course/courseplan/177380" target="_blank"><span id="courseCode_D9E6D46E1A40A4DB">120100MGX005H</span></a></td>
+					<td><a href="/course/coursetime/177380" target="_blank">创造性思维</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_D9E6D46E1A40A4DB">1.0</span></td>
+					<td>48</td>
+					<td >46</td>
+					<td>
+						公共选修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/177380" target="_blank">梁洪力</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="761DE075315EC835" /></td>
+					<td><input type="checkbox" id="did_761DE075315EC835" name="did_761DE075315EC835" value="761DE075315EC835"  disabled/></td>
+					<td><a href="/course/courseplan/178337" target="_blank"><span id="courseCode_761DE075315EC835">120100MGX007H</span></a></td>
+					<td><a href="/course/coursetime/178337" target="_blank">全球化创新</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_761DE075315EC835">1.0</span></td>
+					<td>100</td>
+					<td >83</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178337" target="_blank">张古鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="985EB42B6A803B2E" /></td>
+					<td><input type="checkbox" id="did_985EB42B6A803B2E" name="did_985EB42B6A803B2E" value="985EB42B6A803B2E" /></td>
+					<td><a href="/course/courseplan/177761" target="_blank"><span id="courseCode_985EB42B6A803B2E">120400M01001H</span></a></td>
+					<td><a href="/course/coursetime/177761" target="_blank">公共管理研究方法</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_985EB42B6A803B2E">3.0</span></td>
+					<td>48</td>
+					<td >26</td>
+					<td>
+						<select id="courseType_177761" name="courseType_985EB42B6A803B2E">
+									<option value="985EB42B6A803B2E__120400M01001H__3.0__131__1">一级学科核心课</option>
+									<option value="985EB42B6A803B2E__120400M01001H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177761" target="_blank">刘云等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="0F391306F7F3CCE5" /></td>
+					<td><input type="checkbox" id="did_0F391306F7F3CCE5" name="did_0F391306F7F3CCE5" value="0F391306F7F3CCE5" /></td>
+					<td><a href="/course/courseplan/177763" target="_blank"><span id="courseCode_0F391306F7F3CCE5">120400M01002H</span></a></td>
+					<td><a href="/course/coursetime/177763" target="_blank">公共经济学</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_0F391306F7F3CCE5">3.0</span></td>
+					<td>42</td>
+					<td >21</td>
+					<td>
+						<select id="courseType_177763" name="courseType_0F391306F7F3CCE5">
+									<option value="0F391306F7F3CCE5__120400M01002H__3.0__131__1">一级学科核心课</option>
+									<option value="0F391306F7F3CCE5__120400M01002H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177763" target="_blank">张林秀等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="81EFBDE744BF3F14" /></td>
+					<td><input type="checkbox" id="did_81EFBDE744BF3F14" name="did_81EFBDE744BF3F14" value="81EFBDE744BF3F14" /></td>
+					<td><a href="/course/courseplan/177290" target="_blank"><span id="courseCode_81EFBDE744BF3F14">120400M01003H</span></a></td>
+					<td><a href="/course/coursetime/177290" target="_blank">公共管理学</a></td>
+					<td>54</td>
+					<td><span id="courseCredit_81EFBDE744BF3F14">3.0</span></td>
+					<td>48</td>
+					<td >31</td>
+					<td>
+						<select id="courseType_177290" name="courseType_81EFBDE744BF3F14">
+									<option value="81EFBDE744BF3F14__120400M01003H__3.0__131__1">一级学科核心课</option>
+									<option value="81EFBDE744BF3F14__120400M01003H__1.5__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/177290" target="_blank">叶中华</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="699F869C7C16EFCB" /></td>
+					<td><input type="checkbox" id="did_699F869C7C16EFCB" name="did_699F869C7C16EFCB" value="699F869C7C16EFCB" /></td>
+					<td><a href="/course/courseplan/177287" target="_blank"><span id="courseCode_699F869C7C16EFCB">120400M02001H</span></a></td>
+					<td><a href="/course/coursetime/177287" target="_blank">可持续发展的理论与实践</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_699F869C7C16EFCB">2.0</span></td>
+					<td>0</td>
+					<td >22</td>
+					<td>
+						<select id="courseType_177287" name="courseType_699F869C7C16EFCB">
+									<option value="699F869C7C16EFCB__120400M02001H__2.0__132__1">一级学科普及课</option>
+									<option value="699F869C7C16EFCB__120400M02001H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177287" target="_blank">王毅等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="242562904D6F8B09" /></td>
+					<td><input type="checkbox" id="did_242562904D6F8B09" name="did_242562904D6F8B09" value="242562904D6F8B09" /></td>
+					<td><a href="/course/courseplan/177291" target="_blank"><span id="courseCode_242562904D6F8B09">120400M02003H</span></a></td>
+					<td><a href="/course/coursetime/177291" target="_blank">公共伦理学</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_242562904D6F8B09">2.0</span></td>
+					<td>35</td>
+					<td >15</td>
+					<td>
+						<select id="courseType_177291" name="courseType_242562904D6F8B09">
+									<option value="242562904D6F8B09__120400M02003H__2.0__132__1">一级学科普及课</option>
+									<option value="242562904D6F8B09__120400M02003H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177291" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="D435C5345800E397" /></td>
+					<td><input type="checkbox" id="did_D435C5345800E397" name="did_D435C5345800E397" value="D435C5345800E397" /></td>
+					<td><a href="/course/courseplan/177284" target="_blank"><span id="courseCode_D435C5345800E397">120400M02005H</span></a></td>
+					<td><a href="/course/coursetime/177284" target="_blank">风险管理概论</a></td>
+					<td>36</td>
+					<td><span id="courseCredit_D435C5345800E397">2.0</span></td>
+					<td>35</td>
+					<td >33</td>
+					<td>
+						<select id="courseType_177284" name="courseType_D435C5345800E397">
+									<option value="D435C5345800E397__120400M02005H__2.0__132__1">一级学科普及课</option>
+									<option value="D435C5345800E397__120400M02005H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/177284" target="_blank">陈建明等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="E9B089F0CB893A49" /></td>
+					<td><input type="checkbox" id="did_E9B089F0CB893A49" name="did_E9B089F0CB893A49" value="E9B089F0CB893A49" /></td>
+					<td><a href="/course/courseplan/176823" target="_blank"><span id="courseCode_E9B089F0CB893A49">120400M02010H</span></a></td>
+					<td><a href="/course/coursetime/176823" target="_blank">科技政策与管理</a></td>
+					<td>40</td>
+					<td><span id="courseCredit_E9B089F0CB893A49">2.0</span></td>
+					<td>35</td>
+					<td >29</td>
+					<td>
+						<select id="courseType_176823" name="courseType_E9B089F0CB893A49">
+									<option value="E9B089F0CB893A49__120400M02010H__2.0__132__1">一级学科普及课</option>
+									<option value="E9B089F0CB893A49__120400M02010H__1.0__122__0">公共选修课</option>
+								</select>
+							</td>
+					<td>课堂讲授为主</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/176823" target="_blank">刘云</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="4D34563DF3C92DF0" /></td>
+					<td><input type="checkbox" id="did_4D34563DF3C92DF0" name="did_4D34563DF3C92DF0" value="4D34563DF3C92DF0" /></td>
+					<td><a href="/course/courseplan/177289" target="_blank"><span id="courseCode_4D34563DF3C92DF0">120400M03001H</span></a></td>
+					<td><a href="/course/coursetime/177289" target="_blank">气候变化经济学研究前沿</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_4D34563DF3C92DF0">1.0</span></td>
+					<td>35</td>
+					<td >6</td>
+					<td>
+						一级学科研讨课</td>
+					<td>授课、讨论</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/177289" target="_blank">吴静等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="52F84B80BCD80972" /></td>
+					<td><input type="checkbox" id="did_52F84B80BCD80972" name="did_52F84B80BCD80972" value="52F84B80BCD80972" /></td>
+					<td><a href="/course/courseplan/176822" target="_blank"><span id="courseCode_52F84B80BCD80972">120400M03007H</span></a></td>
+					<td><a href="/course/coursetime/176822" target="_blank">可持续发展政策</a></td>
+					<td>20</td>
+					<td><span id="courseCredit_52F84B80BCD80972">1.0</span></td>
+					<td>35</td>
+					<td >32</td>
+					<td>
+						一级学科研讨课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/176822" target="_blank">王毅等</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="118530D8987A8E4E"  disabled/></td>
+					<td><input type="checkbox" id="did_118530D8987A8E4E" name="did_118530D8987A8E4E" value="118530D8987A8E4E"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178246" target="_blank"><span id="courseCode_118530D8987A8E4E">120400MGB001H-01</span></a></td>
+					<td><a href="/course/coursetime/178246" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_118530D8987A8E4E">0.5</span></td>
+					<td>214</td>
+					<td class="m-font-red">214</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178246" target="_blank">黄小茹</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="74F89528D9DFE764"  disabled/></td>
+					<td><input type="checkbox" id="did_74F89528D9DFE764" name="did_74F89528D9DFE764" value="74F89528D9DFE764"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178247" target="_blank"><span id="courseCode_74F89528D9DFE764">120400MGB001H-02</span></a></td>
+					<td><a href="/course/coursetime/178247" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_74F89528D9DFE764">0.5</span></td>
+					<td>214</td>
+					<td class="m-font-red">217</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178247" target="_blank">黄小茹</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="6D0D5801A0E53543"  disabled/></td>
+					<td><input type="checkbox" id="did_6D0D5801A0E53543" name="did_6D0D5801A0E53543" value="6D0D5801A0E53543"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178248" target="_blank"><span id="courseCode_6D0D5801A0E53543">120400MGB001H-03</span></a></td>
+					<td><a href="/course/coursetime/178248" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_6D0D5801A0E53543">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">219</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178248" target="_blank">任艳青</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="3220C847AD27D8CD"  disabled/></td>
+					<td><input type="checkbox" id="did_3220C847AD27D8CD" name="did_3220C847AD27D8CD" value="3220C847AD27D8CD"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178249" target="_blank"><span id="courseCode_3220C847AD27D8CD">120400MGB001H-04</span></a></td>
+					<td><a href="/course/coursetime/178249" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_3220C847AD27D8CD">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">223</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178249" target="_blank">任艳青</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="406FA7C73C45FB5F"  disabled/></td>
+					<td><input type="checkbox" id="did_406FA7C73C45FB5F" name="did_406FA7C73C45FB5F" value="406FA7C73C45FB5F"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178250" target="_blank"><span id="courseCode_406FA7C73C45FB5F">120400MGB001H-05</span></a></td>
+					<td><a href="/course/coursetime/178250" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_406FA7C73C45FB5F">0.5</span></td>
+					<td>242</td>
+					<td class="m-font-red">243</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178250" target="_blank">李志红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="B386D06375FC49C3"  disabled/></td>
+					<td><input type="checkbox" id="did_B386D06375FC49C3" name="did_B386D06375FC49C3" value="B386D06375FC49C3"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178251" target="_blank"><span id="courseCode_B386D06375FC49C3">120400MGB001H-06</span></a></td>
+					<td><a href="/course/coursetime/178251" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_B386D06375FC49C3">0.5</span></td>
+					<td>242</td>
+					<td class="m-font-red">247</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178251" target="_blank">李志红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="1820CC835F6E2B15"  disabled/></td>
+					<td><input type="checkbox" id="did_1820CC835F6E2B15" name="did_1820CC835F6E2B15" value="1820CC835F6E2B15"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178252" target="_blank"><span id="courseCode_1820CC835F6E2B15">120400MGB001H-07</span></a></td>
+					<td><a href="/course/coursetime/178252" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_1820CC835F6E2B15">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">224</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178252" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="8082ABE67AD6F394"  disabled/></td>
+					<td><input type="checkbox" id="did_8082ABE67AD6F394" name="did_8082ABE67AD6F394" value="8082ABE67AD6F394"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178253" target="_blank"><span id="courseCode_8082ABE67AD6F394">120400MGB001H-08</span></a></td>
+					<td><a href="/course/coursetime/178253" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_8082ABE67AD6F394">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">224</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178253" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="94E00A2AE9AB779C"  disabled/></td>
+					<td><input type="checkbox" id="did_94E00A2AE9AB779C" name="did_94E00A2AE9AB779C" value="94E00A2AE9AB779C"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178254" target="_blank"><span id="courseCode_94E00A2AE9AB779C">120400MGB001H-09</span></a></td>
+					<td><a href="/course/coursetime/178254" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_94E00A2AE9AB779C">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">216</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178254" target="_blank">李玲娟</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="28AAB723308F7035"  disabled/></td>
+					<td><input type="checkbox" id="did_28AAB723308F7035" name="did_28AAB723308F7035" value="28AAB723308F7035"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178255" target="_blank"><span id="courseCode_28AAB723308F7035">120400MGB001H-10</span></a></td>
+					<td><a href="/course/coursetime/178255" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_28AAB723308F7035">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">220</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178255" target="_blank">李玲娟</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="FDE8056DA39B0FFD"  disabled/></td>
+					<td><input type="checkbox" id="did_FDE8056DA39B0FFD" name="did_FDE8056DA39B0FFD" value="FDE8056DA39B0FFD"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178256" target="_blank"><span id="courseCode_FDE8056DA39B0FFD">120400MGB001H-11</span></a></td>
+					<td><a href="/course/coursetime/178256" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_FDE8056DA39B0FFD">0.5</span></td>
+					<td>242</td>
+					<td class="m-font-red">247</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178256" target="_blank">袁军鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="A096358C2B4ABF1C"  disabled/></td>
+					<td><input type="checkbox" id="did_A096358C2B4ABF1C" name="did_A096358C2B4ABF1C" value="A096358C2B4ABF1C"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178257" target="_blank"><span id="courseCode_A096358C2B4ABF1C">120400MGB001H-12</span></a></td>
+					<td><a href="/course/coursetime/178257" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_A096358C2B4ABF1C">0.5</span></td>
+					<td>242</td>
+					<td class="m-font-red">242</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178257" target="_blank">袁军鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="1DAFA04A5C55607B"  disabled/></td>
+					<td><input type="checkbox" id="did_1DAFA04A5C55607B" name="did_1DAFA04A5C55607B" value="1DAFA04A5C55607B"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178263" target="_blank"><span id="courseCode_1DAFA04A5C55607B">120400MGB001H-13</span></a></td>
+					<td><a href="/course/coursetime/178263" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_1DAFA04A5C55607B">0.5</span></td>
+					<td>300</td>
+					<td class="m-font-red">305</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178263" target="_blank">刘朝</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="2F7A3267466094CE"  disabled/></td>
+					<td><input type="checkbox" id="did_2F7A3267466094CE" name="did_2F7A3267466094CE" value="2F7A3267466094CE"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178264" target="_blank"><span id="courseCode_2F7A3267466094CE">120400MGB001H-14</span></a></td>
+					<td><a href="/course/coursetime/178264" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_2F7A3267466094CE">0.5</span></td>
+					<td>154</td>
+					<td class="m-font-red">159</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178264" target="_blank">刘朝</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="72DAC8F03DB9A30B"  disabled/></td>
+					<td><input type="checkbox" id="did_72DAC8F03DB9A30B" name="did_72DAC8F03DB9A30B" value="72DAC8F03DB9A30B"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178265" target="_blank"><span id="courseCode_72DAC8F03DB9A30B">120400MGB001H-15</span></a></td>
+					<td><a href="/course/coursetime/178265" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_72DAC8F03DB9A30B">0.5</span></td>
+					<td>300</td>
+					<td class="m-font-red">300</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178265" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="A200302A08A55043"  disabled/></td>
+					<td><input type="checkbox" id="did_A200302A08A55043" name="did_A200302A08A55043" value="A200302A08A55043"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178266" target="_blank"><span id="courseCode_A200302A08A55043">120400MGB001H-16</span></a></td>
+					<td><a href="/course/coursetime/178266" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_A200302A08A55043">0.5</span></td>
+					<td>300</td>
+					<td class="m-font-red">300</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178266" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="A7E332FF7F588F1A"  disabled/></td>
+					<td><input type="checkbox" id="did_A7E332FF7F588F1A" name="did_A7E332FF7F588F1A" value="A7E332FF7F588F1A"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178269" target="_blank"><span id="courseCode_A7E332FF7F588F1A">120400MGB001H-17</span></a></td>
+					<td><a href="/course/coursetime/178269" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_A7E332FF7F588F1A">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">219</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178269" target="_blank">袁军鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="6DE57BC6B2F1D0D0"  disabled/></td>
+					<td><input type="checkbox" id="did_6DE57BC6B2F1D0D0" name="did_6DE57BC6B2F1D0D0" value="6DE57BC6B2F1D0D0"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178270" target="_blank"><span id="courseCode_6DE57BC6B2F1D0D0">120400MGB001H-18</span></a></td>
+					<td><a href="/course/coursetime/178270" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_6DE57BC6B2F1D0D0">0.5</span></td>
+					<td>216</td>
+					<td class="m-font-red">221</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178270" target="_blank">袁军鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="23C63C38330ADC76"  disabled/></td>
+					<td><input type="checkbox" id="did_23C63C38330ADC76" name="did_23C63C38330ADC76" value="23C63C38330ADC76"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178271" target="_blank"><span id="courseCode_23C63C38330ADC76">120400MGB001H-19</span></a></td>
+					<td><a href="/course/coursetime/178271" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_23C63C38330ADC76">0.5</span></td>
+					<td>300</td>
+					<td class="m-font-red">306</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178271" target="_blank">唐素琴</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="5A81BA012C781A9F"  disabled/></td>
+					<td><input type="checkbox" id="did_5A81BA012C781A9F" name="did_5A81BA012C781A9F" value="5A81BA012C781A9F"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/178272" target="_blank"><span id="courseCode_5A81BA012C781A9F">120400MGB001H-20</span></a></td>
+					<td><a href="/course/coursetime/178272" target="_blank">学术道德与学术写作规范-通论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_5A81BA012C781A9F">0.5</span></td>
+					<td>300</td>
+					<td class="m-font-red">305</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/178272" target="_blank">唐素琴</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="251626BFE74E739F"  disabled/></td>
+					<td><input type="checkbox" id="did_251626BFE74E739F" name="did_251626BFE74E739F" value="251626BFE74E739F"  disabled checked="checked"/></td>
+					<td><a href="/course/courseplan/177651" target="_blank"><span id="courseCode_251626BFE74E739F">120400MGB003H</span></a></td>
+					<td><a href="/course/coursetime/177651" target="_blank">学术道德与学术写作规范-分论</a></td>
+					<td>10</td>
+					<td><span id="courseCredit_251626BFE74E739F">0.5</span></td>
+					<td>48</td>
+					<td >30</td>
+					<td>
+						公共必修课</td>
+					<td>授课、讨论</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/177651" target="_blank">刘红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="4F305EEC44839B53" /></td>
+					<td><input type="checkbox" id="did_4F305EEC44839B53" name="did_4F305EEC44839B53" value="4F305EEC44839B53"  disabled/></td>
+					<td><a href="/course/courseplan/177387" target="_blank"><span id="courseCode_4F305EEC44839B53">120400MGX004H</span></a></td>
+					<td><a href="/course/coursetime/177387" target="_blank">社会政策理论与实践</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_4F305EEC44839B53">1.0</span></td>
+					<td>48</td>
+					<td >47</td>
+					<td>
+						公共选修课</td>
+					<td>授课、讨论</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/177387" target="_blank">胡乃军</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="3A3A3D0274A7CB77" /></td>
+					<td><input type="checkbox" id="did_3A3A3D0274A7CB77" name="did_3A3A3D0274A7CB77" value="3A3A3D0274A7CB77"  disabled/></td>
+					<td><a href="/course/courseplan/178338" target="_blank"><span id="courseCode_3A3A3D0274A7CB77">120400MGX005H</span></a></td>
+					<td><a href="/course/coursetime/178338" target="_blank">公共大数据处理与社会网络分析</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_3A3A3D0274A7CB77">1.0</span></td>
+					<td>100</td>
+					<td >90</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/178338" target="_blank">张古鹏</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="07078C0843477F7F" /></td>
+					<td><input type="checkbox" id="did_07078C0843477F7F" name="did_07078C0843477F7F" value="07078C0843477F7F"  disabled/></td>
+					<td><a href="/course/courseplan/176835" target="_blank"><span id="courseCode_07078C0843477F7F">120400MGX006H</span></a></td>
+					<td><a href="/course/coursetime/176835" target="_blank">电子政务</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_07078C0843477F7F">1.0</span></td>
+					<td>48</td>
+					<td >35</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/176835" target="_blank">关欣</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="F548E6E2A3291A08"  disabled/></td>
+					<td><input type="checkbox" id="did_F548E6E2A3291A08" name="did_F548E6E2A3291A08" value="F548E6E2A3291A08"  disabled/></td>
+					<td><a href="/course/courseplan/176836" target="_blank"><span id="courseCode_F548E6E2A3291A08">120400MGX008H</span></a></td>
+					<td><a href="/course/coursetime/176836" target="_blank">公共组织行为学</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_F548E6E2A3291A08">1.0</span></td>
+					<td>100</td>
+					<td class="m-font-red">100</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/176836" target="_blank">曾明彬</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="3579A282212FFAB0"  disabled/></td>
+					<td><input type="checkbox" id="did_3579A282212FFAB0" name="did_3579A282212FFAB0" value="3579A282212FFAB0"  disabled/></td>
+					<td><a href="/course/courseplan/177385" target="_blank"><span id="courseCode_3579A282212FFAB0">120400MGX009H</span></a></td>
+					<td><a href="/course/coursetime/177385" target="_blank">科技战略与政策</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_3579A282212FFAB0">1.0</span></td>
+					<td>100</td>
+					<td class="m-font-red">100</td>
+					<td>
+						公共选修课</td>
+					<td>课堂讲授为主</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/177385" target="_blank">李志红</a></td>
+                </tr>
+			<tr>
+					<td><input type="checkbox" name="sids" value="DF5DC114CC35AA39" /></td>
+					<td><input type="checkbox" id="did_DF5DC114CC35AA39" name="did_DF5DC114CC35AA39" value="DF5DC114CC35AA39"  disabled/></td>
+					<td><a href="/course/courseplan/178333" target="_blank"><span id="courseCode_DF5DC114CC35AA39">120400MGX012H</span></a></td>
+					<td><a href="/course/coursetime/178333" target="_blank">创新计量学导论</a></td>
+					<td>30</td>
+					<td><span id="courseCredit_DF5DC114CC35AA39">1.0</span></td>
+					<td>48</td>
+					<td >38</td>
+					<td>
+						公共选修课</td>
+					<td>授课、讨论</td>
+					<td>文献综述</td>
+					<td><a href="/course/courseteacher/178333" target="_blank">陈凯华</a></td>
+                </tr>
+			</tbody>
+ 		</table><!--//table:end-->
+ 		<div class="form-actions">
+		    <button type="submit" name="sb" value="y" class="btn btn-primary">确定提交选课</button>
+		    <button type="button" id="cancelBtn" name="sb" value="y" class="btn btn-primary">取消选课</button>
+		</div>
+ 		</form>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#regfrm select").change(function() {
+		var v = $(this).val();
+		var arr = v.split("__");
+		var id = arr[0];
+		var code = arr[1];
+		var xf = arr[2];
+		var courseType = arr[3];
+		var f = arr[4];
+		$("#courseCode_"+id).html(code);
+		$("#courseCredit_"+id).html(xf);
+		if (f == '1') {
+			$("#did_"+id).attr("disabled",false);
+		} else {
+			$("#did_"+id).attr("checked",false);
+			$("#did_"+id).attr("disabled",true);
+		}
+	});
+	$("#cancelBtn").click(function(){
+		window.location = "/courseManage/main?s=bec4fe4b-b466-4469-9916-4494f95f59e9";
+	});
+	$("#regfrm").validate({
+		rules: {
+			sids: {
+				required: true,
+				minlength: 1
+			}
+		},
+		messages: {
+			sids: "请至少选择一门课"
+		},
+		submitHandler: function(form){
+			top.$.jBox.confirm("确认提交吗？","系统提示",function(v,h,f){
+				if(v=="ok"){
+					loading('正在提交，请稍等...');
+					form.submit();
+				}
+			},{buttonsFocus:1});
+			top.$('.jbox-body .jbox-icon').css('top','55px');
+		},
+		errorPlacement: function(error, element) {
+			top.$.jBox.tip($(error).text());
+		}
+	});
+});
+</script>
+
+		</div><!--//container-fluid:end-->
+	</div><!--//main-content:end-->
+	<div id="footer">
+            <div class="container-fluid">
+              &copy; 中国科学院大学，网络信息中心.</div>
+        </div><!--//footer:end--></body>
+</html>

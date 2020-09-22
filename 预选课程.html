@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择课程-选课系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="renderer" content="webkit" />
+<link href="static/stylelib/base.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/responsive.css" rel="stylesheet" type="text/css" />
+<!-- // plugins css -->
+<link href="static/stylelib/plugins/font-awesome/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/plugins/iealert/style.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/plugins/chosen/chosen.css" rel="stylesheet" type="text/css" />
+<!-- // theme css -->
+<link href="static/stylelib/theme_wblue/screen.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/theme_default/routing.css" rel="stylesheet" type="text/css" />
+<link href="static/stylelib/theme_wblue/my_responsive.css" rel="stylesheet" type="text/css" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="static/stylelib/plugins/html5shiv.js"></script>
+<![endif]-->
+<!--// Loading JS -->
+<script src="static/stylelib/jquery-1.8.3.min.js"></script>
+<script src="static/i18n/messages.js"></script>
+	<script src="static/stylelib/base.js"></script>
+<script src="static/stylelib/plugins/iealert/iealert.js"></script>
+<script src="static/stylelib/plugins/jquery.nicescroll.min.js"></script>
+<!--common script for all pages-->
+<script src="static/stylelib/theme_default/global.js"></script>
+<script src="static/stylelib/plugins/sco.modal.js"></script>
+<script src="static/stylelib/plugins/jquery.placeholder.min.js"></script>
+<script language="javascript" type="text/javascript" src="static/My97DatePicker/WdatePicker.js"></script>
+<link href="static/jquery-select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+<script src="static/jquery-select2/4.0.2/js/select2.min.js" type="text/javascript"></script>
+<script src="static/stylelib/plugins/chosen/chosen.jquery.js"></script>
+<link href="static/jquery-validation/1.15.0/dist/jquery.validate.min.css" rel="stylesheet" />
+<script src="static/jquery-validation/1.15.0/dist/jquery.validate.min.js" type="text/javascript"></script>
+<script src="static/jquery-validation/1.15.0/dist/localization/messages_zh.min.js"></script>
+	<script src="static/jquery-form/jquery.form.js" type="text/javascript"></script>
+<link href="static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet" />
+<script src="static/jquery-jbox/2.3/jquery.jBox-2.3.min.js" type="text/javascript"></script>
+<script src="static/common/sumreg.js" type="text/javascript"></script>
+<link href="static/common/sumreg.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+	 <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container-fluid">
+              <a id="edu_logo" target="_top" class="brand" href="http://sep.ucas.ac.cn/portal/site/105" >
+                <img src="http://sep.ucas.ac.cn//resources/images/edu_cloud.png"/>
+              </a><!--//logo:end-->
+              <a id="logo" class="brand" href="#" >
+                <span>选课系统</span>
+              </a><!--//site_name:end-->
+               <!-- //系统菜单 -->
+                      <div class="b-select-system">
+                          <a href="#" class="bss-btn">
+                              <i class="icon-angle-down"></i>
+                              <span>选择其他系统</span>
+                          </a>
+                          <div class="bss-menu">
+                              <ul>
+  	    						<li>
+  									<a target="_top" class="http://sep.ucas.ac.cn/portal/site/105" href="http://sep.ucas.ac.cn/portal/site/105">
+  		    							<img alt=""src="http://sep.ucas.ac.cn/access/img/site/105.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'">
+  		    							<h5>SEP</h5>
+  									</a>
+  	    						</li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/416"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/c11e1a91-5f47-4fff-a6cf-aea6b78f816a.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>网上办事大厅</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/16"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/16.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>课程网站</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/400"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/86ba481a-eb57-4cd3-bd21-408cc981782d.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>正版GIS软件下载</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/405"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/resources/images/app-default-icon2.png" > 
+                                         <h5>就业管理系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/1"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/1.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学籍管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/221"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/221.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>培养指导</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/217"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/eb2834ba-e971-4e5c-bc61-673fbbcaf1e4.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>所级教务</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/10"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/10.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学位管理</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/218"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/218.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>实景课堂</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/282"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/91e650cb-fa5f-4d75-b0ca-635d9b382240.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>奖助系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/306"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/9d73e90b-1162-4716-b176-81d1011813fd.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>学籍变动审核</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="javascript:;"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/226.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>选课系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/311"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/134de36f-4a3f-4c17-bb38-7f759466072b.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>一卡通支付</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/299"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/87f717aa-492c-4fd8-aa7e-96815973d631.PNG" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>校园支付</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/291"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/397edbf7-7a83-4d05-84eb-7e4a9c9d1184.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>四六级报名系统</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/255"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/bea5429e-3e12-4807-8456-25712a542bda.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>正版软件</h5> 
+                                     </a>
+                                  </li>
+                                  <li>
+                                      <a href="http://sep.ucas.ac.cn//portal/site/259"> 
+                                         <img alt="" src="http://sep.ucas.ac.cn/access/img/site/0c5b43cf-00e1-4378-8522-4ab5b39aae6f.png" onError="this.src='http://sep.ucas.ac.cn/resources/images/app-default-icon2.png'"> 
+                                         <h5>校友网</h5> 
+                                     </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div><!--//b-select-system:end-->
+  
+  
+                      <!-- //顶部菜单按钮(除pc端外显示).btn-navbar  -->
+                      <a class="b-top-toggle-menu btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="javascript:void(0);">
+                          <i class="icon-align-justify"></i>
+                      </a>
+  
+                      <!-- //顶部提醒 -->
+                      <div id="taskInfo" class="b-top-remind hidden-phone">
+                      </div><!--//b-top-remind:end-->
+                      <!-- //顶部左侧链接与菜单 -->
+                      <div class="b-top-nav">
+                          <ul class="nav pull-right top-menu">
+                              <li class="btnav-info" title="当前用户所在单位">
+ 中国科学院昆明植物研究所                             </li>
+                            <li class="btnav-menu dropdown" title="切换角色">
+                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               	<i class="icon-user"></i> 学生角色
+                               	<b class="caret"></b>
+                               </a>
+                               	<ul class="dropdown-menu">
+                                         <li><a  href="http://sep.ucas.ac.cn//portal/site/226/821"><i class="icon-user-md"></i> 学生角色</a></li>
+                                  </ul>
+                           </li>
+                             <li class="btnav-info"> 
+                                <a>
+代伟                             
+</a>
+                              </li>
+                              <li><a href="http://sep.ucas.ac.cn//logout"  title="退出系统"><i class="icon-off"></i></a></li>
+                          </ul>
+                      </div><!--//b-top-nav:end-->
+          </div><!--//container:end-->
+      </div><!--//container-fluid:end-->
+  </div><!--//header:end-->
+ <style type="text/css">
+.pull-right > li > .dropdown-menu, .nav > li > .dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+.nav > li {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.dropdown-menu {
+    min-width:30px
+}
+</style>
+<ul class="nav pull-right top-menu" style="margin-right:10px">
+	<li class="btnav-menu">
+		<a href="http://inc.ucas.ac.cn/home/info/467ed160-1fe8-436a-994d-235206b33628/3d223558-53a2-4c56-9456-25d79d6317e9" target="_blank" title="帮助指南">
+		<i class=""></i> <span>帮助指南</span>
+		</a>
+	</li>
+	<li class="btnav-menu dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="语言">
+		<i class=""></i> <span>语言</span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="?locale=zh_CN"><i class=""></i> 中文</a></li>
+			<li><a href="?locale=en_US"><i class=""></i> English</a></li>
+		</ul>
+	</li>
+</ul>
+<div id="main-menu" class="row-fluid">
+   <div class="b-sidebar-scroll">
+       <div id="sidebar" class="nav-collapse collapse">
+           <ul class="b-sidebar-menu">
+           		<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>通知公告</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/notice/view/1" target="">通知公告</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>学期课表</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/course/termSchedule" target="">学期课表</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item active">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>选修课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class="active"><a href="/courseManage/main" target="">选择课程</a></li>
+							<li class=""><a href="/courseManage/selectedCourse" target="">已选课程</a></li>
+							<li class=""><a href="/course/coursetip" target="">选课学分提示</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>评估课程</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/evaluate/course/59587" target="">2020年夏季学期</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>查询成绩</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/score/yjs/all" target="">所有成绩</a></li>
+							<li class=""><a href="/score/yjs/p10" target="">Program10成绩</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>科学前沿讲座</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/subject/notice" target="">讲座通知</a></li>
+							<li class=""><a href="/subject/lecture" target="">讲座预告</a></li>
+							<li class=""><a href="/subject/student" target="">听讲情况</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>人文讲座</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/subject/humanityNotice" target="">讲座通知</a></li>
+							<li class=""><a href="/subject/humanityLecture" target="">讲座预告</a></li>
+							<li class=""><a href="/subject/humanityStudent" target="">报名及听课记录</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>Program-10</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/program10/intro" target="">介绍项目</a></li>
+							<li class=""><a href="/program10/register" target="">注册项目</a></li>
+							<li class=""><a href="/program10/selectedCourse" target="">选择课程</a></li>
+							<li class=""><a href="/program10/cancel" target="">注销项目</a></li>
+							<li class=""><a href="/program10/pringCourse" target="_blank">打印选课单</a></li>
+							<li class=""><a href="/program10/evaluateMain" target="">评估项目</a></li>
+							<li class=""><a href="/program10/downloadMain" target="">下载申请表</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>讲义调查问卷</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/poll/main" target="">讲义调查问卷</a></li>
+							<li class=""><a href="static/doc/pollHelp.doc" target="">使用说明</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>成绩单申请</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/selfServicePrint/applyMain" target="">自助打印成绩单申请</a></li>
+							<li class=""><a href="/selfServicePrint/dzcjd/applyMaindz" target="">电子成绩单申请</a></li>
+							</ul>
+	             	</li>
+				<li  class="bsm-item ">
+						<a class="bsmi-btn" href="#">
+							<i class="icon-qrcode"></i>
+							<span>英语免修免考</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="bsmi-sub">
+							<li class=""><a href="/engExempt/notice" target="">通知</a></li>
+							<li class=""><a href="/engExempt/apply" target="">报名</a></li>
+							<li class=""><a href="/engExempt/result" target="">认定结果查询</a></li>
+							</ul>
+	             	</li>
+				</ul><!--//sidebar-menu-->
+       </div><!--//sidebar:end-->
+    </div>
+</div><!--//main-menu:end--><div id="main-content">
+		<div class="container-fluid">
+			
+<div class="row-fluid">
+    <div class="span12">
+        <h2 id="page-title"><span>选择课程</span></h2>
+        </div><!--span*:end-->
+</div><!--//row-fluid:end-->
+<div class="m-cbox m-lgray">
+	<div class="mc-head">
+	    <h4>
+	        <span class="mch-smenu-btn"><i class="icon-reorder"></i></span>
+			选择课程</h4>
+	    <div class="mch-tool">
+	        <a href="#" class="mcht-zoom-btn"><i class="icon-chevron-down"></i></a>
+	    </div>
+	</div><!--//mc-head:end-->
+	
+<div class="mc-body">
+	<div class="head">
+		<div id="messageBoxError" class="alert alert-error hide"><button data-dismiss="alert" class="close">×</button>
+			<label id="loginError" class="error"></label>
+		</div>
+		<div id="messageBoxSuccess" class="alert alert-success hide"><button data-dismiss="alert" class="close">×</button>
+			<label id="loginSuccess" class="success"></label>
+		</div>
+	</div>
+	<div>
+	<p>当前选课学期：<strong class="m-font-red">2020年秋季学期</strong></p>
+		<p>选课有效时间段：
+		2020-09-12 12:30:00  至  2020-09-27 17:00:00</p>
+	</div>
+		<form id="regfrm" name="regfrm" action="/courseManage/savePhone?s=bec4fe4b-b466-4469-9916-4494f95f59e9" class="form-horizontal" method="post">
+			<p><strong class="m-font-red">为了给您提供更好的服务，需要您提供固定电话、手机（至少一项不为空）填入以下栏目，该信息为必填项！</strong></p>
+			<div class="">
+			    	固定电话：
+			    <input class="input-large" type="text" placeholder="" id="telephone" name="telephone" value=""/>
+			    	移动电话：
+			        <input class="input-large" type="text" placeholder="" id="mobilePhone" name="mobilePhone" value="18880880888"/>
+			        <button type="submit" name="sb" value="0" class="btn btn-primary">保存联系方式</button>
+			</div>
+		</form>
+	<div>为了提高您的选课效率，建议您首先选择院系以便过滤出需要选择的课程列表！ 以下院系分类前代码即开课编号第一位。</div>
+ 		<form id="regfrm2" name="regfrm2" action="/courseManage/selectCourse?s=bec4fe4b-b466-4469-9916-4494f95f59e9" class="form-horizontal" method="post">
+ 		<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_910" value="910"/> <label for="id_910">数学学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_911" value="911"/> <label for="id_911">物理学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_957" value="957"/> <label for="id_957">天文学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_912" value="912"/> <label for="id_912">化学学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_928" value="928"/> <label for="id_928">材料学院</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_913" value="913"/> <label for="id_913">生命学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_914" value="914"/> <label for="id_914">地球学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_921" value="921"/> <label for="id_921">资环学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_951" value="951"/> <label for="id_951">计算机学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_952" value="952"/> <label for="id_952">电子学院</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_958" value="958"/> <label for="id_958">工程学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_917" value="917"/> <label for="id_917">经管学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_945" value="945"/> <label for="id_945">公管学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_927" value="927"/> <label for="id_927">人文学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_964" value="964"/> <label for="id_964">马克思主义学院</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_915" value="915"/> <label for="id_915">外语系</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_954" value="954"/> <label for="id_954">中丹学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_955" value="955"/> <label for="id_955">国际学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_959" value="959"/> <label for="id_959">存济医学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_946" value="946"/> <label for="id_946">体育教研室</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_961" value="961"/> <label for="id_961">微电子学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_962" value="962"/> <label for="id_962">未来技术学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_963" value="963"/> <label for="id_963">网络空间安全学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_968" value="968"/> <label for="id_968">心理学系</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_969" value="969"/> <label for="id_969">人工智能学院</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_970" value="970"/> <label for="id_970">纳米科学与技术学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_971" value="971"/> <label for="id_971">艺术中心</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_972" value="972"/> <label for="id_972">光电学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_967" value="967"/> <label for="id_967">创新创业学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_973" value="973"/> <label for="id_973">核学院</label></div>
+						</div>
+						<div class="row-fluid">
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_974" value="974"/> <label for="id_974">现代农业科学学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_975" value="975"/> <label for="id_975">化学工程学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_976" value="976"/> <label for="id_976">海洋学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_977" value="977"/> <label for="id_977">航空宇航学院</label></div>
+						<div class="span2"><input type="checkbox" name="deptIds" id="id_979" value="979"/> <label for="id_979">杭州高等研究院</label></div>
+						</div>
+						<div>
+						<button type="submit" name="sb" value="0" class="btn btn-primary" >新增加本学期研究生课程</button>
+						</div>
+		</form>
+	</div>
+</div>
+<div class="m-cbox m-lgray">
+	<div class="mc-head">
+	    <h4>
+	        <span class="mch-smenu-btn"><i class="icon-reorder"></i></span>
+			已选择的课程<strong class="m-font-red">（集中教学学生为预选课程，最终选课结果，进入已选课程进行查询）</strong>
+	    </h4>
+	    <div class="mch-tool">
+	    	<a href="/course/personSchedule" target="_blank">查看个人课表</a>
+	        <a href="#" class="mcht-zoom-btn"><i class="icon-chevron-down"></i></a>
+	    </div>
+	</div><!--//mc-head:end-->
+    <div class="mc-body">
+		
+		<table class="table table-striped table-bordered table-advance table-hover">
+		   <thead>
+		       <tr>
+		           <th>课程编码</th>
+		           <th>课程名称</th>
+		           <th>课时</th>
+		           <th>学分</th>
+		           <th>学位课</th>
+		           <th>考试方式</th>
+		           <th>主讲教师</th>
+		           <th>课程网站</th>
+		           <th>跨学期课程</th>
+		           <th>删除</th>
+		    	</tr>
+		   	</thead>
+		   	<tbody>
+			<tr>
+					<td><a href="/course/courseplan/177294" target="_blank">030100M01004H</a></td>
+					<td><a href="/course/coursetime/177294" target="_blank">科技法学</a></td>
+					<td>54</td>
+					<td>3.0</td>
+					<td>
+						否<a onclick="updateDegreeTemp(177294);return false;">修改</a>
+						</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177294" target="_blank">段异兵等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177294)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177294)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178212" target="_blank">030500MGB001H-27</a></td>
+					<td><a href="/course/coursetime/178212" target="_blank">中国特色社会主义理论与实践研究（东区）</a></td>
+					<td>36</td>
+					<td>2.0</td>
+					<td>
+						是</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/178212" target="_blank">熊辉</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178212)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178212)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177987" target="_blank">050200MGB003H-116</a></td>
+					<td><a href="/course/coursetime/177987" target="_blank">英语A+16班（怀）</a></td>
+					<td>64</td>
+					<td>3.0</td>
+					<td>
+						是</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/177987" target="_blank">崔雅琼</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177987)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177987)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177590" target="_blank">071000M02002H</a></td>
+					<td><a href="/course/coursetime/177590" target="_blank">生物统计与实验设计</a></td>
+					<td>40</td>
+					<td>3.0</td>
+					<td>
+						是<a onclick="updateDegreeTemp(177590);return false;">修改</a>
+						</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177590" target="_blank">王启华等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177590)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177590)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177595" target="_blank">071002M04002H</a></td>
+					<td><a href="/course/coursetime/177595" target="_blank">系统与进化生物学</a></td>
+					<td>60</td>
+					<td>4.0</td>
+					<td>
+						是<a onclick="updateDegreeTemp(177595);return false;">修改</a>
+						</td>
+					<td>闭卷笔试</td>
+					<td><a href="/course/courseteacher/177595" target="_blank">葛颂等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177595)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177595)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177342" target="_blank">0710I0D01002H</a></td>
+					<td><a href="/course/coursetime/177342" target="_blank">植物分子生物学（全英文授课）</a></td>
+					<td>60</td>
+					<td>4.0</td>
+					<td>
+						是<a onclick="updateDegreeTemp(177342);return false;">修改</a>
+						</td>
+					<td>文献综述</td>
+					<td><a href="/course/courseteacher/177342" target="_blank">景海春等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177342)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177342)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177070" target="_blank">100100M02012H</a></td>
+					<td><a href="/course/coursetime/177070" target="_blank">实用生物信息学（1）:高通量测序数据分析技术</a></td>
+					<td>50</td>
+					<td>3.0</td>
+					<td>
+						否<a onclick="updateDegreeTemp(177070);return false;">修改</a>
+						</td>
+					<td>课堂开卷</td>
+					<td><a href="/course/courseteacher/177070" target="_blank">赵方庆等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177070)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177070)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178009" target="_blank">100100MGB001H-2</a></td>
+					<td><a href="/course/coursetime/178009" target="_blank">学术道德与学术写作规范-分论</a></td>
+					<td>10</td>
+					<td>0.5</td>
+					<td>
+						是</td>
+					<td>其它（需说明）</td>
+					<td><a href="/course/courseteacher/178009" target="_blank">曾长青</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178009)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178009)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178883" target="_blank">125600MGB001H-05</a></td>
+					<td><a href="/course/coursetime/178883" target="_blank">工程伦理-通论（5班）</a></td>
+					<td>9</td>
+					<td>1.0</td>
+					<td>
+						否</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/178883" target="_blank">王楠</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178883)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178883)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178884" target="_blank">125600MGB001H-07</a></td>
+					<td><a href="/course/coursetime/178884" target="_blank">工程伦理-资环（2班）</a></td>
+					<td>3</td>
+					<td>0.0</td>
+					<td>
+						否</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/178884" target="_blank">肖康</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178884)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178884)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178887" target="_blank">125600MGB001H-13</a></td>
+					<td><a href="/course/coursetime/178887" target="_blank">工程伦理-机械（2班）</a></td>
+					<td>3</td>
+					<td>0.0</td>
+					<td>
+						否</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/178887" target="_blank">王生</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178887)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178887)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/178888" target="_blank">125600MGB001H-15</a></td>
+					<td><a href="/course/coursetime/178888" target="_blank">工程伦理-材料（2班）</a></td>
+					<td>3</td>
+					<td>0.0</td>
+					<td>
+						否</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/178888" target="_blank">王晓东</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(178888)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(178888)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/176927" target="_blank">200200M05002H</a></td>
+					<td><a href="/course/coursetime/176927" target="_blank">生物信息大数据挖掘分析和实践</a></td>
+					<td>42</td>
+					<td>2.5</td>
+					<td>
+						否<a onclick="updateDegreeTemp(176927);return false;">修改</a>
+						</td>
+					<td>读书报告</td>
+					<td><a href="/course/courseteacher/176927" target="_blank">鲍一明等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(176927)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(176927)">删除</button>
+						</td>
+                </tr>
+			<tr>
+					<td><a href="/course/courseplan/177709" target="_blank">200800M05001H</a></td>
+					<td><a href="/course/coursetime/177709" target="_blank">基因组学概论与前沿</a></td>
+					<td>30</td>
+					<td>2.0</td>
+					<td>
+						否<a onclick="updateDegreeTemp(177709);return false;">修改</a>
+						</td>
+					<td>大开卷</td>
+					<td><a href="/course/courseteacher/177709" target="_blank">杨焕明等</a></td>
+					<td><button type="button" class="btn btn-primary" onclick="addCourseSite(177709)">加入</button></td>
+					<td>
+						否</td>
+					<td>
+						<button type="button" class="btn btn-primary" onclick="del(177709)">删除</button>
+						</td>
+                </tr>
+			</tbody>
+ 		</table><!--//table:end-->
+ 		<div>
+ 		    <strong>您总共选课的学分为： 28.0，其中学位课学分为： 16.5</strong>
+ 		    <span style="float: right;">
+ 		        <button type="button" class="btn" onclick="submitForm(64757)" >提交选课单</button>
+ 		        <button type="button" class="btn" onclick="recallForm(64757)" disabled>撤回选课单</button>
+ 		        <a href="/courseManage/toAuditResult/64757" class="btn" target="_blank" >选课单审核结果</a>
+                    </span>
+ 		    <br><br>
+ 		    <div style="float: right;"><strong class="m-font-red">封网时间为2020-09-27 17:00:00，请在此之前提交申请</strong></div>
+ 		    <br>
+ 		</div>
+	</div>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">修改学位课属性</h3>
+  </div>
+  <form id="sufrm" name="sufrm" method="post">
+  <div class="modal-body">
+   	<div>
+   		<input type="radio" name="degree" value="1"/>&nbsp;是&nbsp;&nbsp;&nbsp;
+   		<input type="radio" name="degree" value="0"/>&nbsp;否
+   	</div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button type="button" class="btn btn-primary" onclick="submitfrom()">确定</button>
+  </div>
+  </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#addBachelorCourse").click(function() {
+		window.location="/courseManage/selectBCourse?s=bec4fe4b-b466-4469-9916-4494f95f59e9";
+	});
+	$("#regfrm").validate({
+		groups: {
+	        nameGroup: "telephone mobilePhone"
+	    },
+	    rules: {
+			"telephone":{
+				required: {  
+                    depends:function(){ //二选一  
+                        return ($('#mobilePhone').val().length <= 0);  
+                    }
+                },
+                isTel:true
+			},
+			"mobilePhone":{
+				required: {  
+                    depends:function(){ //二选一  
+                        return ($('#telephone').val().length <= 0);  
+                    }  
+                },
+                isMobile:true
+			}
+		},
+		submitHandler: function(form){
+			loading('正在提交，请稍等...');
+			form.submit();
+		},
+		errorPlacement: function(error, element) {
+			top.$.jBox.tip($(error).text());
+		}
+	});
+	
+	$("#regfrm2").validate({
+		rules: {
+			deptIds: {
+				required: true,
+				minlength: 1
+			}
+		},
+		messages: {
+			deptIds: '请至少选择一个院系'
+		},
+		submitHandler: function(form){
+			loading('正在提交，请稍等...');
+			form.submit();
+		},
+		errorPlacement: function(error, element) {
+			top.$.jBox.tip($(error).text());
+		}
+	});
+});
+function del(courseId) {
+	top.$.jBox.confirm('确认要删除吗？','系统提示',function(v,h,f){
+		if(v=="ok"){
+			window.location = "/courseManage/delTemp/" + courseId + "?s=bec4fe4b-b466-4469-9916-4494f95f59e9";
+		}
+	},{buttonsFocus:1});
+	top.$('.jbox-body .jbox-icon').css('top','55px');
+}
+
+function addCourseSite(courseId) {
+	$.ajax({
+		   type: "get",
+		   url: "/courseManage/addCourseSite.json?courseId=" + courseId,
+		   beforeSend: function(){
+			   loading('正在提交，请稍等...');
+			},
+			success: function(data){
+				resetTip(); //loading();
+				var tt = data.f;
+				if (tt==true) {
+					top.$.jBox.tip(data.msg,"info");
+					window.location.reload();//刷新当前页面.
+				} else {
+					top.$.jBox.tip(data.msg,"warning");
+				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        alert(XMLHttpRequest.readyState + XMLHttpRequest.status + XMLHttpRequest.responseText);  
+			}
+		});
+}
+
+function submitForm(termId) {
+	var msg = "您确认提交选课单吗？"; 
+	if (confirm(msg)==true){
+	    $.ajax({
+		   type: "get",
+		   url: "/courseManage/submitForm.json?termId=" + termId,
+		   beforeSend: function(){
+			   loading('正在提交，请稍等...');
+			},
+			success: function(data){
+				resetTip(); //loading();
+				var tt = data.f;
+				if (tt==true) {
+					top.$.jBox.tip(data.msg,"info");
+					window.location.reload();//刷新当前页面.
+				} else {
+					top.$.jBox.tip(data.msg,"warning");
+				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        alert(XMLHttpRequest.readyState + XMLHttpRequest.status + XMLHttpRequest.responseText);  
+			}
+		});
+	}
+}
+
+function recallForm(termId) {
+	var msg = "您确认撤回选课单吗？"; 
+	if (confirm(msg)==true){
+	    $.ajax({
+		   type: "get",
+		   url: "/courseManage/recallForm.json?termId=" + termId,
+			success: function(data){
+				resetTip(); //loading();
+				var tt = data.f;
+				if (tt==true) {
+					top.$.jBox.tip(data.msg,"info");
+					window.location.reload();//刷新当前页面.
+				} else {
+					top.$.jBox.tip(data.msg,"warning");
+				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){  
+		        alert(XMLHttpRequest.readyState + XMLHttpRequest.status + XMLHttpRequest.responseText);  
+			}
+		});
+	}
+}
+
+var cid;
+function updateDegreeTemp(courseId) {
+	cid = courseId;
+	$("#myModal").modal();
+}
+function submitfrom() {
+	$("#sufrm").attr("action", "/courseManage/updateCourseDegreeTemp/"+cid);
+	$("#sufrm").submit();
+}
+</script>
+
+		</div><!--//container-fluid:end-->
+	</div><!--//main-content:end-->
+	<div id="footer">
+            <div class="container-fluid">
+              &copy; 中国科学院大学，网络信息中心.</div>
+        </div><!--//footer:end--></body>
+</html>
