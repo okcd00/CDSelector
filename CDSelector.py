@@ -16,7 +16,6 @@ import requests
 from bs4 import BeautifulSoup
 from configparser import RawConfigParser
 
-#import pytesseract
 from PIL import Image
 from io import BytesIO
 import matplotlib.pyplot as plt
@@ -52,17 +51,21 @@ header_store = [
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 ]
 
-# 识别验证码
+
 def get_code(data):
+    print("由于在外网环境选课，请您手动输入验证码。接下来将为您展示验证码：")
     img = Image.open(BytesIO(data))
     plt.imshow(img)
     plt.show()
-    captcha = input("输入验证码:")
-    #img = img.convert('L')
-    #captcha = pytesseract.image_to_string(img)
-    #print(captcha)
+    captcha = str(input("请您手动输入验证码:")).strip()
+    # import pytesseract
+    # img = img.convert('L')
+    # captcha = pytesseract.image_to_string(img)
+    # print(captcha)
     img.close()
+    print("您输入的验证码为：", captcha)
     return captcha
+
 
 class UCASEvaluate:
     def __init__(self):
@@ -75,10 +78,11 @@ class UCASEvaluate:
         self.password = cf.get('info', 'password')
         self.runtime = cf.getint('info', 'runtime')
         self.debug = cf.getboolean('action', 'debug')
-        self.enroll = cf.getboolean('action', 'enroll')
-        self.evaluate = cf.getboolean('action', 'evaluate')
-        self.select_bat = cf.getboolean('action', 'select_bat')
-        self.watch_logo = cf.getboolean('action', 'watch_logo')
+        self.enroll = cf.getboolean('action', 'enroll')  # 是否无限重复轮询
+        self.capture = cf.getboolean('action', 'capture')  # 登陆时是否需要验证码
+        self.evaluate = cf.getboolean('action', 'evaluate')  #
+        self.select_bat = cf.getboolean('action', 'select_bat')  # 是否需要批量选课（例如英语需要两门同时选才能选成功）
+        self.watch_logo = cf.getboolean('action', 'watch_logo')  # 没啥用，推荐关了
 
         self.loginPage = 'http://sep.ucas.ac.cn'
         self.loginUrl = self.loginPage + '/slogin'
@@ -99,19 +103,18 @@ class UCASEvaluate:
 
         self.enrollCount = {}
         self.headers = {
-            #'Host': 'jwxk.ucas.ac.cn',
             'Host': 'sep.ucas.ac.cn',
             'Connection': 'keep-alive',
             # 'Pragma': 'no-cache',
             # 'Cache-Control': 'no-cache',
-            #'Cache-Control': 'max-age=0',
+            # 'Cache-Control': 'max-age=0',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Upgrade-Insecure-Requests': '1',
-            #'User-Agent': header_store[-5],
-            'User-Agent': header_store[-3],
+            'User-Agent': header_store[-5],
+            # 'User-Agent': header_store[-3],
             'Accept-Encoding': 'gzip, deflate',
-            #'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
-            'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6'
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+            # 'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6'
         }
         # self.headers = None
 
@@ -167,22 +170,21 @@ class UCASEvaluate:
         return response
 
     def login(self):
-        #获取验证码
-        codeimage = self.s.get(self.loginPage+'/changePic')
-
         post_data = {
             'userName': self.username,
             'pwd': self.password,
-            'certCode': get_code(codeimage.content),  #验证码
             'sb': 'sb'
         }
+        if self.capture:
+            capture_image = self.s.get(self.loginPage+'/changePic')
+            post_data.update({'certCode': get_code(capture_image.content)})  # 验证码
         response = self.s.post(self.loginUrl, data=post_data, headers=self.headers)
         self.show_response(response, self.loginUrl, post_data, 'Login')
-        #print(self.s.cookies.get_dict())
+        # print(self.s.cookies.get_dict())
 
-        #手动添加cookie
-        #cookies = {'sepuser':'','JSESSIONID':''}
-        #requests.utils.add_dict_to_cookiejar(self.s.cookies, cookies)
+        # 手动添加cookie测试
+        # cookies = {'sepuser':'','JSESSIONID':''}
+        # requests.utils.add_dict_to_cookiejar(self.s.cookies, cookies)
 
         if 'sepuser' in self.s.cookies.get_dict():
             return True
@@ -225,7 +227,8 @@ class UCASEvaluate:
                 'roleId': 821,
             }
             response = self.session_get(  # Notification homepage
-                url=self.courseIdentify + identity, data=post_data, desc='Notification List')
+                url=self.courseIdentify + identity,
+                data=post_data, desc='Notification List')
 
             response = self.session_get(  # SelectedCourse List
                 url=self.courseSelected, desc='SelectedCourse List')

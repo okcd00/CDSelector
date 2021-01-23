@@ -6,6 +6,7 @@ runtime  = 3
 [action]
 debug = false
 enroll = false
+capture = false
 evaluate = true
 select_bat = false
 watch_logo = false
