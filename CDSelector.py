@@ -16,6 +16,10 @@ import requests
 from bs4 import BeautifulSoup
 from configparser import RawConfigParser
 
+#import pytesseract
+from PIL import Image
+from io import BytesIO
+import matplotlib.pyplot as plt
 
 index_course = {
     '910': u'数学', '911': u'物理', '957': u'天文', '912': u'化学', '928': u'材料',
@@ -48,6 +52,17 @@ header_store = [
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 ]
 
+# 识别验证码
+def get_code(data):
+    img = Image.open(BytesIO(data))
+    plt.imshow(img)
+    plt.show()
+    captcha = input("输入验证码:")
+    #img = img.convert('L')
+    #captcha = pytesseract.image_to_string(img)
+    #print(captcha)
+    img.close()
+    return captcha
 
 class UCASEvaluate:
     def __init__(self):
@@ -84,15 +99,19 @@ class UCASEvaluate:
 
         self.enrollCount = {}
         self.headers = {
-            'Host': 'jwxk.ucas.ac.cn',
+            #'Host': 'jwxk.ucas.ac.cn',
+            'Host': 'sep.ucas.ac.cn',
             'Connection': 'keep-alive',
             # 'Pragma': 'no-cache',
             # 'Cache-Control': 'no-cache',
+            #'Cache-Control': 'max-age=0',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Upgrade-Insecure-Requests': '1',
-            'User-Agent': header_store[-5],
+            #'User-Agent': header_store[-5],
+            'User-Agent': header_store[-3],
             'Accept-Encoding': 'gzip, deflate',
-            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+            #'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6'
         }
         # self.headers = None
 
@@ -148,14 +167,23 @@ class UCASEvaluate:
         return response
 
     def login(self):
+        #获取验证码
+        codeimage = self.s.get(self.loginPage+'/changePic')
+
         post_data = {
             'userName': self.username,
             'pwd': self.password,
+            'certCode': get_code(codeimage.content),  #验证码
             'sb': 'sb'
         }
-        response = self.s.post(
-            self.loginUrl, data=post_data, headers=self.headers)
+        response = self.s.post(self.loginUrl, data=post_data, headers=self.headers)
         self.show_response(response, self.loginUrl, post_data, 'Login')
+        #print(self.s.cookies.get_dict())
+
+        #手动添加cookie
+        #cookies = {'sepuser':'','JSESSIONID':''}
+        #requests.utils.add_dict_to_cookiejar(self.s.cookies, cookies)
+
         if 'sepuser' in self.s.cookies.get_dict():
             return True
         return False
