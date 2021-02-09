@@ -27,7 +27,7 @@ index_course = {
     '915': u'外语', '954': u'中丹', '955': u'国际', '959': u'存济', '946': u'体育',
     '961': u'微电', '962': u'未来', '963': u'网络', '968': u'心理', '969': u'人工',
     '970': u'纳米', '971': u'艺术', '972': u'光电', '967': u'创新', '973': u'核学',
-    '974': u'现代', '975': u'化学', '976': u'海洋', '977': u'航空', '979': u'杭州'
+    '974': u'现代', '975': u'化学', '976': u'海洋', '977': u'航空', '979': u'杭州',
 }
 
 dept_ids_dict = dict([(v, k) for k, v in index_course.items()])
@@ -108,7 +108,8 @@ class UCASEvaluate:
             # 'Pragma': 'no-cache',
             # 'Cache-Control': 'no-cache',
             # 'Cache-Control': 'max-age=0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;' + \
+                      'q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': header_store[-5],
             # 'User-Agent': header_store[-3],
@@ -146,12 +147,13 @@ class UCASEvaluate:
             status_str = "Link failed with code {}".format(int(response.status_code))
         print('[{}] {}'.format(description, status_str))
         if self.debug:
-            print("\tReq as {}".format(self.show_http_request(url, data)))
+            print("\tRequest as {}".format(self.show_http_request(url, data)))
             print("\tView as {}".format(response.url))
             print("\tCookie: {}".format(self.s.cookies.get_dict()))
 
     def update_headers_with_cookie(self):
-        self.headers.update({'Cookie': ';'.join(['{}={}'.format(k, v) for k, v in self.s.cookies.items()])})
+        self.headers.update({'Cookie': ';'.join(
+            ['{}={}'.format(k, v) for k, v in self.s.cookies.items()])})
 
     def session_get(self, url, data=None, desc=""):
         response = self.s.get(
@@ -191,8 +193,8 @@ class UCASEvaluate:
         return False
 
     @staticmethod
-    def get_message(restext):
-        css_soup = BeautifulSoup(restext, 'html.parser')
+    def get_message(res_text):
+        css_soup = BeautifulSoup(res_text, 'html.parser')
         text = css_soup.select('#main-content > div > div.m-cbox.m-lgray > div.mc-body > div')[0].text
         return "".join(line.strip() for line in text.split('\n'))
 
@@ -215,13 +217,14 @@ class UCASEvaluate:
             self.coursesDept[course_id] = course_dept
         print("")
 
-    def enrollCourses(self):
+    def enroll_courses(self, retry=-1):
         response = self.session_get(
             url=self.courseSystem, desc='SEP AppStore')
         soup = BeautifulSoup(response.text, 'html.parser')
         identity = re.findall(r'"http://jwxk.ucas.ac.cn/login\?Identity=(.*)&amp;roleId=[0-9]{2,4}"',
                               str(soup))[0]
         print("[Obtain Identity]", identity)
+        last_msg = ""
         try:
             post_data = {
                 'roleId': 821,
@@ -229,17 +232,19 @@ class UCASEvaluate:
             response = self.session_get(  # Notification homepage
                 url=self.courseIdentify + identity,
                 data=post_data, desc='Notification List')
+            # self.dump_check(response, '通知列表')
 
             response = self.session_get(  # SelectedCourse List
                 url=self.courseSelected, desc='SelectedCourse List')
             self.dump_check(response, '已选课程')
 
-            idx, last_msg = 0, ""
-            while True:
+            idx = 0
+            while retry != 0:
+                retry -= 1
                 msg = ""
                 if self.select_bat:
                     # select at the same time
-                    result, msg = self.__enrollCourses(self.coursesId)
+                    result, msg = self._enroll_courses(self.coursesId)
                     if result: 
                         self.coursesId.clear()
                 else:
@@ -254,8 +259,8 @@ class UCASEvaluate:
                             continue
                         
                         self.enrollCount[each_course] = 1
-                        result, msg = self.__enrollCourse(
-                            course_id=each_course, isDegree=self.coursesId[each_course])
+                        result, msg = self._enroll_course(
+                            course_id=each_course, is_degree_course=self.coursesId[each_course])
                         
                         if result:
                             self.enrollCount[each_course] = 0
@@ -274,14 +279,15 @@ class UCASEvaluate:
                 last_msg = msg
                 sys.stdout.write(show_text)
                 sys.stdout.flush()
-        except KeyboardInterrupt as e:
-            print("\nKeyboardInterrupt Detected, bye!")
+        except KeyboardInterrupt as ex:
+            print("{}\nKeyboardInterrupt Detected, bye!".format(str(ex)))
             return "STOP"
-        except Exception as e:
-            print("Catch Error: {}".format(e))
+        except Exception as ex:
+            print("Catch Error: {}".format(ex))
+            print("Last Msg: {}".format(last_msg))
             return "Course_Selection_Port is not open, waiting..."
 
-    def __enrollCourse(self, course_id, isDegree):
+    def _enroll_course(self, course_id, is_degree_course):
         response = self.session_get(  # SelectedCourse List
             url=self.courseSelectionBase, desc='Course Selection Board')
         self.dump_check(response, '预选课程')
@@ -317,7 +323,7 @@ class UCASEvaluate:
                 'sids': course_dict[course_id]
             }
 
-            if isDegree:
+            if is_degree_course:
                 post_data['did_' + course_dict[course_id]] = course_dict[course_id]
 
             response = self.session_post(
@@ -331,7 +337,7 @@ class UCASEvaluate:
         else:
             return False, "No such course"
 
-    def __enrollCourses(self, course_ids):
+    def _enroll_courses(self, course_ids):
         """
         一般来说不推荐一下选好几个，一个一个选比较好，选得多了其中任意一个人满了都会失败
         但是英语需要同时选择听说/读写，才可以成功选课，所以也提供一下这个方法
@@ -398,34 +404,34 @@ if __name__ == "__main__":
 
     while True:
         try:
-            ucasEvaluate = UCASEvaluate()
+            ucas_evaluate_instance = UCASEvaluate()
             break
         except Exception as e:
             if e == "Connection aborted.":
-                ucasEvaluate = UCASEvaluate()
+                ucas_evaluate_instance = UCASEvaluate()
 
-    if ucasEvaluate.debug:
-        print("Debug Mode: %s" % str(ucasEvaluate.debug) )
+    if ucas_evaluate_instance.debug:
+        print("Debug Mode: %s" % str(ucas_evaluate_instance.debug))
         print("In debug mode, you can check snapshot with html files.")
         print("By the way, Ctrl+C to stop.")
     
-    if not ucasEvaluate.login():
+    if not ucas_evaluate_instance.login():
         print('Login error. Please check your username and password.')
         exit()
 
-    print('Login success: ' + ucasEvaluate.username)
-    if ucasEvaluate.debug:
-        print("[Obtain SepUser]", ucasEvaluate.s.cookies.get_dict()['sepuser'])
+    print('Login success: ' + ucas_evaluate_instance.username)
+    if ucas_evaluate_instance.debug:
+        print("[Obtain SepUser]", ucas_evaluate_instance.s.cookies.get_dict()['sepuser'])
     print("-----" * 5)
     print('Enrolling starts')
-    if not ucasEvaluate.enroll:
+    if not ucas_evaluate_instance.enroll:
         # at least run once
-        status = ucasEvaluate.enrollCourses()
+        status = ucas_evaluate_instance.enroll_courses()
         status += time.asctime(time.localtime(time.time()))
         sys.stdout.write("%s\r" % status)
 
-    while ucasEvaluate.enroll:
-        status = ucasEvaluate.enrollCourses()
+    while ucas_evaluate_instance.enroll:
+        status = ucas_evaluate_instance.enroll_courses()
         if status.startswith('STOP'):
             break
         else: 
