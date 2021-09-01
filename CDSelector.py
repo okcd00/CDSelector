@@ -178,7 +178,7 @@ class UCASEvaluate:
             'sb': 'sb'
         }
         if self.capture:
-            capture_image = self.s.get(self.loginPage+'/changePic')
+            capture_image = self.s.get(self.loginPage+'/randomcode.jpg')
             post_data.update({'certCode': get_code(capture_image.content)})  # 验证码
         response = self.s.post(self.loginUrl, data=post_data, headers=self.headers)
         self.show_response(response, self.loginUrl, post_data, 'Login')
