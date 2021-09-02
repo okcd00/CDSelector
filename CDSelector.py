@@ -12,6 +12,7 @@ import re
 import os
 import sys
 import time
+import json
 import requests
 from bs4 import BeautifulSoup
 from configparser import RawConfigParser
@@ -76,8 +77,8 @@ class UCASEvaluate:
         
         self.username = cf.get('info', 'username')
         self.password = cf.get('info', 'password')
-        self.runtime = cf.getint('info', 'runtime')
-        self.debug = cf.getboolean('action', 'debug')
+        self.runtime = cf.getint('info', 'runtime')  # 多久轮询一次
+        self.debug = cf.getboolean('action', 'debug')  # 是否打印一大堆日志
         self.enroll = cf.getboolean('action', 'enroll')  # 是否无限重复轮询
         self.capture = cf.getboolean('action', 'capture')  # 登陆时是否需要验证码
         self.evaluate = cf.getboolean('action', 'evaluate')  #
@@ -95,7 +96,8 @@ class UCASEvaluate:
         self.courseCategory = self.courseBase + '/courseManage/selectCourse?s='
 
         self.courseSave = self.courseBase + '/courseManage/saveCourse?s='
-        # deptIds=913&sids=9D5ACABA58C8DF02
+        # params for post sheet are like:
+		# deptIds=913&sids=9D5ACABA58C8DF02
         # deptIds=913&sids=2585B359205108D6&did_2585B359205108D6=2585B359205108D6
 
         self.studentCourseEvaluateUrl = 'http://jwjz.ucas.ac.cn/Student/DeskTopModules/'
@@ -119,6 +121,7 @@ class UCASEvaluate:
         }
         # self.headers = None
 
+        self.identity = ""
         self.s = requests.Session()
         self.s.get(self.loginPage, headers=self.headers)
 
@@ -182,13 +185,15 @@ class UCASEvaluate:
             post_data.update({'certCode': get_code(capture_image.content)})  # 验证码
         response = self.s.post(self.loginUrl, data=post_data, headers=self.headers)
         self.show_response(response, self.loginUrl, post_data, 'Login')
-        # print(self.s.cookies.get_dict())
 
-        # 手动添加cookie测试
-        # cookies = {'sepuser':'','JSESSIONID':''}
-        # requests.utils.add_dict_to_cookiejar(self.s.cookies, cookies)
-
+        # 载入已有的cookie
+        if os.path.exists('./personal_info.dump'):
+            # print("Cookies:", self.s.cookies.get_dict())
+            cookies = json.load(open('./personal_info.dump', 'r'))
+            requests.utils.add_dict_to_cookiejar(self.s.cookies, cookies)
         if 'sepuser' in self.s.cookies.get_dict():
+            if not os.path.exists('./personal_info.dump'):
+                json.dump(self.s.cookies.get_dict(), open('./personal_info.dump', 'w'))
             return True
         return False
 
@@ -221,9 +226,15 @@ class UCASEvaluate:
         response = self.session_get(
             url=self.courseSystem, desc='SEP AppStore')
         soup = BeautifulSoup(response.text, 'html.parser')
-        identity = re.findall(r'"http://jwxk.ucas.ac.cn/login\?Identity=(.*)&amp;roleId=[0-9]{2,4}"',
-                              str(soup))[0]
-        print("[Obtain Identity]", identity)
+        self.dump_check(response, 'SEP主页')
+        
+        identity = re.findall(r"http://jwxk.ucas.ac.cn/login\?Identity=([0-9a-z\-]*)", str(soup))
+        if identity:
+            identity = identity[0].split('&')[0]
+            self.identity = identity
+            print("[Obtain Identity]", identity)
+        else:
+            identity = self.identity
         last_msg = ""
         try:
             post_data = {
@@ -232,7 +243,7 @@ class UCASEvaluate:
             response = self.session_get(  # Notification homepage
                 url=self.courseIdentify + identity,
                 data=post_data, desc='Notification List')
-            # self.dump_check(response, '通知列表')
+            self.dump_check(response, '通知列表')
 
             response = self.session_get(  # SelectedCourse List
                 url=self.courseSelected, desc='SelectedCourse List')
@@ -400,7 +411,7 @@ if __name__ == "__main__":
 
     time.sleep(1)
     os.system("color 0A")
-    os.system('MODE con: COLS=72 LINES=10 & TITLE CD_Course_Selecting is working')
+    os.system('MODE con: COLS=72 LINES=16 & TITLE CD_Course_Selecting is working')
 
     while True:
         try:
