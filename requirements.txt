@@ -1,7 +1,7 @@
 beautifulsoup4>=4.6.0
 bs4>=0.0.1
 configparser==3.5.0
-lxml==4.6.3
+lxml==4.6.5
 requests>=2.20.0
 tqdm>=4.11.2
 pillow
